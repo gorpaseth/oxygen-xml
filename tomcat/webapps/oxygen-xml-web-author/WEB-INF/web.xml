@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:web="http://java.sun.com/xml/ns/javaee" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+    id="oxygen-xml-web-author" 
+    version="3.0">
+  <display-name>oxygen-xml-web-author</display-name>
+
+  <!-- Register the RestEasy servlet. 
+    This has to be registered in the web.xml file so that WebSphere knows not to register its own JAX-RS 
+    implementation for these URLs. 
+  -->
+  <servlet>
+    <servlet-name>Resteasy</servlet-name>
+    <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServlet30Dispatcher</servlet-class>
+    <init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>ro.sync.servlet.OxygenApplication</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Resteasy</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+    <url-pattern>/rest-public/*</url-pattern>
+    <url-pattern>/rest-files/*</url-pattern>
+    <url-pattern>/admin/*</url-pattern>
+  </servlet-mapping>
+  <!-- Context listener that initializes the WebApp. Registered here to avoid ordering issues. -->
+  <listener>
+    <listener-class>ro.sync.servlet.StartupServlet</listener-class>
+  </listener>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    
+    <!-- We should not have oxygen.html in here because we can't easily target 
+         the /context/app/ url-pattern when we need to deal with caching issues. Leave it commented! -->
+    <!-- <welcome-file>oxygen.html</welcome-file> -->
+  </welcome-file-list>
+  <error-page>
+    <location>/WEB-INF/error-pages/error-general.jsp</location>
+  </error-page>
+</web-app>

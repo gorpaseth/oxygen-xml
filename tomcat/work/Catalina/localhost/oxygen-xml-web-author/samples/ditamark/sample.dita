@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?xml-model href="rules/md2dita.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<topic id="topic_gsq_fv3_nx">
+    <title>The path from Markdown to DITA</title>
+    <body>
+        <p>When Markdown fragments are inserted in the document, the Web Author will recognize them and will provide suggestions and actions to convert them to DITA fragments. You can find these suggestions either on the tooltip, when hovering over any item underlined with a blue line or in the "Validation" side-view.</p>
+        <section id="section_zjd_zyt_4x">
+            <title>Lists</title>
+            <p>Unordered lists can be converted to DITA lists:</p>
+            <p>* item </p>
+            <p>* another item</p>
+            <p>* one more</p>
+            <p>You can use both * and - to signal a list item</p>
+            <p>- sample</p>
+            <p>- using</p>
+            <p>- dash</p>
+            <p>If a list already exists, a new item at the end can be added to the list</p>
+            <ul id="ul_pdt_5ts_4x">
+                <li>sample</li>
+                <li>list</li>
+            </ul>
+            <p>* another item</p>
+            <p>Ordered lists start with '1.' like below:</p>
+            <p>1. first Item </p>
+            <p>1. second item</p>
+            <p>1. third item</p>
+            <p>But the actual number after the first one is not really important:</p>
+            <p>1. first item</p>
+            <p>4. second item</p>
+            <p>9. third item</p>
+        </section>
+        <section id="section_rqy_dzt_4x">
+            <title>Quotes</title>
+            <p>Below, you can see a fragment from [Wikipedia](http://www.wikipedia.org)</p>
+            <p>> Wikipedia is hosted by the <xref href="https://wikimediafoundation.org/"
+                    format="html" scope="external">Wikimedia Foundation</xref>, </p>
+            <p>> a non-profit organization that also hosts a range of </p>
+            <p>> other projects. </p>
+        </section>
+        <section id="section_wfq_pzt_4x">
+            <title>Code blocks and inline code</title>
+            <p>```</p>
+            <p>1+1=2</p>
+            <p>2+2=4</p>
+            <p>```</p>
+            <p>Web Author also handles `inline code` markup.</p>
+        </section>
+        <section id="section_dny_rzt_4x">
+            <title>Links</title>
+            <p>Links are also detected and can be converted to cross references: </p>
+            <p>See the [oXygen website](http://www.oxygenxml.com) for more details.</p>
+            <p>Quick links like &lt;<xref href="http://www.oxygenxml.com/" format="html" scope="external">http://www.oxygenxml.com</xref>> can also be converted to DITA cross references.</p>
+            <p>You can combine a link and a list and there are two quick fixes available. One to convert to an unorderded list and then one to convert the link to a cross reference:</p>
+            <p>* See the [oXygen website](http://www.oxygenxml.com) for more details.</p>
+        </section>
+        <section id="section_scs_ryt_4x">
+            <title>Images</title>
+            <p>An image that uses the Markdown format can be converted to a figure or image element, depending on whether or not there is a title:</p>
+            <p>In this case, there is a title, so you can convert it to a figure: ![oXygen logo](https://www.oxygenxml.com/img/resources/oxygen190x62.png "One of the oXygen logos") which is a block!</p>
+            <p>In this case, there is no title, so you can convert it to an image: ![oXygen logo](https://www.oxygenxml.com/img/resources/oxygen190x62.png) which is rendered inline.</p>
+        </section>
+        <section id="section_z1g_qjx_4x">
+            <title>Tables</title>
+            <p>You can convert a table with a header row:</p>
+            <p>|test|table|conversion|</p>
+            <p>|-|-|-|</p>
+            <p>|1|2|3|</p>
+            <p>|1|2|3|</p>
+            <p>You can also convert a table without a header row:</p>
+            <p>|-|-|-|</p>
+            <p>|1|2|3|</p>
+            <p>|1|2|3|</p>
+        </section>
+        <section id="section_lqq_5yt_4x">
+            <title>Sections</title>
+            <p>Sections can be easily created by using ## to mark their title.</p>
+        </section>
+        <p>## New section</p>
+        <section id="section_rpv_wyt_4x">
+            <title>Inner and sibling topics</title>
+            <p>On the last paragraph, you can use # to mark an inner or sibling topic title</p>
+        </section>
+        <p># New topic</p>
+    </body>
+</topic>

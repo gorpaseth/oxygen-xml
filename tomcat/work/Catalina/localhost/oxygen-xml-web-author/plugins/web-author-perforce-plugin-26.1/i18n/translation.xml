@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Server_address">
+        <val lang="en_US">Server address</val>
+        <val lang="de_DE">Server-Addresse</val>
+        <val lang="fr_FR">Adresse du serveur</val>
+        <val lang="ja_JP">サーバーアドレス</val>
+        <val lang="nl_NL">Serveradres</val>
+        <val lang="zh_CN">服务器地址</val>
+    </key>
+    <key value="Server_port">
+        <val lang="en_US">Server port</val>
+        <val lang="de_DE">Server-Port</val>
+        <val lang="fr_FR">Port du serveur</val>
+        <val lang="ja_JP">サーバーポート</val>
+        <val lang="nl_NL">Serverpoort</val>
+        <val lang="zh_CN">服务器端口</val>
+    </key>
+    <key value="Backup_interval">
+        <val lang="en_US">Backup interval (sec)</val>
+        <val lang="de_DE">Sicherungsintervall (Sekunden)</val>
+        <val lang="fr_FR">Intervalle de copie de sauvegarde (sec)</val>
+        <val lang="ja_JP">バックアップ間隔 (秒)</val>
+        <val lang="nl_NL">Back-upinterval (sec)</val>
+        <val lang="zh_CN">备份间隔（秒）</val>
+    </key>
+    <key value="Backup_interval_description">
+        <val lang="en_US">If empty, documents are not backed up.</val>
+        <val lang="de_DE">Wenn leer, werden Dokumente nicht gesichert.</val>
+        <val lang="fr_FR">Si vide, aucune copie de sauvegarde des documents n'est créée.</val>
+        <val lang="ja_JP">空の場合、ドキュメントはバックアップされていません。</val>
+        <val lang="nl_NL">Als dit leeg is, wordt er geen back-up van documenten gemaakt.</val>
+        <val lang="zh_CN">如果为空，则不备份文档。</val>
+    </key>
+</translation>

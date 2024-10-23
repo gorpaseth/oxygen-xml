@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="Chess">
+  <title>Chess Basics for Beginners</title>
+  <body>
+    <p>Chess is a 2-player game that utilizes a chessboard and sixteen pieces of 6 types for each player. See Wikipedia for a basic history of the game of chess.</p>
+    <p>
+      <dl>
+        <dlentry>
+          <dt>Object of the Game</dt>
+          <dd>To win a chess match, a player must use their chess pieces to create a situation where
+            the opponent's king is unable to make a move to avoid capture.</dd>
+        </dlentry>
+      </dl>
+    </p>
+    <section id="section_chessboard">
+      <title>The Chessboard</title>
+      <p>A chessboard consists of 64 square spaces in an 8x8 grid. Sixteen "light" and sixteen
+        "dark" pieces are placed on the board at the beginning of the game. The board is placed so
+        that a white square is in each player's near-right corner. Horizontal rows are called
+          <i>ranks</i> and vertical rows are called <i>files</i>.</p>
+    </section>
+    <section id="section_pieces">
+      <title>The Chess Pieces</title>
+      <p>In a standard game of chess, each of the two players begins a game with the following 16
+        pieces:</p>
+    </section>
+    <section id="initial_setup">
+      <title>Initial Setup</title>
+      <p>At the beginning of the game, the pieces are arranged, one on a square, as follows:<ul>
+        <li>The 2 rooks are placed on the outside corners, right and left edge.</li>
+        <li>The 2 knights are placed immediately inside of the rooks.</li>
+        <li>The 2 bishops are placed immediately inside of the knights.</li>
+        <li>The queen is placed on the central square of the same color of that of the player
+          (white queen on the white square and black queen on the black square).</li>
+        <li>The king takes the vacant spot next to the queen.</li>
+        <li>The 8 pawns are placed one square in front of all of the other pieces.</li>
+      </ul></p>
+    </section>
+    <section id="gameplay">
+      <title>Gameplay</title>
+      <p>The player controlling the light pieces is usually named "White", while the player
+        controlling the dark pieces is usually named "Black". White moves first, then players
+        alternate moves. Making a move is required. It is not legal to skip a move, even when it is
+        detrimental to move. Play continues until a king is <term>checkmated</term>, a player forfeits, 
+        or a <term>draw</term> is declared.</p>
+    </section>
+    <section id="movement">
+      <title>Movement</title>
+      <p>Each type of chess piece has its own method of movement. A piece moves to a vacant square
+        except when capturing an opponent's piece.</p>
+      <p>Except for any move of the knight and <term>castling</term>, pieces cannot jump over other pieces. A piece is
+        <i>captured</i> (or <i>taken</i>) when an attacking enemy piece replaces it on its square.
+        The captured piece is thereby permanently removed from the game.</p>
+      <p>Note: The king can be put <term>in check</term> but cannot be captured. </p>
+      <p><u>Movement possibilities for each piece:</u></p>
+      <p>
+        <dl>
+          <dlentry id="King">
+            <dt>King</dt>
+            <dd>
+              <ul>
+                <li>The king can move <b>one</b> space at a time vertically, horizontally or
+                  diagonally. The king is not used as an attacking piece (except perhaps at the very
+                  end of the game) because, since he is so valuable, you want to keep him protected
+                  and out of harm's way. Nonetheless, he is capable of attacking any of the opposing
+                  pieces except the king and queen, to which he cannot get close enough to
+                  capture.</li>
+                <li>Kings are not offensive pieces. Your king is the piece you most want to protect,
+                  because if you lose him, you lose the game.</li>
+              </ul>
+            </dd>
+          </dlentry>
+          <dlentry id="Queen">
+            <dt>Queen</dt>
+            <dd>
+              <ul>
+                <li>The queen is the most powerful piece on the board. She can be thought of as the
+                  <b>rook and bishop combined.</b> The queen can move any number of vacant squares
+                  <i>horizontally, vertically or diagonally</i>.</li>
+                <li>Attacking with a queen is the same as with rooks and bishops. That is, she
+                  captures an opponent's piece that lies within her path by moving to that piece's
+                  square.</li>
+              </ul>
+            </dd>
+          </dlentry>
+          <dlentry id="Bishop">
+            <dt>Bishop</dt>
+            <dd>
+              <ul>
+                <li>Bishops may move any number of vacant squares in any <b>diagonal</b> direction.
+                  Like rooks, they may capture an opponent's piece within its path by stopping on
+                  that piece's square.</li>
+                <li>The bishop proceeds, lands, and captures diagonally and remains throughout the
+                  game on the same color squares on which it begins the game. Thus, each player has
+                  a white-square bishop and a dark-square bishop.</li>
+                <li>As with rooks, if another of your pieces blocks your bishop's path, the bishop
+                  must stop before reaching the occupied square. If the blocking piece belongs to
+                  your opponent, you may stop on (but not jump over) that square and capture the
+                  occupying piece.</li>
+              </ul>
+            </dd>
+          </dlentry>
+          <dlentry id="Knight">
+            <dt>Knight</dt>
+            <dd>
+              <ul>
+                <li>Knights are the <b>only pieces that can jump</b> over other pieces and thus are
+                  the only pieces that cannot be blocked. They move in an L-shaped pattern. That is,
+                  two squares horizontally or vertically and then one square perpendicular to that
+                  (in other words, two spaces horizontally and one space vertically or one space
+                  horizontally and two spaces vertically).</li>
+                <li>A knight captures a piece only when it lands on that piece's square. In other
+                  words, the knight can "jump" over other pieces (of either color) and capture a
+                  piece where it lands.</li>
+              </ul>
+            </dd>
+          </dlentry>
+          <dlentry id="Rook">
+            <dt>Rook</dt>
+            <dd>
+              <ul>
+                <li>Rooks may move <i>any</i> number of vacant squares <i>vertically</i> or
+                  <i>horizontally</i>. If an opponent's piece blocks the path, that piece may be
+                  captured by moving the rook to (but not beyond) the occupied square and removing
+                  the opponent's piece.</li>
+                <li>Rooks cannot jump over pieces of either color. If one of your other pieces
+                  blocks your rook's path, your rook must stop before reaching that square.</li>
+                <li><term>Castling</term> is a special move involving a rook and a king.</li>
+              </ul>
+            </dd>
+          </dlentry>
+          <dlentry id="Pawn">
+            <dt>Pawn</dt>
+            <dd>
+              <ul>
+                <li>Usually pawns move forward (never backward) one square. However, the first time
+                  it moves, a pawn may move forward either one or two squares. In all subsequent
+                  moves, a pawn is limited to moving one square at a time.</li>
+                <li>If an opponent's piece is directly in front of it, a pawn may not move forward
+                  and may not capture that piece.</li>
+                <li>A pawn may attack an opponent's piece only if the piece is one square
+                  <i>diagonally</i> forward from the pawn.</li>
+                <li><term>Pawn promotion</term> occurs when your pawn has marched all the way across the
+                  board to the eighth (your opponent's first) rank.</li>
+              </ul>
+            </dd>
+          </dlentry>
+        </dl>
+      </p>
+    </section>
+    <section id="section_castling">
+      <title>Castling</title>
+      <p><term>Castling</term> consists of moving the king two squares towards a rook, then placing
+        the rook on the other side of the king, adjacent to it. Castling is only permissible if
+        <b>ALL</b> of the following conditions are true:</p>
+      <ul>
+        <li>The king and rook involved in castling have not previously been moved.</li>
+        <li>There are no pieces between the king and the rook.</li>
+        <li>The king is not currently <term>in check</term>. Note that the king cannot pass through or end up in a square that
+          is under attack by an enemy piece (though the rook is permitted to be under attack and to
+          pass over an attacked square).</li>
+        <li>The rook did not become a rook from the promotion of a pawn.</li>
+      </ul>
+    </section>
+    <section id="section_promotion">
+      <title>Pawn Promotion</title>
+      <p>If a player advances a pawn to its eighth rank, the pawn is then <term>promoted</term>
+        (converted) to a queen, rook, bishop, or knight of the same color at the choice of the
+        player. The choice is not limited to previously captured pieces. Hence, it is theoretically
+        possible for a player to have up to nine queens or up to ten rooks, bishops, or knights if
+        all of their pawns are promoted.</p>
+    </section>
+    <section id="section_check">
+      <title>Check and Checkmate</title>
+      <p>A king is <term>in check</term> when it is under attack by at least one enemy piece. A
+        piece that is unable to move because it would place its own king <term>in check</term> may
+        still <term>check</term> the opposing player.</p>
+      <p>It is illegal to make a move that places or leaves one's king in check. The possible ways
+        to get out of check are:</p>
+      <ul>
+        <li><i>Move</i> the king to a square where it is not <term>in check</term>.</li>
+        <li><i>Capture</i> the checking piece (possibly with the king).</li>
+        <li><i>Block</i> the check by placing a piece between the king and the opponent's
+          threatening piece.</li>
+      </ul>
+      <p>If it is not possible to get out of check, the king is <b><term>checkmated</term></b> and
+        the game is over.</p>
+    </section>
+    <section id="section_draws">
+      <title>Draws</title>
+      <p>The game ends in a <term>draw</term> if any of these conditions occur:</p>
+      <ul>
+        <li>The player is not in check but has no legal move.</li>
+        <li>There is no possibility of <term>checkmate</term> for either side with any series of
+          legal moves.</li>
+        <li>Both players agree to a draw.</li>
+      </ul>
+    </section>
+  </body>
+</topic>

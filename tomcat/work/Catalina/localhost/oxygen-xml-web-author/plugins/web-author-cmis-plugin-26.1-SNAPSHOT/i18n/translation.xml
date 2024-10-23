@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Server_URL">
+        <val lang="en_US">Server URL</val>
+        <val lang="de_DE">Server-URL</val>
+        <val lang="fr_FR">URL du serveur</val>
+        <val lang="ja_JP">サーバー URL</val>
+        <val lang="nl_NL">Server-URL</val>
+        <val lang="zh_CN">服务器URL</val>
+    </key>
+    <key value="Cmis_server_note">
+        <val lang="en_US">The users will only be able to access files from this server URL.</val>
+        <val lang="de_DE">Die Benutzer werden auf Dateien nur über diese Server-URL zugreifen können.</val>
+        <val lang="fr_FR">Les utilisateurs ne pourront accéder aux fichiers qu'à partir l'URL de ce serveur.</val>
+        <val lang="ja_JP">ユーザーは、このサーバーURLからのみファイルにアクセスできます。</val>
+        <val lang="nl_NL">Gebruikers hebben alleen toegang tot bestanden via deze server-URL.</val>
+        <val lang="zh_CN">用户只能从此服务器URL访问文件。</val>
+    </key>
+    <key value="Example">
+        <val lang="en_US">Example</val>
+        <val lang="de_DE">Beispiel</val>
+        <val lang="fr_FR">Exemple</val>
+        <val lang="ja_JP">例</val>
+        <val lang="nl_NL">Voorbeeld</val>
+        <val lang="zh_CN">例子</val>
+    </key>
+    <key value="Server_name">
+        <val lang="en_US">Server name</val>
+        <val lang="de_DE">Name des Servers</val>
+        <val lang="fr_FR">Nom du serveur</val>
+        <val lang="ja_JP">サーバー名</val>
+        <val lang="nl_NL">Servernaam</val>
+        <val lang="zh_CN">服务器名称</val>
+    </key>
+    <key value="Server_logo_URL">
+        <val lang="en_US">Server logo URL</val>
+        <val lang="de_DE">URL des Server-Logos</val>
+        <val lang="fr_FR">URL du logo du serveur</val>
+        <val lang="ja_JP">サーバーロゴURL</val>
+        <val lang="nl_NL">Serverlogo-URL</val>
+        <val lang="zh_CN">服务器徽标URL</val>
+    </key>
+    <key value="Autosave_interval">
+        <val lang="en_US">Autosave interval</val>
+        <val lang="de_DE">Intervall für automatisches Speichern</val>
+        <val lang="fr_FR">Intervalle de sauvegarde automatique</val>
+        <val lang="ja_JP">自動保存間隔</val>
+        <val lang="nl_NL">Interval voor automatisch opslaan</val>
+        <val lang="zh_CN">自动保存间隔</val>
+    </key>
+    <key value="Seconds">
+        <val lang="en_US">seconds</val>
+        <val lang="de_DE">Sekunden</val>
+        <val lang="fr_FR">secondes</val>
+        <val lang="ja_JP">秒</val>
+        <val lang="nl_NL">seconden</val>
+        <val lang="zh_CN">秒</val>
+    </key>
+    <key value="Check_out_required">
+        <val lang="en_US">Check out required</val>
+        <val lang="de_DE">Check-Out erforderlich</val>
+        <val lang="fr_FR">Extraction obligatoire</val>
+        <val lang="ja_JP">チェックアウトが必要です</val>
+        <val lang="nl_NL">Uitchecken vereist</val>
+        <val lang="zh_CN">需要退房</val>
+    </key>
+    <key value="Checked_out_by">
+        <val lang="en_US">Checked out by {0}.</val>
+        <val lang="de_DE">Ausgecheckt von {0}.</val>
+        <val lang="fr_FR">Extrait par {0}.</val>
+        <val lang="ja_JP">{0}によりチェックアウトされました。</val>
+        <val lang="nl_NL">Uitgecheckt door {0}.</val>
+        <val lang="zh_CN">已由{0}签出。</val>
+    </key>
+    <key value="Old_ver_warning">
+        <val lang="en_US">Older version of document</val>
+        <val lang="de_DE">Ältere Version des Dokuments</val>
+        <val lang="fr_FR">Version antérieure du document</val>
+        <val lang="ja_JP">ドキュメントの古いバージョン</val>
+        <val lang="nl_NL">Oudere versie van document</val>
+        <val lang="zh_CN">文档的旧版本</val>
+    </key>
+    <key value="Cannot_check_out_checked_out_by">
+        <val lang="en_US">Cannot check out "{0}" because it is already checked out by "{1}".</val>
+        <val lang="de_DE">Auschecken nicht möglich. "{0}" ist ausgecheckt von {1}</val>
+        <val lang="fr_FR">Impossible d''extraire "{0}" car il est déjà extrait par "{1}".</val>
+        <val lang="ja_JP">チェックアウトをできません。{0} は {1} よってチェックアウトされました</val>
+        <val lang="nl_NL">Uitchecken is niet mogelijk. "{0}" is uitgecheckt door "{1}"</val>
+        <val lang="zh_CN">检出失败. {0} 被{1}检出</val>
+    </key>
+    <key value="Current">
+        <val lang="en_US">Current</val>
+        <val lang="de_DE">Aktuell</val>
+        <val lang="fr_FR">Actuelle</val>
+        <val lang="ja_JP">現在</val>
+        <val lang="nl_NL">Huidig</val>
+        <val lang="zh_CN">当前</val>
+    </key>
+</translation>

@@ -1,0 +1,25 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc","closure"]
+  },
+  "source": {
+    "includePattern": ".+\\.js$"
+  },
+  "plugins": ["../../gulp/jsdoc_forbid_private_functions.js"],
+  "templates": {
+    "systemName"            : "Oxygen XML Web Author",
+    "footer"                :
+    "<style>.navbar-fixed-top { position: static !important; } .page-title {color: #000 !important;} .jsdoc-message{display:none;} .sunlight-menu {display:none;}</style>",
+    "copyright"             : "",
+    "includeDate"           : false,
+    "syntaxTheme"           : "dark",
+    "theme"                 : "readable"
+  },
+  "opts": {
+    "destination": "../../../../target/site/jsdoc",
+    "recurse": true,
+    "tutorials": "../../../../src/site/tutorials",
+    "readme": "js/ext/README.md"
+  }
+}

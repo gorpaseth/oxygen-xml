@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><title>Oxygen XML Web Author</title><style>
+        .form-container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .auth-card {
+            max-width: 36em;
+            margin: 12px;
+            padding: 32px;
+            box-shadow: rgb(215 215 215) 0 0 10px;
+            border-radius: 4px;
+            font-family: robotolight,Arial,Helvetica,sans-serif;
+        }
+        .auth-buttons {
+            display: flex;
+            justify-content: center;
+            justify-items: stretch;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .auth-button {
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 8px 16px 8px 16px;
+            margin: 5px;
+            border: 1px solid 1px solid lightgray;
+            box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+            line-height: 21px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .auth-button.hide {
+            display: none;
+        }
+
+        .auth-button-icon-span {
+            height: 21px;
+            width: 21px;
+            margin-right: 8px;
+        }
+        .auth-button-icon {
+            width: 21px;
+        }
+
+
+
+        .auth-error {
+            padding: 4px;
+            background-color: #FEEBEB;
+            color: #b94a48;
+            border-color: #eed3d7;
+        }
+        .auth-error.hide {
+            display: none;
+        }
+    </style><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=css/admin-page-1af6f13cbe.css><script src=no-cache/translation-lite.js></script></head><body><div id=header-bar class=ui-layout-north><div class="header-left vertical-align-children"><a href=oxygen.html rel=external id=header-logo class=vertical-align-children><div class="large-logo logo-container vertical-align-children"><div class=ui-oxygen-logo></div></div></a> <span id=header-logo-caption-authenticate data-oxy-i18n-key=AUTHENTICATE>Authenticate</span></div><div style=float:right;margin-right:20px;margin-top:15px;><span id=langLabel>Language:</span><select id=languageSelect><option value=en_US>EN</option><option value=de_DE>DE</option><option value=fr_FR>FR</option><option value=ja_JP>JA</option><option value=nl_NL>NL</option><option value=zh_CN>ZH</option></select></div></div><div class=form-container><div class=auth-card><h3 data-oxy-i18n-key=AUTHENTICATION_CARD_TITLE>Authenticate to access Oxygen XML Web Author</h3><p data-oxy-i18n-key=AUTHENTICATION_EXPLANATION>You have to authenticate in order to access the application.</p><div class=auth-buttons><div class=auth-buttons><a class="auth-button hide" href=...><span class=auth-button-icon-span><img class=auth-button-icon></span> <span class=auth-button-text>Authenticate with ...</span></a></div></div><p class="auth-error hide"></p></div></div><script>
+
+  function showError(msgKey) {
+    let errorEl = document.querySelector(".auth-error");
+    errorEl.textContent = tr(msgs[msgKey]);
+    errorEl.setAttribute("data-oxy-i18n-key", msgKey);
+    errorEl.classList.remove("hide");
+  }
+
+  function renderAuthButton(authProvider) {
+    let button = document.querySelector(".auth-button");
+    button.classList.remove("hide");
+    button.setAttribute("href", "../rest/app-authentication/auth-redirect?provider=" + encodeURIComponent(authProvider.authProviderName));
+
+    let buttonText = document.querySelector(".auth-button-text");
+    buttonText.textContent = tr(msgs.AUTHENTICATE_WITH, { '$auth_provider_name': authProvider.authProviderName});
+    buttonText.setAttribute("data-oxy-i18n-key", "AUTHENTICATE_WITH");
+    buttonText.setAttribute("data-oxy-i18n-arg-auth_provider_name", authProvider.authProviderName);
+
+    if (authProvider.authProviderIcon) {
+      let icon = document.querySelector(".auth-button-icon");
+      icon.setAttribute("src", authProvider.authProviderIcon);
+      icon.setAttribute("alt", authProvider.authProviderName);
+    }
+  }
+
+  fetch('../rest/app-authentication/provider')
+      .then(response => response.json())
+      .then(authProvider => {
+        if (authProvider) {
+          renderAuthButton(authProvider);
+        } else {
+          showError("AUTHENTICATION_NO_POSSIBLE");
+        }
+      })
+      .catch((e) => {
+        console.warn(e);
+        showError("AUTHENTICATION_DETAILS_FAILED");
+      });
+</script></body></html>

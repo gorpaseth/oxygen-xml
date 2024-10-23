@@ -1,0 +1,312 @@
+.diff-stripe {
+    display: none;
+    width: 100%;
+    position: relative;
+    /* the labels container height*/
+    /*top: 23px;*/
+    z-index: 15;
+    font-size: 0.9em;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.diff-stripe {
+    box-sizing: border-box;
+}
+.diff-stripe > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.diff-stripe * {
+    box-sizing: border-box;
+    font-family: robotolight, Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    padding-left: 0.3em;
+    display: inline;
+}
+.diff-stripe a {
+    color: rgb(110, 119, 228);
+    text-decoration: none;
+    font-weight: bolder;
+}
+.diff-stripe.show {
+    display: flex;
+    align-items: center;
+}
+.oxy-spinner.middle:after {
+    top: 15%;
+}
+
+.diff-links.middle {
+    width: 100px;
+    min-width: 100px;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+}
+.diff-links.middle, #editor-frame > .oxy-document > [data-role="document"], #second-editor-frame > .oxy-document > [data-role="document"] {
+    /* Enforce same background color for editors and middle zone. */
+    background-color: #fbfbfb !important;
+}
+
+.diff-links.middle svg {
+    overflow: visible;
+    position: absolute;
+    stroke-width: 1.0;
+    /* Pentru ca svg-urile sunt unele peste altele. */
+    pointer-events: none;
+    z-index: 4;
+}
+.diff-links.middle svg > path {
+    fill: #edf8ff;
+    pointer-events: auto;
+    transition: stroke 200ms ease-out;
+}
+
+.diff-links.middle > svg.selected-diff {
+    z-index: 5;
+}
+
+/* Place inner links between element and page. */
+.oxy-document [data-root="true"] > *, .oxy-document [data-role="document"] > :not([data-root="true"]) {
+    position: relative;
+    z-index: 10;
+}
+.diff-links.inner > * {
+    z-index: 5;
+}
+.diff-links.inner > *.selected-diff {
+    z-index: 8;
+    border-bottom-color: gray;
+    border-top-color: gray;
+}
+#editor-frame-wrapper .diff-links.inner > *.selected-diff {
+    border-left-color: gray;
+}
+#second-editor-frame-wrapper .diff-links.inner > *.selected-diff {
+    border-right-color: gray;
+}
+
+.diff-links.inner > * {
+    position: absolute;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+    transition : border 200ms ease-out;
+}
+
+
+.diff-links.inner > [data-diff-type='1'] { /* Conflict */
+    border-color: rgb(255, 209, 209);
+}
+
+.diff-links.inner > [data-diff-type='2'] { /* Outgoing */
+    border-color: rgb(221, 221, 221);
+}
+
+.diff-links.inner > [data-diff-type='3'] { /* Incoming */
+    border-color: rgb(200, 226, 243);
+}
+
+
+.diff-links.middle > [data-diff-type='1'] { /* Conflict */
+    stroke: rgb(255, 209, 209);
+}
+
+.diff-links.middle > [data-diff-type='2'] { /* Outgoing */
+    stroke: rgb(221, 221, 221);
+}
+
+.diff-links.middle > [data-diff-type='3'] { /* Incoming */
+    stroke: rgb(200, 226, 243);
+}
+
+
+.diff-links.inner > .selected-diff {
+    border-color: grey;
+}
+.diff-links.middle > svg.selected-diff > path {
+    stroke: gray;
+}
+
+
+#editor-frame-wrapper .diff-links.inner > * {
+    border-left-style: solid;
+}
+#second-editor-frame-wrapper .diff-links.inner > * {
+    border-right-style: solid;
+}
+
+.range-ruler-container {
+    background: #e7e7e7;
+    border-left: 1px solid #c7c7c7;
+}
+.range-ruler {
+    height: 100%;
+    position: relative;
+}
+.range-ruler > .range {
+    width: 75%;
+    left: 5%;
+    min-height: 4px;
+    position: absolute;
+    border: 1px solid #aaaaaa;
+}
+.range-ruler > .range.selected-diff {
+    background-color: rgb(255, 255, 120) !important;
+    z-index: 1;
+}
+.range-ruler > .range.selected-diff, .range-ruler > .range:hover {
+    border: 1px solid #595959;
+}
+.range-ruler > .range:hover {
+    cursor: pointer;
+}
+
+
+
+.diff {
+    /* Fallback. */
+    background-color: rgb(153, 255, 153);
+}
+
+.diff.selected-diff {
+    background-color: rgb(255, 255, 120) !important;
+ }
+
+.diff.selected-diff:empty {
+    position: relative;
+}
+
+.diff.selected-diff .tag-min {
+    background-color: transparent !important;
+}
+
+.diff.selected-diff * {
+    background-color: rgb(255, 255, 120) !important;
+}
+
+/* Empty diffs look good with outline. */
+.diff.selected-diff:empty {
+    background-color: transparent!important;
+    white-space: nowrap;
+}
+
+/* Draw a taller caret. */
+.diff.selected-diff:empty:after {
+    content: '';
+    display: inline-block;
+    background-image: url("./icons/caret-arrow.svg");
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: -8px;
+    top: -5px;
+}
+.diff.selected-diff:empty {
+    border-left: 1px solid #7c790a;
+}
+
+/* Show comments from under diff. */
+mark[data-type="COMMENT"] .diff:not(.selected-diff) {
+    background-color: rgba(255, 209, 209, 0.2) !important;
+}
+
+.diff-parent-inline {
+    display: block;
+}
+
+/* Full width for the editors */
+#second-editor-frame *[data-root="true"],
+#editor-frame-wrapper *[data-root="true"] {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+/* WA-3364: Enforce max-width unset to prevent breaking the horizontal scroll. */
+.oxy-document, *[data-role="document"] {
+    max-width: unset !important;
+}
+
+/* Stripe colors. */
+.diff-stripe > * {
+    color: #2e6986;
+    background-color: #dceef7;
+    padding: 2px 15px;
+    width: 100%;
+}
+.diff-stripe > .success {
+    color: #0f7a0f;
+    background-color: #dbf4dc;
+}
+.diff-stripe > .warning {
+    color: #904f15;
+    background-color: #fcf6de;
+}
+.diff-stripe > .error {
+    color: #c00b15;
+    background-color: #ffe3e3;
+}
+
+#builtin-toolbar {
+    padding-right: 34px;
+}
+/** In Merge mode, we do not ever save the content and do not have a window title. Hide the dirty marker as well. */
+.modified-indicator {
+    display: none;
+}
+
+/* Diff links middle segment colors. */
+/* Same color as editor inner segments, lower opacity to make editor borders visible. */
+.diff-links.middle > svg[data-diff-type='1'] > path { /* Conflict */
+    fill: rgba(255, 237, 237, 0.5);
+}
+.diff-links.middle > svg[data-diff-type='2'] > path { /* Outgoing */
+    fill: rgba(242, 242, 242, 0.5);
+}
+.diff-links.middle > svg[data-diff-type='3'] > path { /* Incoming */
+    fill: rgba(237, 248, 255, 0.5);
+}
+.diff-links.middle > .selected-diff[data-diff-type='1'] > path { /* Conflict */
+    fill: rgba(255, 237, 237, 0.9);
+}
+.diff-links.middle > .selected-diff[data-diff-type='2'] > path { /* Outgoing */
+    fill: rgba(242, 242, 242, 0.9);
+}
+.diff-links.middle > .selected-diff[data-diff-type='3'] > path { /* Incoming */
+    fill: rgba(237, 248, 255, 0.9);
+}
+
+/* Diff links editor inner segment colors. */
+/* Range ruler segments for Outgoing changes gets the grey to match the lower importance. */
+.diff-links.inner > *[data-diff-type='1'] { /* Conflict */
+    background-color: rgba(255, 237, 237, 0.9);
+}
+
+.diff-links.inner > *[data-diff-type='2'],
+.range-ruler > *[data-diff-type='2'] { /* Outgoing */
+    background-color: rgba(242, 242, 242, 0.9);
+}
+
+.diff-links.inner > *[data-diff-type='3'] { /* Incoming */
+    background-color: rgba(237, 248, 255, 0.9);
+}
+
+/* Diff second level children colors. */
+/* Range ruler segments for Conflict and Incoming changes get this color to pop out more. */
+.diff[data-diff-type='1'][data-diff-parent],
+.range-ruler > *[data-diff-type='1'] { /* Conflict */
+    background-color: rgba(255, 209, 209, 0.9);
+}
+
+.diff[data-diff-type='2'][data-diff-parent] { /* Outgoing */
+    background-color: rgba(221, 221, 221, 0.9);
+}
+
+.diff[data-diff-type='3'][data-diff-parent],
+.range-ruler > *[data-diff-type='3'] { /* Incoming */
+    background-color: rgba(200, 226, 243, 0.9);
+}

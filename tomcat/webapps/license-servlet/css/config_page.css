@@ -1,0 +1,69 @@
+body {
+    width: auto;
+    max-width: 900px;
+    padding: 0 10px 0 10px;
+}
+
+.configContainer {
+  background-color: #f1f1f1;
+}
+
+.configLine {
+  padding: 7px;
+  border: 1px solid lightgray;
+  border-top: 0px;
+}
+
+.configLine:nth-child(1) {
+  border-top: 1px solid lightgray;
+}
+
+.configLine > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#emailEnabled, #lockEnabled {
+  width: 2%;
+}
+
+.configLabel {
+  width: 17%;
+  padding-left: 5px;
+}
+
+.lockLabel {
+    width:22%;
+    padding-left: 5px;
+}
+
+.configInput {
+  width: 81%;
+}
+
+.configInput > input {
+  width: 100%;
+}
+
+.lockInput {
+  width: 71%;
+}
+
+.buttonCheck {
+    display:inline-block;
+    margin: 10px 0 10px 0;
+}
+.clearFix {
+    clear: both;
+}
+.saveStatus {
+    display: none;
+}
+.success {
+    display: inline-block;
+    color: green;
+}
+.failed {
+    display: inline-block;
+    color: red;
+}

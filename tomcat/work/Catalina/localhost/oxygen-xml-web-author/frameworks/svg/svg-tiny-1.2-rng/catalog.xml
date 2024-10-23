@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="https://www.w3.org/TR/SVGTiny12/relaxng/Tiny-1.2.rng"  uri="Tiny-1.2.rng"/>
+    <uri name="https://www.w3.org/TR/SVGTiny12/relaxng/Tiny-1.2.nvdl"  uri="Tiny-1.2.nvdl"/>
+    <uriSuffix uriSuffix="relaxng/Tiny-1.2.nvdl" uri="Tiny-1.2.nvdl"/>
+</catalog>

@@ -1,0 +1,127 @@
+/* Move scroll to left side for the main editor.*/
+.scroll-on-left {
+    direction: rtl;
+}
+.scroll-on-left > * {
+    direction: ltr;
+}
+
+#diff-editors-frame {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    height: calc(100% - 23px);
+}
+
+#diff-editors-frame > #editor-stripes, #diff-editors-frame > #editor-stripes-bottom {
+	display: none;
+}
+
+#diff-stripes {
+	z-index: 10;
+}
+
+.diff-stripe.show + #diff-editors-frame {
+    height: calc(100% - (1.35em + 23px));
+}
+
+.diff-document-wrapper {
+    flex-basis: 50%;
+    position: relative;
+    z-index: 10;
+}
+.range-ruler-container {
+    width: 20px;
+}
+
+.diff-links.middle, .diff-middle-label {
+    width: 40px !important;
+    min-width: 40px !important;
+}
+.diff-links.middle path {
+    transform: scaleX(0.4) !important;
+}
+@media screen and (max-height: 500px) {
+    .range-ruler-container {
+        display: none;
+    }
+}
+
+.diff-document-wrapper {
+    height:100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+
+    overflow: auto !important;
+    /* Lets it scroll lazy */
+    -webkit-overflow-scrolling: touch !important;
+}
+
+#second-editor-frame {
+    margin: 0;
+    border: 0;
+    height:100%;
+    position: relative; /* Position relative to ensure #editor-frame is an offsetParent for the children within */
+    overflow: auto !important;
+}
+
+/* on smaller screens we lower the document padding */
+@media screen and (max-width: 1370px) {
+    .diff-document-wrapper *[data-root="true"] {
+        padding: 10px !important;
+    }
+}
+
+.diff-labels {
+    width: 100%;
+    position: relative;
+    height: 23px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #b4b4b4;
+    background-color: white;
+    display: flex;
+    /* compensate the range ruler width*/
+    padding: 0 20px 3px 0;
+    z-index: 15;
+    color: #282828;
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.diff-preview-label,
+.diff-main-label {
+    flex-basis: 50%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 0.9em;
+    padding-left: 20px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.diff-main-label {
+    padding-left: 20px;
+}
+
+#header.diff-has-labels {
+    border-bottom: 1px transparent;
+}
+
+.diff-iframe-container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border:1px solid #b4b4b4;
+}
+
+.diff-tooltip {
+    background-color: white;
+    padding: 3px;
+    margin: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}

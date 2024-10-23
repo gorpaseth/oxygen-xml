@@ -1,0 +1,30 @@
+.markdown-editing-area {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.md-url-row {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.md-url-label {
+	min-width: 80px;
+	width: 35%;
+	margin-right: 7px;
+	overflow-wrap: break-word;
+}
+
+.md-url-row .oxy-input {
+	flex-grow: 1;
+}
+
+.md-error-msg {
+	min-height: 20px; 
+	line-height: 20px; 
+	color: red; 
+	margin-top: 10px
+}

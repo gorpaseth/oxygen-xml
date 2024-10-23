@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="https://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+
+  <!-- Display name for the servlet -->
+  <display-name>oXygen License Servlet</display-name>
+
+  <!-- Define roles -->
+  <security-role>
+    <!-- Admin role -->
+    <role-name>admin</role-name>
+  </security-role>
+  <security-role>
+    <!-- Manager role -->
+    <role-name>manager</role-name>
+  </security-role>
+  <security-role>
+    <!-- User role -->
+    <role-name>user</role-name>
+  </security-role>
+
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>oXygen License Servlet</realm-name>
+  </login-config>
+  
+  <servlet>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <servlet-class>ro.sync.licenseservlet.LicenseServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <!-- The licensing part -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Root security constraints -->
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern></url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- Define a constraint to restrict access to /license-servlet -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-servlet folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Licensing Area</web-resource-name>
+      <url-pattern>/license-servlet</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- All user, manager or admin can access this area -->
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <display-name>Security constraint for the /license-servlet/ folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Licensing Area</web-resource-name>
+      <url-pattern>/license-servlet/</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- All user, manager or admin can access this area -->
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The HTML report -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/report</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/report -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/report folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Report Area</web-resource-name>
+      <url-pattern>/license-servlet/report</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin or manager users access this area -->
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The XML report -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/report-xml</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/report-xml -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/report-xml folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>XML Report Area</web-resource-name>
+      <url-pattern>/license-servlet/report-xml</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin or manager users access this area -->
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The Usage report -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/report-usage</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/report-usage -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/report-usage folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Report Area</web-resource-name>
+      <url-pattern>/license-servlet/report-usage</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin or manager users access this area -->
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The license replace page -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/replace-license</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/replace-license -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/replace-license folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/license-servlet/replace-license</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin users access this area -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The view license page -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/view-activated-license</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/view-activated-license -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/view-activated-license folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/license-servlet/view-activated-license</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin users access this area -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- The view RAW license page -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/view-raw-activated-license</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/view-raw-activated-license -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/view-raw-activated-license folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/license-servlet/view-raw-activated-license</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin users access this area -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The configuration page -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/configuration</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/configuration -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-server/configuration folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/license-servlet/configuration</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin users access this area -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- The user management page -->
+  <servlet-mapping>
+    <servlet-name>oXygenLicenseServlet</servlet-name>
+    <url-pattern>/license-servlet/user-management</url-pattern>
+  </servlet-mapping>
+  <!-- Define a constraint to restrict access to /license-servlet/user-management -->
+  <security-constraint>
+    <display-name>Security constraint for the /license-servlet/user-management folder</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/license-servlet/user-management</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin users access this area -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- Define a constraint to restrict access to index.jsp page -->
+  <security-constraint>
+    <display-name>Security constraint for the index.jsp page.</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/index.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin or manager users access this area -->
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <!-- Define a constraint to restrict access to allowed-users.html page -->
+  <security-constraint>
+    <display-name>Security constraint for the allowed-users.html page.</display-name>
+    <web-resource-collection>
+      <web-resource-name>Allowed Users page</web-resource-name>
+      <url-pattern>/allowed-users.html</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin or manager users access this area -->
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Define a constraint to restrict access to replace.jsp page -->
+  <security-constraint>
+    <display-name>Security constraint for the replace.jsp page.</display-name>
+    <web-resource-collection>
+      <web-resource-name>Admin Area</web-resource-name>
+      <url-pattern>/replace.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin users access this area -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <servlet>
+    <servlet-name>ProxySettings</servlet-name>
+    <servlet-class>ro.sync.licenseservlet.polling.ProxySettingsServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <!-- The licensing part -->
+  <servlet-mapping>
+    <servlet-name>ProxySettings</servlet-name>
+    <url-pattern>/proxy-settings</url-pattern>
+  </servlet-mapping>
+
+  <!-- Define a constraint to restrict access to proxy settings -->
+  <security-constraint>
+    <display-name>Security constraint for the proxy settings</display-name>
+    <web-resource-collection>
+      <web-resource-name>Proxy Settings</web-resource-name>
+      <url-pattern>/proxy-settings</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin access is available. -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <servlet>
+    <servlet-name>LicensePolling</servlet-name>
+    <servlet-class>ro.sync.licenseservlet.polling.LicensePollingServlet</servlet-class>
+  </servlet>
+  <!-- The licensing part -->
+  <servlet-mapping>
+    <servlet-name>LicensePolling</servlet-name>
+    <url-pattern>/license-polling</url-pattern>
+  </servlet-mapping>
+
+  <!-- Define a constraint to restrict access to license polling -->
+  <security-constraint>
+    <display-name>Security constraint for the license polling</display-name>
+    <web-resource-collection>
+      <web-resource-name>LicensePolling</web-resource-name>
+      <url-pattern>/license-polling</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin access is available. -->
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <servlet>
+    <servlet-name>Initial setup servlet</servlet-name>
+    <servlet-class>ro.sync.licenseservlet.initial.InitialSetupServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Initial setup servlet</servlet-name>
+    <url-pattern>/initial-setup</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Usage statistics endpoint -->
+  <servlet>
+    <servlet-name>UsageStatisticsEndpoint</servlet-name>
+    <servlet-class>ro.sync.licenseservlet.statistics.UsageStatisticsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsageStatisticsEndpoint</servlet-name>
+    <url-pattern>/usage-statistics</url-pattern>
+  </servlet-mapping>
+  <!-- Restrict access to statistics for only admin users -->
+  <security-constraint>
+    <display-name>Security constraint for the usage statistics</display-name>
+    <web-resource-collection>
+      <web-resource-name>UsageStatisticsEndpoint</web-resource-name>
+      <url-pattern>/usage-statistics</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <!-- Only admin and managers can access. -->
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+
+  <!-- Servlet providing access to the allowed users list -->
+  <servlet>
+    <servlet-name>Allowed users servlet</servlet-name>
+    <servlet-class>ro.sync.licenseservlet.AllowedUsersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Allowed users servlet</servlet-name>
+    <url-pattern>/allowed-users</url-pattern>
+  </servlet-mapping>
+
+  <security-constraint>
+    <display-name>Security constraint for allowed users access</display-name>
+    <web-resource-collection>
+      <web-resource-name>Allowed users servlet</web-resource-name>
+      <url-pattern>/allowed-users</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <error-page>
+    <error-code>401</error-code>
+    <location>/error/401.html</location>
+  </error-page>
+
+  <listener>
+    <listener-class>ro.sync.licenseservlet.LogbackContextConfigurator</listener-class>
+  </listener>
+  <listener>
+    <listener-class>ro.sync.licenseservlet.LicenseServletStarter</listener-class>
+  </listener>
+  
+  <!-- Register the SSL Redirect filter -->
+  <filter>
+    <filter-name>SSL Redirect filter</filter-name>
+    <filter-class>ro.sync.servlet.ssl.SSLRedirectFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SSL Redirect filter</filter-name>
+    <url-pattern>/*</url-pattern>
+   </filter-mapping>
+</web-app>

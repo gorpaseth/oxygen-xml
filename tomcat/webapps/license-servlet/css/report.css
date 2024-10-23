@@ -1,0 +1,107 @@
+.nameNoLock {
+    width: 25%;
+}
+
+.sinceNoLock {
+    width: 25%;
+}
+
+.hostNoLock {
+    width: 25%;
+}
+
+.macNoLock {
+    width: 25%;
+}
+
+.name {
+    width: 20%;
+}
+
+.since {
+    width: 25%;
+}
+
+.host {
+    width: 25%;
+}
+
+.mac {
+    width: 20%;
+}
+
+.locked {
+    width: 10%;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+.lock {
+    display: inline-block;
+    width: 1.2em;
+    height: 100%;
+    background-image: 
+    url('data:image/svg+xml;utf8,<svg width="1.2em" height="1.2em" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M640 768h512v-192q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-576q0-40 28-68t68-28h32v-192q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" fill="#337AB7"/></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.unlock {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    padding-left: 0.2em;
+    text-decoration: underline;
+    color: #337AB7;
+}
+
+.lock,
+.unlock {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+td {
+    position: relative;
+}
+
+.ximage {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -3px;
+    top: calc(50% - 15px);
+    right: 5px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+
+    padding: 5px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0OTAgMTMyMnEwIDQwLTI4IDY4bC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTI5NC0yOTQtMjk0IDI5NHEtMjggMjgtNjggMjh0LTY4LTI4bC0xMzYtMTM2cS0yOC0yOC0yOC02OHQyOC02OGwyOTQtMjk0LTI5NC0yOTRxLTI4LTI4LTI4LTY4dDI4LTY4bDEzNi0xMzZxMjgtMjggNjgtMjh0NjggMjhsMjk0IDI5NCAyOTQtMjk0cTI4LTI4IDY4LTI4dDY4IDI4bDEzNiAxMzZxMjggMjggMjggNjh0LTI4IDY4bC0yOTQgMjk0IDI5NCAyOTRxMjggMjggMjggNjh6IiBmaWxsPSJyZ2IoNTEsIDEyMywgMTgzKSIvPjwvc3ZnPg==');
+    opacity: 0.30;
+    cursor: pointer;
+}
+
+td:hover .ximage {
+    opacity: 1;
+}
+
+#withTooltip {
+  z-index: 999;
+}
+
+#noTooltip span {
+  display: none;
+}
+
+#withTooltip span {
+  font-weight: normal;
+  display: block;
+  position: absolute;
+  border: 1px solid black;
+  top: 2em;
+  left: 3em;
+  background-color: #FFFF99;
+  min-width: 20em;
+}

@@ -1,0 +1,56 @@
+<configuration>
+    <appender name="R" class="com.oxygenxml.privilegedlogs.PrivilegedConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+          <pattern>%date{ISO8601} %level [ %thread ] %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="R2" class="com.oxygenxml.privilegedlogs.PrivilegedRollingFileAppender">
+      <file>${oxygen.logs.file:-target/oxygen-logs.log}</file>
+
+      <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+          <minIndex>1</minIndex>
+          <maxIndex>4</maxIndex>
+
+          <fileNamePattern>${oxygen.logs.file:-target/oxygen-logs.log}.%i.log</fileNamePattern>
+      </rollingPolicy>
+
+      <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+        <maxFileSize>12000KB</maxFileSize>
+      </triggeringPolicy>
+
+      <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+        <pattern>%date{ISO8601} %level [ %thread ] %logger - %msg%n</pattern>
+        <charset>UTF-8</charset>
+      </encoder>
+    </appender>
+
+    <Logger name="org.jboss.resteasy.jsapi.JSAPIWriter" level="warn"/>
+    <Logger name="org.jboss.resteasy.jsapi.i18n" level="error"/>
+    <Logger name="ro.sync.contentcompletion" level="info"/>
+    <Logger name="ro.sync.exml.options" level="info"/>
+    <Logger name="ro.sync.syntaxhighlight" level="info"/>
+    <Logger name="ro.sync.exml.editor.ValidationAssistant" level="info"/>
+    <Logger name="ro.sync.exml.editor.xmleditor.XMLErrorScanner" level="info"/>
+    <Logger name="ro.sync.options" level="info"/>
+    <Logger name="ro.sync.servlet.errors.DefaultExceptionHandler" level="info"/>
+    <Logger name="ro.sync.servlet.StartupServlet" level="info"/>
+    <Logger name="ro.sync.azcheck.ui.spellcontrol.hunspell" level="info"/>
+    <Logger name="ro.sync.auth.FormAuthFilterWithForwardedLoginPage" level="info"/>
+
+    <root level="warn">
+        <appender-ref ref="R"/>
+        <appender-ref ref="R2"/>
+    </root>
+    
+    <!-- Logger to be used by plugins that want to output JSON messages directly to STDOUT. -->
+    <appender name="NO_LAYOUT_STDOUT_APPENDER" class="com.oxygenxml.privilegedlogs.PrivilegedConsoleAppender">
+      <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+        <pattern>%m%n</pattern>
+      </encoder>  
+    </appender>
+    <Logger name="NO_LAYOUT_LOGGER" level="info" additivity="false">
+      <appender-ref ref="NO_LAYOUT_STDOUT_APPENDER" />
+    </Logger>
+
+</configuration>

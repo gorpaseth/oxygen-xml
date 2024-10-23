@@ -1,0 +1,382 @@
+@CHARSET "ISO-8859-1";
+
+body {
+  color: #333333;
+  padding: 0;
+  background-color: #fff;
+  margin: 30px auto;
+  width: 900px;
+  line-height: 1.5em;
+}
+
+h1 {
+  margin-top:10px;
+}
+
+.mainTitle {
+    display: block;
+    line-height: 1.4em;
+    text-decoration: none;
+    text-align: left;
+    color: #337AB7;
+}
+
+h2 {
+  line-height: 1.7em;
+  color:#444444;
+}
+
+h3{
+  margin-top:1.5em;
+  margin-bottom:0.5em;  
+}
+
+a.link {
+  font-weight: normal;
+  color: #235EB6;
+  text-decoration: none;
+}
+
+a.link:hover {
+  text-decoration: none;
+  color: #FF3300;
+}
+
+#noLicenseFormTextArea {
+  color: #666;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 5px 0px 10px 0px;
+  padding: 10px;
+  border: #999 1px solid;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+  -webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+  -moz-box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+}
+
+#noLicenseFormTextArea:focus {
+  color: #000;
+  outline: none;
+  border: #35a5e5 1px solid;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  -webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  -moz-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.textKeeper {
+  display: block;
+  padding: 8px 10px;
+  outline: 0;
+  border-radius: 5px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  margin: 0px;
+}
+
+form {
+  font-weight: normal;
+  display: block;
+}
+
+/* Stiles for the license statistics table. */
+body, table {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-size: 14px;
+}
+
+.emf{font-weight: bold; color: #666}
+
+table {
+  border: 1px solid #808080;
+  border-collapse: collapse;
+  min-width: 50em;
+  width: 100%;
+  table-layout:fixed;
+}
+
+td {
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border: 1px solid #CCCCCC;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+ul.how-to > li{margin-top: 1em}
+
+.notice{
+  font-weight: bold;
+  color: #ff484d;
+}
+
+.loadingError,
+.error-msg {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding-left: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.success-msg {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+        
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.close-button {
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.dialog-header > .close-button {
+  right: 20px;
+  top: 15px;
+}
+
+.proc {
+  height: 20px;
+  color: white;
+  border:0;
+}
+
+.info {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+.info td {
+    padding: 0.5em;
+    line-height: 1.6em
+}
+.info td:first-child {
+    width:200px;
+    background-color: #DDEEFF;
+    font-weight:bold;
+}
+
+.note{
+   background-color: #ECF5FD;
+   padding:0.7em 1em;
+   font-size: 0.9em;
+   border: 1px solid #C4D0DA;
+   border-radius: 5px;
+}
+
+.procFree {
+  background-color: #52803d;
+  background: linear-gradient(#6AA250, #44712F);
+  border:0;
+  padding: 0.4em 1em;
+}
+
+.procUsed {
+  background-color: #CC0000;
+  background: linear-gradient(#cc0000, #9A0909);
+  border:0;
+  padding: 0.4em 1em;
+  white-space:nowrap;
+}
+.tt {
+  position: relative;
+}
+
+.ttHover {
+  position: relative;
+  z-index: 999;
+}
+
+.tt span {
+  display: none;
+}
+
+.ttHover span {
+  font-weight: normal;
+  display: block;
+  position: absolute;
+  border: 1px solid black;
+  top: 2em;
+  left: 5em;
+  background-color: #FFFF99;
+  min-width: 20em;
+}
+
+/* License replace confirm dialog. */
+.button {
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 1em;
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  padding:0.5em 2em;
+  text-decoration: none;
+  height: 22px;
+  display: inline-block;
+  box-sizing: content-box;
+}
+
+.button:hover {
+  background-color: #326DA0;
+}
+
+.proxy-settings{
+  max-width: 650px  
+}
+
+.textfield {
+  width: 300px;
+  margin: 5px 0 15px;
+  line-height: 1.5em;
+  padding:0.4em;
+  border:1px solid #bbb;
+  border-radius:5px;
+  
+}
+
+input[name='http.proxyUser'], input[name='http.proxyPassword']{width:420px  }
+
+.textfield-label {
+  line-height: 1.5em;
+  margin: 0 10px;
+  display: inline-block;
+}
+.proxy-host-textfield {
+  width: 300px;
+}
+.proxy-port-textfield {
+  width: 50px;
+}
+
+.refresh-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  border-color: transparent;
+  font-weight: normal;
+  color: #235EB6;
+  outline: none;
+  cursor: pointer;
+}
+.refresh-button:hover {
+  color: #FF3300;
+}
+
+/* Elements that should appear only when JS is enabled. */
+.script-only {
+  visibility: hidden;
+}
+
+.status-message {
+  color: grey;
+  font-style: italic;
+}
+
+.auto-check-box {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.success {
+  color: #278A27;
+}
+
+.fail {
+  color: #cc0000;
+}
+
+h2{margin-bottom:0;}
+ul, ol{margin-top:0;}
+
+.inline-img {
+  vertical-align: text-bottom;
+  width: 16px;
+  height: 16px;
+}
+#confirmLicenseDialogMask, #tooManyUsersDialogMask {
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: #565656;
+  opacity: 0.5;
+}
+
+#confirmLicenseDialog, #tooManyUsersDialog {
+  display:none;
+  position: absolute;
+  width: 400px;
+  height: 270px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  border:1px solid #bbb;
+  border-radius:5px;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  font-size: 1.1em;
+  line-height: 1.1;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,.4);
+}
+
+#tooManyUsersDialog {
+  width: 400px;
+  height: 170px;
+}
+
+#noLicenseFormConfirmButton {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -85px;
+}
+
+.dialog-header {
+  height: 20px;
+}
+
+.valid-component {
+	display: none;
+}
+
+.show-allowed-users {
+	float: right;
+}

@@ -1,0 +1,40 @@
+.mainTitle {
+    display: block;
+    line-height: 1.4em;
+    text-decoration: none;
+    text-align: left;
+    color: #337AB7;
+}
+
+.header {
+    line-height: 2.2em !important;
+    font-weight:bold;
+    background-color: white !important;
+}
+
+.activeInput {
+    width: 81%;
+}
+
+.active {
+    background-color: white;
+}
+
+.inactive {
+    background-color: #F1F1F1;
+}
+
+.activeInput > input {
+    width: 3%;
+}
+
+.userBanned {
+    display: inline-block;
+}
+
+#okButton {
+    display: block;
+    width: 30px;
+    margin: auto;
+    margin-top: 30px;
+}

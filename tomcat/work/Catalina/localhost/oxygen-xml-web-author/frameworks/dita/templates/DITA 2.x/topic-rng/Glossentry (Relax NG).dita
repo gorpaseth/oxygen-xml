@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="urn:pubid:oasis:names:tc:dita:rng:glossentry.rng:2.x" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<glossentry id="glossentry_${id}">
+    <glossterm>${caret}</glossterm>
+    <glossdef></glossdef>
+</glossentry>

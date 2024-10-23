@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE dita
+  PUBLIC "-//OASIS//DTD DITA Composite//EN" "../../../../dtd/ditabase.dtd">
+<dita>
+   <topic xml:lang="en-us" id="installingThePhotoAlbumApplicationOnLinux.d12e2">
+      <title>Installing the <i>Photo Album Application</i> on Linux</title>
+      <body>
+        <section xml:lang="en-us" id="prerequisites.d12e12">
+          <title>Prerequisites</title>
+          <p>Before installing the photo album organizer you must check that your computer fulfills
+            some basic requirements.</p>
+          <ol>
+            <li>
+              <i>Disk Space</i>
+              <p audience="novice">The application needs at least 100MB free disk space. Ask
+                your system administrator for help.</p><p audience="expert">The application
+              needs at least 100MB free disk space. To find the available free space on your
+              disk, type <cmdname>df</cmdname> in a terminal and check that the partition
+              where you want to install the program has at least 100 MB free space. You can
+              see the free space in the <ph>Avail</ph>
+              column.<pre>Filesystem            Size  Used Avail Use% Mounted on
+              /dev/md0               73G   65G  4.3G  94% /
+              /dev/sda2              92M  5.7M   81M   7% /boot
+              /dev/sdd1             230G   31G  188G  15% /home
+              /dev/sdd2             230G  153G   65G  71% /usr/local</pre>
+              </p></li>
+            <li>
+              <i>Physical Memory</i>
+              <p>The application needs at lest 1GB of total memory.</p></li>
+            <li><i>CPU</i>
+              <p>The CPU must be at least dual core at minimum 1.5GHz.</p></li>
+          </ol>
+        </section>
+      <section xml:lang="en-us" id="installing.d12e54">
+         <title>Installing</title>
+        <p>To install the program follow these steps.</p>
+        <p>
+          <ol>
+            <li>Download the <i>Linux</i> archive, then run the
+              <cmdname>md5</cmdname> utility over the downloaded file to check its
+              integrity.
+            </li>
+            <li>Using a terminal, change directory to <filepath>/usr/local</filepath>.
+            </li>
+            <li>
+              Make a directory <filepath>photo-album</filepath>, then extract the
+              downloaded file here, using <cmdname>tar</cmdname> command.
+            </li>
+            <li>
+              Create a symbolic link from your Desktop to the executable script
+              <filepath>photo-album.sh</filepath>
+            </li>
+          </ol>
+        </p>
+      </section>
+     </body>
+   </topic>
+</dita>

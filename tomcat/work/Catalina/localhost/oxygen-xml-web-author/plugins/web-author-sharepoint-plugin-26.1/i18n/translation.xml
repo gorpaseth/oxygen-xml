@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Authentication_required">
+        <val lang="en_US">Authentication required</val>
+        <val lang="de_DE">Authentifikation erforderlich</val>
+        <val lang="fr_FR">Authentification requise</val>
+        <val lang="ja_JP">認証が必要です</val>
+        <val lang="nl_NL">Verificatie vereist</val>
+        <val lang="zh_CN">需要身份验证</val>
+    </key>
+    <key value="Authentication_title">
+        <val lang="en_US">Authentication</val>
+        <val lang="de_DE">Authentifikation</val>
+        <val lang="fr_FR">Authentification</val>
+        <val lang="ja_JP">認証</val>
+        <val lang="nl_NL">Authenticatie</val>
+        <val lang="zh_CN">身份验证</val>
+    </key>
+    <key value="Sharepoint_oauth">
+        <val lang="en_US">The SharePoint Plugin uses OAuth 2.0 authentication to gain access to your
+      files.</val>
+        <val lang="de_DE">Das SharePoint-Plugin verwendet OAuth-2.0-Authentifizierung, um Zugang zu
+      Ihren Dateien zu erhalten.</val>
+        <val lang="fr_FR">Le plugin SharePoint utilise l'authentification OAuth 2.0 pour accéder à vos
+      fichiers.</val>
+        <val lang="ja_JP">SharePointプラグインは、あなたのファイルへのアクセスを取得するため、OAuth 2.0認証を使用します。</val>
+        <val lang="nl_NL">De SharePoint-plug-in maakt gebruik van verificatie met OAuth 2.0 om toegang
+      te krijgen tot uw bestanden.</val>
+        <val lang="zh_CN">SharePoint插件使用OAuth 2。0身份验证来访问您的文件。</val>
+    </key>
+    <key value="Go_to_Azure_Management">
+        <val lang="en_US">To obtain the configuration parameters listed below go to the {0}Azure
+      Management Portal{1} and register a new application.</val>
+        <val lang="de_DE">Um die unten aufgelisteten Konfigurationsparameter zu erhalten, öffnen Sie das
+      {0}Azure-Management-Portal{1} und registrieren Sie eine neue Anwendung.</val>
+        <val lang="fr_FR">Pour obtenir les paramètres de configuration listés ci-dessous allez au
+      {0}Portail de Management Azure{1} et enregistrez une nouvelle application.</val>
+        <val lang="ja_JP">以下に一覧表示される構成パラメーターを取得するには、{0}Azure管理ポータルl{1}に移動し、新しいアプリケーションを登録してください。</val>
+        <val lang="nl_NL">Als u de onderstaande configuratieparameters wilt verkrijgen, gaat u naar de
+      {0}Azure Management Portal{1} en registreert u een nieuw programma.</val>
+        <val lang="zh_CN">要获取下面列出的配置参数，请转到{0}Azure管理门户{1}并注册一个新应用程序。</val>
+    </key>
+    <key value="Note">
+        <val lang="en_US">Note</val>
+        <val lang="de_DE">Hinweis</val>
+        <val lang="fr_FR">Note</val>
+        <val lang="ja_JP">注</val>
+        <val lang="nl_NL">Opmerking</val>
+        <val lang="zh_CN">注意</val>
+    </key>
+    <key value="Sharepoint_redirect_url_format">
+        <val lang="en_US">The {0}Redirect URL{1} parameter must have the following format:</val>
+        <val lang="de_DE">Der {0}Redirect-URL{1} Parameter muss das folgende Format haben:</val>
+        <val lang="fr_FR">Le paramètre {0}URL de redirection{1} doit avoir le format suivant :</val>
+        <val lang="ja_JP">{0}リダイレクトURL{1}パラメーターは、次の形式に従う必要があります：</val>
+        <val lang="nl_NL">De parameter {0}Omleidings-URL{1} moet de volgende opmaak hebben:</val>
+        <val lang="zh_CN">{0}重定向URL{1}参数必须具有以下格式：</val>
+    </key>
+    <key value="Example">
+        <val lang="en_US">Example</val>
+        <val lang="de_DE">Beispiel</val>
+        <val lang="fr_FR">Exemple</val>
+        <val lang="ja_JP">例</val>
+        <val lang="nl_NL">Voorbeeld</val>
+        <val lang="zh_CN">示例</val>
+    </key>
+    <key value="Client_ID">
+        <val lang="en_US">Client ID</val>
+        <val lang="de_DE">Client-ID</val>
+        <val lang="fr_FR">ID Client</val>
+        <val lang="ja_JP">クライアントID</val>
+        <val lang="nl_NL">Client-ID</val>
+        <val lang="zh_CN">客户端ID</val>
+    </key>
+    <key value="Client_Secret">
+        <val lang="en_US">Client Secret</val>
+        <val lang="de_DE">Client-Secret</val>
+        <val lang="fr_FR">Client Secret</val>
+        <val lang="ja_JP">クライアントシークレット</val>
+        <val lang="nl_NL">Clientgeheim</val>
+        <val lang="zh_CN">客户秘钥</val>
+    </key>
+    <key value="Redirect_URL">
+        <val lang="en_US">Redirect URL</val>
+        <val lang="de_DE">Redirect-URL</val>
+        <val lang="fr_FR">URL de redirection</val>
+        <val lang="ja_JP">リダイレクトURL</val>
+        <val lang="nl_NL">Omleidings-URL</val>
+        <val lang="zh_CN">重定向URL</val>
+    </key>
+    <key value="Autosave_interval">
+        <val lang="en_US">Autosave interval</val>
+        <val lang="de_DE">Intervall für automatisches Speichern</val>
+        <val lang="fr_FR">Intervalle de sauvegarde automatique</val>
+        <val lang="ja_JP">自動保存間隔</val>
+        <val lang="nl_NL">Interval voor automatisch opslaan</val>
+        <val lang="zh_CN">自动保存间隔</val>
+    </key>
+    <key value="Editor_settings_title">
+        <val lang="en_US">Editor settings</val>
+        <val lang="de_DE">Editoreinstellungen</val>
+        <val lang="fr_FR">Paramètres de l'éditeur</val>
+        <val lang="ja_JP">エディター設定</val>
+        <val lang="nl_NL">Editor-instellingen</val>
+        <val lang="zh_CN">编辑器设置</val>
+    </key>
+    <key value="Anyone_can_check_in">
+        <val lang="en_US">Allow anyone to Check-In a document.</val>
+        <val lang="de_DE">Erlaube jedem ein Dokument einzuchecken.</val>
+        <val lang="fr_FR">Permettre à tout le monde d'enregistrer un document.</val>
+        <val lang="ja_JP">誰でもドキュメントをチェックインできるようにします。</val>
+        <val lang="nl_NL">Iedereen toestaan om een document in te checken.</val>
+        <val lang="zh_CN">允许任何人签入文档。</val>
+    </key>
+</translation>

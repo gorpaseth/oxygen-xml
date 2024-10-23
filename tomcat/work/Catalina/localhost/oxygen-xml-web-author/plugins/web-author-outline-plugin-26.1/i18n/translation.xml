@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+        <language description="English" lang="en_US"/>
+        <language description="German" lang="de_DE"/>
+        <language description="French" lang="fr_FR"/>
+        <language description="Japanese" lang="ja_JP"/>
+        <language description="Dutch" lang="nl_NL"/>
+        <language description="Chinese" lang="zh_CN"/>
+    </languageList>
+    <key value="OUTLINE_PLACEMENT">
+        <val lang="en_US">Outline placement</val>
+        <val lang="de_DE">Outline-Platzierung</val>
+        <val lang="fr_FR">Position du sommaire</val>
+        <val lang="ja_JP">アウトラインの配置</val>
+        <val lang="nl_NL">Plaatsing van overzicht</val>
+        <val lang="zh_CN">大纲停靠</val>
+    </key>
+    <key value="Left">
+        <val lang="en_US">Left</val>
+        <val lang="de_DE">Links</val>
+        <val lang="fr_FR">Gauche</val>
+        <val lang="ja_JP">左</val>
+        <val lang="nl_NL">Links</val>
+        <val lang="zh_CN">左</val>
+    </key>
+    <key value="Right">
+        <val lang="en_US">Right</val>
+        <val lang="de_DE">Rechts</val>
+        <val lang="fr_FR">Droit</val>
+        <val lang="ja_JP">右</val>
+        <val lang="nl_NL">Rechts</val>
+        <val lang="zh_CN">右</val>
+    </key>
+</translation>

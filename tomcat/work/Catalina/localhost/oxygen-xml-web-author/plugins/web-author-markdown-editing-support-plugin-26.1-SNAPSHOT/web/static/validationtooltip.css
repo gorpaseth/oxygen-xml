@@ -1,0 +1,85 @@
+/**
+ * Markdown validation styles, only loaded when validation is enabled.
+ */
+@font-face {
+  font-family: roboto;
+  src: url("../../app/fonts/RobotoTTF/Roboto-Regular.ttf");
+}
+.tooltip-hovercard {
+  width: 250px;
+
+  background-color: white;
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  z-index: 5000;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border: solid 1px #ded7d7;
+}
+.tooltip-hovercard .preview {
+  padding: 10px;
+}
+
+.preview[data-severity="info"] {
+  border-left: 4px solid rgba(100, 155, 225, 0.5) /*#2390ff*/;
+}
+
+.preview[data-severity="warning"] {
+  border-left: 4px solid rgba(250, 210, 50, 0.5);
+}
+
+.preview[data-severity="error"] {
+  border-left: 4px solid rgba(255, 85, 85, 0.5);
+}
+
+.preview-comment-tooltip {
+  font-weight: normal;
+  border-top: solid 1px #ded7d7;
+  margin-top: 5px;
+  padding: 6px 2px;
+  min-height: 60px;
+  max-height: 220px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.preview-comment-tooltip:empty {
+  display: none;
+}
+
+.marker_preview_tooltip {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin: 0 5px 3px 0;
+}
+
+.comment-wrapper {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+#hovercard-mask {
+  position: absolute;
+  background: transparent;
+  pointer-events: none;
+  width: 100%;
+  z-index:-1;
+}
+
+.validation-info {
+  border-bottom: 1px solid rgb(100, 155, 225);
+}
+
+.validation-warning {
+  border-bottom: 1px solid rgb(250, 210, 50);
+}
+
+.validation-error {
+  border-bottom: 1px solid rgb(255, 85, 85);
+}

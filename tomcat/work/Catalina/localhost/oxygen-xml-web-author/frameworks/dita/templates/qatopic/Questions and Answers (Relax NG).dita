@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:com:oxygenxml:specialization:qatopic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<qatopic id="${id}">
+  <title>Frequently asked questions</title>
+  <qabody>
+    <qagroup id="${id}">
+      <question></question>
+      <answer></answer>
+    </qagroup>
+  </qabody>
+</qatopic>

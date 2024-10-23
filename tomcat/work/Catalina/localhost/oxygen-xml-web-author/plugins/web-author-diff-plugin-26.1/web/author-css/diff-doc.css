@@ -1,0 +1,7 @@
+:root:diff *:not(:diff-inside) {
+    -oxy-folded: true !important;
+}
+
+:root:diff :diff-inside {
+    -oxy-folded: false !important;
+}

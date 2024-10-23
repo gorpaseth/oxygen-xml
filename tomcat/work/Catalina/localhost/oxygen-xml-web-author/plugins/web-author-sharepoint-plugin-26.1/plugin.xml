@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSATALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+        id="com.oxygenxml.examples.sharepoint.CustomProtocol"
+        name="SharePointPlugin"
+        description="A plugin that enable editing of files stored on a Office 365 SharePoint site."
+        version="26.1"
+        vendor="Syncro Soft"
+        class="com.oxygenxml.webapp.sharepoint.SharepointPlugin">
+    <runtime>
+        <librariesFolder name="lib"/>
+        <library name="target\classes\"/>
+    </runtime>
+    <!-- The SharePoint URLs handler -->
+    <extension type="URLHandler"
+               class="com.oxygenxml.webapp.sharepoint.SharepointURLHandlerExtension"/>
+    <!-- The servlet used to perform the OAuth 2.0 flow for a SharePoint server. -->
+    <extension type="WebappServlet"
+               class="com.oxygenxml.webapp.sharepoint.oauth.OAuthServlet"/>
+    <!-- The servlet used to perform queries about the client session. -->
+    <extension type="WebappServlet"
+               class="com.oxygenxml.webapp.sharepoint.oauth.SessionServlet"/>
+    <!-- The servlet used to perform different actions on a document. -->
+    <extension type="WebappServlet"
+               class="com.oxygenxml.webapp.sharepoint.actions.ActionServlet"/>
+    <!-- The servlet used as endpoint for the File Handler AddIn -->
+    <extension type="WebappServlet"
+               class="com.oxygenxml.webapp.sharepoint.filehandler.FileHandlerServlet"/>
+    <!-- CSS and images Resources folder -->
+    <extension type="WebappStaticResourcesFolder"
+               path="resources/" href="sharepoint"/>
+    <!-- Workspace Access extension -->
+    <extension type="WorkspaceAccess"
+               class="com.oxygenxml.webapp.sharepoint.SharepointWorkspaceAccess"/>
+    <!-- Config srevlet -->
+    <extension type="WebappServlet" role="config"
+               class="com.oxygenxml.webapp.sharepoint.config.SharePointPluginConfigExtension"/>
+               
+    <extension type="WebappCSSResource" href="resources/sharepoint.css"/>
+
+    <extension type="TrustedHosts"
+      class="com.oxygenxml.webapp.sharepoint.TrustedHostsProvider"/>
+</plugin>

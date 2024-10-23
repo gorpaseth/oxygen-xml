@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Oxygen XML Web Author Administration Page</title>
+
+    <style>
+        form {
+            font-family: robotolight, Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            width: 300px;
+            margin: 25px auto;
+            padding: 10px 10px 25px 10px;
+            box-shadow: 0 3px 10px 0 rgba(181, 181, 181, 0.4);
+            border-radius: 4px;
+        }
+
+        .message {
+            text-align: center;
+            background-color: #ffebeb;
+            padding: 10px;
+            vertical-align: inherit;
+            border-radius: 4px;
+            border: 1px solid #ffcfcf;
+        }
+
+        .title {
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+            color: #393939;
+        }
+
+        .form-group input {
+            border-radius: 4px;
+            width: 100%;
+            display: block;
+            padding: 0 5px;
+            height: 30px;
+        }
+
+        .form-group input,
+        .checkbox {
+            margin-bottom: 10px;
+        }
+
+        form,
+        .form-group input {
+            box-sizing: border-box;
+            border: 1px solid #d5d5d5;
+        }
+
+        .btn-lg {
+            width: 100% !important;
+            margin-top: 12px;
+        }
+
+        input.invalid-input {
+            background-color: #ffdbdb;
+        }
+
+        #change-password {
+            display: block;
+            text-decoration: none;
+            margin-top: 30px;
+            color: #1155cc;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/admin-page-1af6f13cbe.css">
+
+<script src="no-cache/stranslation-lite.js"></script>
+</head>
+<body>
+<div id="header-bar" class="ui-layout-north">
+    <div class="header-left vertical-align-children">
+        <a title="" href="oxygen.html" rel="external" id="header-logo" class="vertical-align-children">
+            <div class="large-logo logo-container vertical-align-children">
+                <div class="ui-oxygen-logo"></div>
+            </div>
+        </a>
+        </span> <span id="header-logo-caption">Administration Page</span>
+    </div>
+    <div style="float:right;margin-right:20px;margin-top:15px;">
+        <span id="langLabel">Language: </span>
+        <select id="languageSelect">
+            <option value="en_US">EN</option>
+            <option value="de_DE">DE</option>
+            <option value="fr_FR">FR</option>
+            <option value="ja_JP">JA</option>
+            <option value="nl_NL">NL</option>
+            <option value="zh_CN">ZH</option>
+        </select>
+    </div>
+</div>
+
+<form name="loginform" action="" method="POST" accept-charset="UTF-8" role="form">
+    <div class="msg_holder"></div>
+
+    <div class="title" data-login-page="adm">Administration Page</div>
+
+    <div class="form-group">
+        <span id="label-username">Username</span>
+        <input class="form-control" name="username" type="text" autofocus>
+    </div>
+
+    <div class="form-group">
+        <span id="label-password">Password</span>
+        <input class="form-control" name="password" type="password" value="" autocomplete="off">
+    </div>
+    <button class="oxy-button oxy-button--primary btn btn-lg btn-success btn-block" type="submit" value="Login">Login</button>
+    <a rel="noopener noreferrer" id="change-password" href="https://www.oxygenxml.com/doc/help.php?product=webauthor&pageId=wa-reset-admin-credentials" target="_blank">Forgot password?</a>
+</form>
+
+<script>
+
+    window.addEventListener('load', function () {
+        // Make the request xhr request to admin-login from here and add error messages when needed.
+
+        var loginForm = document.querySelector('form[name=loginform]');
+        var loginFormButton = loginForm.querySelector('button');
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var username = loginForm.querySelector('input[name=username]').value;
+            var password = loginForm.querySelector('input[name=password]').value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '../admin-login');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        window.location.reload();
+                    } else {
+                        loginForm.classList.remove("oxy-spinner");
+                        loginFormButton.removeAttribute('disabled');
+                        var msgHolder = document.querySelector('.msg_holder');
+                        if (msgHolder) {
+                            msgHolder.innerHTML = '';
+
+                            var message = document.createElement('div');
+                            message.className  = 'message';
+                            message.textContent = tr(msgs.INVALID_CREDENTIALS_);
+
+                            msgHolder.appendChild(message);
+                        }
+                    }
+                }
+            };
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.setRequestHeader('X-Requested-With', 'WA');
+            xhr.send('username=' + encodeURIComponent(username.trim()) +
+              '&password=' + encodeURIComponent(password));
+            loginForm.classList.add("oxy-spinner");
+            loginFormButton.setAttribute('disabled', '');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+Using CATALINA_BASE:   /Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat
+Using CATALINA_HOME:   /Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat
+Using CATALINA_TMPDIR: /Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat/temp
+Using JRE_HOME:        /Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home
+Using CLASSPATH:       /Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat/bin/bootstrap.jar:/Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat/bin/tomcat-juli.jar
+Using CATALINA_OPTS:    -Doxygen.data.dir=/Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat/work/Catalina/localhost/oxygen-xml-web-author -Xmx3072m  -Djava.security.manager  -Doxygen.ssl.trusted.keystore="./tomcat/conf/web-author.keystore"   -Dcom.oxygenxml.webapp.product=true -Djava.security.policy=="/Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat/conf/catalina.policy"
+Tomcat started.

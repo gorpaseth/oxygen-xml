@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Categories">
+        <val lang="en_US">Categories</val>
+        <val lang="de_DE">Kategorien</val>
+        <val lang="fr_FR">Catégories</val>
+        <val lang="ja_JP">カテゴリ</val>
+        <val lang="nl_NL">Categorieën</val>
+        <val lang="zh_CN">类别</val>
+    </key>
+    <key value="Hex_code">
+        <val lang="en_US">Hex code</val>
+        <val lang="de_DE">Hex-Code</val>
+        <val lang="fr_FR">Code hexadécimal</val>
+        <val lang="ja_JP">16進数コード</val>
+        <val lang="nl_NL">Hexadecimale code</val>
+        <val lang="zh_CN">十六进制代码</val>
+    </key>
+    <key value="Initial_categories">
+        <val lang="en_US">Initial categories</val>
+        <val lang="de_DE">Ursprüngliche Kategorien</val>
+        <val lang="fr_FR">Catégories initiales</val>
+        <val lang="ja_JP">初期カテゴリ</val>
+        <val lang="nl_NL">Aanvankelijke categorieën</val>
+        <val lang="zh_CN">初始类别</val>
+    </key>
+    <key value="Remove_categories">
+        <val lang="en_US">Remove categories (comma separated)</val>
+        <val lang="de_DE">Kategorien entfernen (kommasepariert)</val>
+        <val lang="fr_FR">Supprimer des catégories (séparées par des virgules)</val>
+        <val lang="ja_JP">カテゴリを削除する（カンマ区切り）</val>
+        <val lang="nl_NL">Categorieën verwijderen (door komma's gescheiden)</val>
+        <val lang="zh_CN">删除类别（逗号分隔）</val>
+    </key>
+    <key value="Remove_all_categories">
+        <val lang="en_US">Use * to remove the "By category" view completely</val>
+        <val lang="de_DE">Verwenden Sie * um die Ansicht "Nach Kategorie" vollständig zu entfernen</val>
+        <val lang="fr_FR">Utilisez * pour supprimer complètement la vue "Par catégorie".</val>
+        <val lang="ja_JP">*を使用して「カテゴリ別」ビューを完全に削除します</val>
+        <val lang="nl_NL">Gebruik * om het "Op categorie" zicht volledig te verwijderen</val>
+        <val lang="zh_CN">使用*完全删除“按类别”视图</val>
+    </key>
+    <key value="Default_characters">
+        <val lang="en_US">Default recently used characters</val>
+        <val lang="de_DE">Voreingestellte zuvor genutzte Zeichen</val>
+        <val lang="fr_FR">Caractères par défaut utilisés récemment</val>
+        <val lang="ja_JP">デフォルトの最近使用した文字</val>
+        <val lang="nl_NL">Standaard voor recent gebruikte tekens</val>
+        <val lang="zh_CN">默认最近使用的字符</val>
+    </key>
+</translation>

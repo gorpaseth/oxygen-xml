@@ -1,0 +1,52 @@
+.p4-login-dialog label {
+    text-align: left;
+    display: block;
+}
+
+.p4-inline-dialog-container {
+  max-width: 400px;
+  margin: 50px auto;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  line-height: 2em;
+  height: auto;
+}
+
+.p4-login-msg {
+  margin-bottom: 15px;
+}
+
+.p4-highlighted {
+  color: #504e4f;
+  font-style: italic;
+}
+
+.p4-login-dialog input {
+    width: 100%;
+    display: block;
+}
+
+.autosave-status-clean,
+.autosave-status-saving,
+.autosave-status-error {
+    margin-left: 5px;
+    color: #c0c3c5;
+    cursor: pointer;
+}
+
+.autosave-failed-save-as,
+.autosave-failed-download {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Add some space between the dropdown text and the downwards arrow. */
+[name="p4-actions"] .goog-toolbar-menu-button-caption {
+    margin-right: 5px;
+}
+
+#changelistDesc {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang=en><head><title></title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=css/all-37dae98658.css><link rel=stylesheet href=../rest/load/plugins/plugins.css><script>!function(a){var t="sync.cacheFix.activeBuildTime"+(location.search.match("url=")?"":".dash");try{var c=localStorage.getItem(t);c?c!==a&&(localStorage.setItem(t,a),window.location.reload(!0)):localStorage.setItem(t,a)}catch(a){console.warn(a)}}("1712793682996");</script><script src=v26.1.0-lib/layout-dab69784e0.js></script></head><body><div id=review class="no-focus-visible layout-loading" aria-hidden=true><div class=new-file-new-container><div id=templateChooser class="new-file-new-container new-file-templates-container"></div></div></div><script src=workspace-caee3999f1.js></script><script type=text/javascript>
+  //CustomEvent polyfill for IE11
+  (function() {
+
+    if (typeof window.CustomEvent === "function")
+      return false;
+
+    function CustomEvent(event, params) {
+      params = params || {
+        bubbles : false,
+        cancelable : false,
+        detail : undefined
+      };
+      var evt = document.createEvent('CustomEvent');
+      evt.initCustomEvent(event, params.bubbles, params.cancelable,
+          params.detail);
+      return evt;
+    }
+
+    CustomEvent.prototype = window.Event.prototype;
+
+    window.CustomEvent = CustomEvent;
+  })();
+
+  sync.rest.initAutoRecovery();
+
+  var templates_div = document.getElementById('templateChooser');
+
+  var cD = goog.dom.createDom;
+
+  var templates_container = cD('div', {
+    'id': 'myId',
+    'class': 'new-file-templates-container',
+    'style': 'margin: 0px'
+  });
+
+  var TemplateContentRequest = function (tmplURL) {
+    this.execute = function () {
+      var request = new XMLHttpRequest();
+
+      // Return it as a Promise
+      return new goog.Promise(function (resolve, reject) {
+        request.onreadystatechange = function () {
+          // Only run if the request is complete
+          if (request.readyState !== 4) return;
+
+          if (request.status >= 200 && request.status < 300) {
+            resolve(request);
+          } else {
+            // If failed
+            reject({
+              status: request.status,
+              statusText: request.statusText
+            });
+          }
+        };
+
+        request.open('GET', tmplURL, true);
+        request.send();
+      });
+    }
+  };
+
+  function templateSelectedCallback(selectedTmpl) {
+    if(selectedTmpl) {
+      var templateURL = selectedTmpl.getDownloadUrl();
+      var eventData = {
+          selectedTmpl: selectedTmpl,
+          templateContentRequest: new TemplateContentRequest(templateURL)
+      };
+      var event = new CustomEvent('templateChooserEvent', {detail: eventData});
+      window.frameElement.dispatchEvent(event);
+    }
+  }
+
+  function templateSubmittedCallback() {
+    // NOP
+  }
+
+  goog.dom.appendChild(templates_div, templates_container);
+
+  sync.react.render(sync.react.createElement(sync.view.TemplateChooser, {
+    onTemplateSelected: templateSelectedCallback,
+    onTemplateSubmitted: templateSubmittedCallback
+  }), templates_container);
+</script></body></html>

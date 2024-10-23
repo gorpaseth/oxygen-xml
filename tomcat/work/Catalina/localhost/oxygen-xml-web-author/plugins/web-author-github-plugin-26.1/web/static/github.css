@@ -1,0 +1,788 @@
+
+.github-status,
+.github-icon-octocat-large,
+.github-icon-octocat-small{
+    display:inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.github-icon-octocat-large {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.github-icon-octocat-small {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.github-input{
+    width: 100%;
+    padding: 0 3px;
+    font-family: Roboto, arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: initial;
+}
+textarea.github-input {
+    resize: none;
+    margin-top: 5px;
+    padding: 4px;
+    display: block; /* To prevent extra space added at the bottom */
+    max-width: 100%;
+}
+.github-commit-shortcut {
+    z-index: 1;
+    max-width: 47%;
+    color: #909090;
+    font-size: 0.7em;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 21px;
+    display: flex;
+    align-items: center;
+}
+.github-commit-shortcut input {
+    vertical-align: sub;
+}
+@media only screen and (max-width: 450px) {
+    .github-commit-shortcut {
+        line-height: 1.5;
+        max-width: 35%;
+        height: 35px;
+        bottom: 14px;
+    }
+}
+
+.github-login-dialog {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.github-login-dialog label {
+    text-align: right;
+    display: block;
+}
+.github-commit-dialog {
+    font-family: Roboto, arial, sans-serif;
+    color: #3E3E3E;
+}
+@media only screen and (max-width: 550px) {
+    .github-login-dialog {
+        width: auto;
+        max-width: none;
+    }
+    .github-login-dialog label {
+        text-align: left;
+    }
+    .github-login-dialog input {
+        width: 100%;
+        display: block;
+    }
+    .github-commit-dialog {
+        width: auto;
+    }
+}
+
+.gh-commit-message-details > *:not(:first-child) {
+    margin-top: 5px;
+}
+
+.github-commit-dialog h1 {
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+}
+.gh-branch-details h1 {
+    margin-top: 30px;
+}
+
+.gh-signoff {
+    display: flex;
+    align-items: center;
+}
+.gh-signoff input[type=text] {
+    flex: 1;
+}
+[for="gh-signoff-checkbox"] {
+    padding: 0 5px 0 0;
+}
+
+.github-oauth-text {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.github-login-center-aligned {
+    text-align: center;
+    margin-top: -5px;
+}
+
+.github-login-dialog-error {
+    text-align: center;
+    background-color: #FEEBEB;
+    color: #b94a48;
+    border: 1px solid #eed3d7;
+    border-radius: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 3px 3px 3px 5px;
+    line-height: 1.2;
+    margin: 0 auto 5px auto;
+}
+
+#git-toolbar-button {
+    font-family: robotolight, Arial, Helvetica, sans-serif;
+    font-size: 1.05em;
+    font-weight: lighter;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 24px;
+}
+
+#git-toolbar-button.oxy-spinner.oxy-spinner-dark-background {
+    background-image: none !important;
+}
+#git-toolbar-button.oxy-spinner.oxy-spinner-dark-background:after {
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+}
+
+.github-loading {
+    content: '';
+    width: 26px;
+    height: 24px;
+    background-image: url('../../../plugin-resources/github-static/spinner.svg') !important; /* Important to override the js style set */
+    background-size: contain;
+}
+#gh-settings-branch-select.github-loading {
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+}
+
+#git-toolbar-button.success {
+    content: '';
+    width: 26px;
+    height: 24px;
+    background-image: url('../../../plugin-resources/github-static/Checkmark_green.svg') !important; /* Important to override the js style set */
+}
+
+.gh-commit-info-prolog,
+.gh-access-commit-info-prolog {
+    margin-bottom: 12px;
+    background-color: lightyellow;
+    border: 1px solid #dadab4;
+    padding: 6px;
+}
+
+.gh-access-commit-info-prolog {
+    background-color: #eaefff;
+    border: 1px solid rgba(27,31,35,0.15);
+    line-height: 1.5;
+}
+
+.gh-commit-info-prolog a {
+    background-color: aliceblue;
+}
+
+#gh-commit-diag-content {
+    text-align: center;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.gh-commit-diag-choice {
+    vertical-align: top;
+    padding: 5px;
+
+    text-align: center;
+    display: inline-block;
+    max-width: 115px;
+    margin-right: 12px;
+    box-sizing: border-box;
+
+    border: 1px solid #E4E4E4;
+    border-radius: 4px;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gh-commit-diag-choice:last-child {
+    margin-right: 0;
+}
+
+.gh-commit-diag-choice:hover {
+    background-color: #f5f5f5;
+}
+
+.gh-commit-diag-choice.gh-default-choice {
+    border: 1px solid #FFBC70;
+}
+
+.gh-commit-diag-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    background-position-x: 50%;
+}
+
+.gh-commit-cancel {
+    background-image: url('../../../plugin-resources/github-static/x.svg');
+}
+
+.gh-commit-diag-title {
+    font-size: 1em;
+    margin: 5px 0 2px 0;
+}
+
+.gh-commit-diag-descripion {
+    padding: 0 5px;
+}
+#gh-settings-branch-select {
+    line-height: 1.5em;
+    padding: 2px;
+    box-sizing: border-box;
+    min-width: 100px;
+}
+
+.gh-config-dialog {
+    text-align: left;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    width: 100%;
+}
+#gh-default-branch-wrapper.disabled {
+    opacity: 0.45;
+}
+.github-repo-edit {
+    background-size: 16px 16px;
+    right:0;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 20px;
+    width: 20px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXUlEQVR42mNgGBKgoKAgAYj/Q3ECJZrBmCLNRBuASzNRXhhemj8AsQExmgWA+ABZmpEMUQDiC+RqBtnugOQVA1JTG8jWCVCvbIAaCKIboDgAZAFWg////08RptgAAMDo/Jm25cdCAAAAAElFTkSuQmCC) no-repeat 50% 50%;
+    border-color: #ccc;
+}
+
+.github-browsing-repo-preview:hover > .github-repo-edit {
+    background-color: lightgrey;
+}
+
+.github-browsing-repo-preview > .github-repo-edit {
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+
+.github-browsing-repo-preview:hover > .github-repo-edit:hover {
+    border-color: grey;
+    cursor: pointer;
+}
+
+.github-browsing-repo-preview {
+    white-space: nowrap;
+}
+.repo-icon {
+    background: url('../../../plugin-resources/github-static/repo.svg');
+    background-size: 12px 16px;
+    width: 12px;
+}
+.branch-icon {
+    background: url('../../../plugin-resources/github-static/git-branch.svg');
+    background-size: 9px 16px;
+    width: 9px;
+}
+.branch-icon,
+.repo-icon {
+    margin-right: 5px;
+    display: inline-block;
+    opacity: 0.5;
+    height: 16px;
+    background-repeat: no-repeat;
+}
+
+
+.github-repo-right {
+    max-width: 40%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.github-repo-div {
+    display:flex;
+    align-items: flex-end;
+    line-height: 1.5em;
+}
+
+.github-repo-ac {
+    position: relative;
+    z-index: 1;
+    flex:auto;
+}
+
+.github-repo-ac > input,
+.github-repo-ac > .ac-renderer,
+.github-repo-error {
+    width: 100%;
+}
+.github-repo-error {
+    margin-top: 5px;
+}
+
+.github-repo-ac > input {
+    border-radius: 0;
+    background-color: white;
+}
+.github-repo-ac > .ac-renderer {
+    max-height: 135px;
+    overflow: auto;
+    -webkit-touch-overflow: scroll;
+    box-sizing: border-box;
+}
+.github-repo-ac > .ac-renderer > .ac-row {
+    padding: 10px 8px;
+}
+.github-error-icon {
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    background: no-repeat 50% 50%;
+    background-image: url("../../../plugin-resources/github-static/Error16.png");
+    display:inline-block;
+    margin-right: 5px;
+}
+
+.github-file-icon,
+.big-branch-icon,
+.big-repo-icon {
+    display: inline-block;
+    opacity: 0.5;
+    margin-right: 5px;
+}
+.github-file-icon{
+    background: url('../../../plugin-resources/github-static/file.svg');
+    background-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+}
+.big-repo-icon {
+    background: url('../../../plugin-resources/github-static/repo.svg') no-repeat;
+    background-size: 24px 32px;
+    width: 24px;
+}
+.big-branch-icon {
+    background: url('../../../plugin-resources/github-static/git-branch.svg') no-repeat;
+    background-size: 18px 32px;
+    width: 18px;
+    margin-left: 3px;
+    margin-right: 8px;
+}
+.github-description-preview {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-style: italic;
+}
+
+.github-repo-section,
+.github-branch-section,
+.github-file-section {
+    margin: 10px;
+}
+
+.dialog-container .github-repo-section,
+.dialog-container .github-branch-section,
+.dialog-container .github-file-section {
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 550px) {
+    .github-repo-right {
+        display: none;
+    }
+
+    .gh-commit-diag-choice {
+        min-height: inherit;
+        max-width: none;
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+    }
+
+    .gh-commit-diag-choice:last-child {
+        margin: 0 auto;
+    }
+}
+.gh-location-tooltip {
+    padding: 10px;
+    min-width: inherit;
+    font-weight: bold;
+    background: white;
+    font-family: Arial, Liberation Sans, DejaVu Sans, sans-serif;
+    font-size: 13px;
+
+    border:1px solid #d5d5d5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.gh-location-tooltip > div {
+    margin-top: 8px;
+    line-height: 1.35em;
+    padding: 2px 7px;
+    font-weight: normal;
+}
+.github-commit-dialog .commit-history {
+    width: 100%;
+    padding: 0;
+    height: 2em;
+}
+/* Hide the "Choose a previously entered comment" option */
+.github-commit-dialog .commit-history > option:first-child {
+    display: none;
+}
+
+.expandable-err-msg-check {
+    display: none;
+}
+.expandable-err-msg {
+    display: none;
+}
+.expandable-err-msg-check:checked + .expandable-err-msg {
+    padding-top: 5px;
+    text-align: left;
+    display: block;
+    overflow-y: auto;
+    height: 90px;
+}
+.expandable-err-msg-check:checked ~ .expandable-err-msg-more:after {
+    content: attr(oxycaption-less);
+}
+.expandable-err-msg-more:after {
+    content: attr(oxycaption-more);
+    text-align: right;
+}
+.expandable-err-msg-more:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.gh_pull_diag {
+    font-family: Roboto, arial, sans-serif;
+    text-align: left;
+    max-width: 430px;
+    color: #434343;
+}
+
+.gh_pull_diag input {
+    height: initial;
+}
+
+.gh_pull_diag .gh-pull-info {
+    display: none;
+    padding: 0 2px;
+}
+
+.gh_pull_diag .gh-pull-info > label {
+    display: block;
+    overflow: hidden;
+}
+
+.gh_pull_diag .gh-pull-info input {
+    display: block;
+    width: 100%;
+
+    color: #606060;
+    background-color: #FAFAFA;
+    border: 1px solid #E4E4E4;
+    padding: 6px 4px;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gh_pull_diag input[name=pullRequest]:checked ~ .gh-pull-info {
+    display: block;
+}
+
+.gh-fork-info {
+    padding-left: 3px;
+    font-size: 0.85em;
+}
+
+#gh-fork-branch-name {
+    border: 1px solid #E4E4E4;
+    padding: 4px;
+    border-radius: 4px;
+    background: white;
+}
+
+.gh-branch-name-suffix {
+    color: #A2A373;
+    padding-left: 2px;
+}
+
+.gh-cloning-repo:after {
+    animation-duration: 0.8s;
+}
+
+.gh-cloning-repo:before {
+    content: attr(oxycaption);
+    position: absolute;
+    width: 100%;
+    top: 53%;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#git-login-button {
+    width: 100%;
+}
+
+#git-login-button,
+#github-oauth-button,
+#bitbucket-oauth-button,
+#bitbucket-server-oauth-button,
+#gitlab-oauth-button,
+#gitlab-e-oauth-button {
+    border-radius: 4px;
+    margin-top: 15px;
+    border: 1px solid #ddd2d2;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 5px;
+    cursor: default;
+
+    width: 100%;
+    line-height: 2em;
+    font-size: inherit;
+}
+#git-login-button:hover,
+#github-oauth-button:hover,
+#bitbucket-oauth-button:hover,
+#bitbucket-server-oauth-button:hover,
+#gitlab-oauth-button:hover,
+#gitlab-e-oauth-button:hover {
+    cursor: pointer;
+    background-color: #fdfdfd;
+}
+#git-login-button.activated, #git-login-button:active,
+#github-oauth-button.activated, #github-oauth-button:active,
+#bitbucket-oauth-button.activated, #bitbucket-oauth-button:active,
+#bitbucket-server-oauth-button.activated, #bitbucket-server-oauth-button:active,
+#gitlab-oauth-button.activated, #gitlab-oauth-button:active,
+#gitlab-e-oauth-button.activated, #gitlab-e-oauth-button:active {
+    background-color: #f2f2f2;
+}
+.git-logo-image {
+    width: 24px;
+    height: 24px;
+
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+}
+.git-login-text {
+    margin-left: 5px;
+}
+
+#git-login-form {
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: robotolight, Arial, Helvetica, sans-serif;
+    line-height: 2em;
+    margin-top: 15px;
+}
+
+#git-login-form input {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+}
+
+#git-login-form input:focus {
+    border-bottom: 1px solid rgb(104, 180, 255);
+    outline: none;
+}
+
+#git-login-form input:after {
+    content: '';
+    display: block;
+}
+
+.git-req {
+    position: relative;
+    margin-bottom: .8rem;
+}
+.git-req.on:after {
+    content: '*';
+    color: red;
+    line-height: initial;
+    position: absolute;
+    top: 3px;
+    right: 8px;
+}
+
+.git-req input,
+.gh-patch-branch input {
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -ms-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    transition: background-color .4s;
+}
+
+.git-logout-container {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 1;
+    color: #F3F4F4;
+}
+
+.git-logout-container:hover {
+    border-color: #D3D3D3;
+}
+
+.git-logout-container .git-username {
+    color: #cccccc;
+}
+
+#github-commit-success-indicator {
+    word-wrap: break-word;
+}
+
+.gh-patch-branch {
+    display: none;
+    position: relative;
+}
+.gh-patch-branch input {
+    width: 100%;
+}
+.access-pull-req {
+    display: none;
+}
+.gh-patch-branch,
+.access-pull-req {
+    padding-left: 20px;
+}
+#gh-new-branch:checked ~ .gh-patch-branch {
+    display: block;
+}
+#gh-new-branch:checked ~ .access-pull-req {
+    display: flex;
+    align-items: center;
+}
+span.gh-patch-branch-spinner {
+    position: absolute;
+    right: 15px;
+}
+span.gh-patch-branch-spinner:after {
+    width: 20px;
+    height: 20px;
+    margin-top: 6px;
+}
+
+.file-browser-list[oxycaption]:empty:before {
+    content: attr(oxycaption);
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    top: 40%;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 23px;
+    line-height: 50px;
+
+    -webkit-animation-name: cloning-fade-in;
+    -moz-animation-name: cloning-fade-in;
+    -o-animation-name: cloning-fade-in;
+    animation-name: cloning-fade-in;
+
+    -webkit-animation-duration: .4s;
+    -moz-animation-duration: .4s;
+    -o-animation-duration: .4s;
+    animation-duration: .4s;
+}
+
+@keyframes cloning-fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.git-login-form,
+.initial-login-container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid lightgrey;
+    /*outline: 2000px solid white;*/
+    background-color: white;
+}
+
+#git-repo-edit-ok-btn {
+    margin: 5px 5px 0 0;
+}
+
+#git-repo-edit-cancel-btn {
+    margin: 5px 5px 0 5px;
+}
+
+.git-repo-choose-cancel-btn {
+    margin-left: 10px;
+}
+
+.git-repo-info-container {
+    margin-right: 10px;
+}
+
+.git-display-none {
+    display: none;
+}
+
+.github-repo-connect-area {
+    border: 1px solid #E4E4E4;
+    padding: 15px;
+    /*margin: 10px;*/
+    background-color: white;
+    max-width: 980px;
+}
+
+.userpass-repo-buttons-container {
+    margin-left: 10px;
+}
+
+.gh-repo-config-logout-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    font-family: robotolight, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+    background: none;
+    color: #2072b2;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Oxygen XML Web Author</title>
+
+    <style>
+        form {
+            font-family: robotolight, Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            width: 300px;
+            margin: 25px auto;
+            padding: 10px 10px 25px 10px;
+            box-shadow: 0 3px 10px 0 rgba(181, 181, 181, 0.4);
+            border-radius: 4px;
+        }
+
+        .message {
+            text-align: center;
+            background-color: #ffebeb;
+            padding: 10px;
+            vertical-align: inherit;
+            border-radius: 4px;
+            border: 1px solid #ffcfcf;
+        }
+
+        .title {
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+            color: #393939;
+        }
+
+        .form-group input {
+            border-radius: 4px;
+            width: 100%;
+            display: block;
+            padding: 0 5px;
+            height: 30px;
+        }
+
+        .form-group input,
+        .checkbox {
+            margin-bottom: 10px;
+        }
+
+        form,
+        .form-group input {
+            box-sizing: border-box;
+            border: 1px solid #d5d5d5;
+        }
+
+        .btn-lg {
+            width: 100% !important;
+            margin-top: 12px;
+        }
+
+        input.invalid-input {
+            background-color: #ffdbdb;
+        }
+
+        .info-flash {
+            margin-bottom: 10px;
+            background-color: lightyellow;
+            border: 1px solid #dadab4;
+            padding: 15px 19px;
+            font-size: 14px;
+            font-family: arial, sans-serif;
+        }
+
+        .invalid-credential-message {
+            display: none;
+        }
+        .invalid-credential-message.visible {
+            display: block;
+            background-color: #ffdbdb;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #d5d5d5;
+            margin-top: 10px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/admin-page-1af6f13cbe.css">
+
+<script src="no-cache/translation-lite.js"></script>
+</head>
+<body>
+<div id="header-bar" class="ui-layout-north">
+    <div class="header-left vertical-align-children">
+        <a title="" href="oxygen.html" rel="external" id="header-logo" class="vertical-align-children">
+            <div class="large-logo logo-container vertical-align-children">
+                <div class="ui-oxygen-logo"></div>
+            </div>
+        </a>
+    </div>
+    <div style="float:right;margin-right:20px;margin-top:15px;">
+        <span id="langLabel">Language: </span>
+        <select id="languageSelect">
+            <option value="en_US">EN</option>
+            <option value="de_DE">DE</option>
+            <option value="fr_FR">FR</option>
+            <option value="ja_JP">JA</option>
+            <option value="nl_NL">NL</option>
+            <option value="zh_CN">ZH</option>
+        </select>
+    </div>
+</div>
+
+<div class="info-flash">
+    Oxygen XML Web Author requires an administration user. This user will be used to setup the license information and to access the administration page.
+</div>
+
+<form name="loginform" action="admin-anon/configure-user" method="POST" accept-charset="UTF-8"
+      role="form" onsubmit="return false;">
+    <div class="msg_holder"></div>
+    <div class="title" data-login-page="cfg">Create an admin user</div>
+
+    <div class="form-group">
+        <span id="label-username">Username</span>
+        <input class="form-control" name="username" type="text" autofocus>
+    </div>
+    <div class="form-group">
+        <span id="label-password">Password</span>
+        <input class="form-control" name="password" type="password" value="">
+    </div>
+
+    <div class="form-group">
+        <span id="label-confirm-password">Confirm Password</span>
+        <input class="form-control" name="confirm-password" type="password" value="">
+    </div>
+
+    <button class="oxy-button oxy-button--primary btn btn-lg btn-success btn-block" type="submit" value="Configure">Add administrator</button>
+    <div class="invalid-credential-message"></div>
+</form>
+<script>
+
+    /**
+     * Marks the input as invalid and registers listener to remove the mark on input change.
+     *
+     * @param input the input to mark as invalid until the first input event on it.
+     */
+    function markInvalid (input) {
+        input.classList.add('invalid-input');
+
+        var handleInput = function () {
+            input.classList.remove('invalid-input');
+            input.removeEventListener('input', handleInput);
+        };
+        input.addEventListener('input', handleInput);
+    }
+
+    function trimConsecutiveWhitespaces(credential) {
+      return credential.replaceAll(/(\s)\s+/g, "$1");
+    }
+
+    /**
+     * @return {{password: string, username: string}=} The entered credentials, if valid.
+     */
+    function getAndValidateCredentials () {
+        var userInput = document.querySelector('input[name="username"]');
+        var passInput = document.querySelector('input[name="password"]');
+        var passConfirmInput = document.querySelector('input[name="confirm-password"]');
+
+        var username = trimConsecutiveWhitespaces(userInput.value);
+        var pass = trimConsecutiveWhitespaces(passInput.value);
+        var passConfirm = trimConsecutiveWhitespaces(passConfirmInput.value);
+
+        if(!username) {
+          this.showInvalidCredentialMessage("The username must not be empty.");
+          markInvalid(userInput);
+        } else if(pass.length < 12) {
+          this.showInvalidCredentialMessage("The password must have at least 12 characters.");
+        } else if(pass.length > 128) {
+          this.showInvalidCredentialMessage("The password must have at most 128 characters.");
+        } else if (!passConfirm) {
+          markInvalid(passConfirmInput);
+        } else if (pass !== passConfirm) {
+          passConfirmInput.value = "";
+          markInvalid(passConfirmInput);
+        } else {
+          return {username: username, password: pass};
+        }
+
+        return null;
+    }
+
+    function showInvalidCredentialMessage (message) {
+      let invalidCredentialMessage = document.querySelector('form .invalid-credential-message');
+      invalidCredentialMessage.classList.add('visible');
+      invalidCredentialMessage.textContent = message;
+      document.querySelector('.btn-lg').blur();
+
+      let passInput = document.querySelector('input[name="password"]');
+      passInput.value = '';
+      let passConfirmInput = document.querySelector('input[name="confirm-password"]');
+      passConfirmInput.value = '';
+      passInput.addEventListener('input', function() {
+        invalidCredentialMessage.classList.remove('visible');
+      });
+    }
+
+    /**
+     * Logs in using the provided credentials.
+     * @param username the username to use.
+     * @param password the password to use.
+     */
+    function login (username, password) {
+        var http = new XMLHttpRequest();
+        var url = "../admin-login";
+        http.open("POST", url, true);
+        //Send the proper header information along with the request
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.setRequestHeader('X-Requested-With', 'WA');
+        http.onreadystatechange = function () {
+            if (http.readyState == 4 && http.status == 200) {
+                window.location.reload();
+            } else if (http.readyState == 4) {
+                window.location.reload();
+            }
+        };
+        var params = 'username=' + encodeURIComponent(username) +
+                '&password=' + encodeURIComponent(password);
+        http.send(params);
+    }
+
+    // handle button click
+    document.querySelector('.btn-lg').addEventListener('click', function () {
+        var validCredentials = getAndValidateCredentials();
+        if (validCredentials) {
+            var http = new XMLHttpRequest();
+            var url = "../admin-anon/configure-user";
+            http.open("POST", url, true);
+
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.setRequestHeader('X-Requested-With', 'WA');
+
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    window.location.reload();
+                } else if (http.readyState == 4) {
+                    var msgHolder = document.querySelector('.msg_holder');
+                    if (msgHolder) {
+                        while (msgHolder.firstChild) {
+                          msgHolder.removeChild(ff.firstChild);
+                        }
+                        var message = document.createElement('div');
+                        message.className  = 'message';
+                        message.textContent = tr(msgs.FAILED_TO_CREATE_ADMIN_USER_,
+                                {
+                                    '$APP_NAME': tr(msgs.WEB_AUTHOR_NAME_),
+                                    '$SUPPORT_EMAIL': 'support@oxygenxml.com'
+                                }
+                        );
+
+                        msgHolder.appendChild(message);
+                    }
+                }
+            };
+            var params = 'username=' + encodeURIComponent(validCredentials.username)
+                + '&password=' + encodeURIComponent(validCredentials.password)
+            http.send(params);
+        }
+    });
+</script>
+</body>
+</html>

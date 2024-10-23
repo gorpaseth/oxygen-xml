@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Unauthorized</title>
+<style type="text/css">
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+  body {
+    box-sizing: border-box;
+    border:1px solid transparent;
+  }
+  .container {
+    background-color: #FDFEFF;
+    max-width: 800px;
+    box-sizing: border-box;
+    border: 1px solid #4C94BF;
+    margin: 100px auto auto;
+    padding: 20px 15px 50px 15px;
+    line-height: 1.2em;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+   text-indent: 25px;
+  }
+
+  .highlighted {
+    font-weight: bold;
+    background-color: #E8F6FF;
+    border: 1px solid #C5E9FF;
+    padding: 1px 5px;
+    border-radius: 5px;
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>You are not authorized to view this page</h1>
+    <!-- <h3>Administrator credentials are needed to view this page.</h3> -->
+    <p>The oXygen License Server has two levels of security:</p>
+    <ul>
+      <li>
+        <span class="highlighted">admin</span> accounts have the highest security clearance,
+            having access to all the administrative tasks, like configuring the license server's license.
+      </li>
+      <li>
+        <span class="highlighted">user</span> accounts are used only by the oXygen application
+            to configure the license using this <em>HTTP/HTTPS server</em>.
+      </li>
+    </ul>
+    <p>These credentials can be configured in the <span class="highlighted">passwords.properties</span> file
+        in the oXygen License Server installation directory.</p>
+  </div>
+</body>
+</html>

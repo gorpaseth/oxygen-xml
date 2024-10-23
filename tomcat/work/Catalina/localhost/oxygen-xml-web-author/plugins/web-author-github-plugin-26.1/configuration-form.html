@@ -1,0 +1,562 @@
+<style>
+    
+    body {
+      margin: 0;
+    }
+    #tabs {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    #tab-menu {
+        display: table-row;
+        box-sizing: border-box;
+        padding: 0 15px;
+        width:100%;
+        height: 45px;
+    }
+    #tab-menu span {
+        display: table-cell;
+        height: 45px;
+        vertical-align: middle;
+        text-align: center;
+        cursor: default;
+    }
+    #tab-menu span.active {
+        border-color: gray;
+        border-bottom-color: white;
+        background: white;
+        font-weight: bold;
+    }
+    #tab-menu span:not(.active) {
+        border-bottom-color: gray;
+    }
+    #tab-menu span:hover {
+        cursor: pointer;
+        border-color: gray;
+        border-bottom-color: lightgray;
+    }
+    #tab-menu span {
+        border: 1px solid white;
+    }
+
+    .configz {
+        word-wrap: break-word;
+        font-family: robotolight, Arial, Helvetica, sans-serif;
+        font-size:0.9em;
+        font-weight: lighter;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .git-configz {
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    .git-configz label {
+        display: block;
+        margin-top:10px;
+        margin-bottom:2px;
+        overflow: hidden;
+    }
+
+    .git-configz input, .git-configz button {
+        color:#606060;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width:100%;
+        margin-top: 4px;
+        border-radius:4px;
+        border:1px solid #E4E4E4;
+        padding:6px 4px;
+    }
+
+    .git-configz > div {
+        display: none;
+    }
+
+    .git-configz > div.active {
+        display: block;
+    }
+
+    input[name="git.generic_disabled"],
+    input[name="git.resolveSubmodules"],
+    input[name="git.enableNewBranch"],
+    input[name="git.showSignOffTrailer"],
+    #use-github-enterprise,
+    input[name="github.useLocalClone"] {
+        width: initial;
+    }
+    
+    .instruction {
+        font-weight:normal;
+        color:#333;
+        background-color: ffffef;
+        border: 1px solid #dadab4;
+        padding:0 5px 0 5px;
+    }
+    
+    .instruction p {
+      line-height: 1.6;
+    }
+    
+    .instruction a, .instruction a:visited {
+       color: blue;
+    }
+
+  
+    #bb-section, #bbsv-section, #gl-section, #gle-section, #g-section {
+        margin-top: 10px;
+    }
+    
+    #bbsv-public-key, #bbsv-consumer-callback-url {
+    	display: flex;
+    	align-items: center;
+    }
+
+    #bbsv-public-key-input, #bbsv-consumer-callback-url-input {
+        background-color: #dadada;
+    }
+	
+	#bbsv-public-key-copy, #bbsv-consumer-callback-url-copy {
+		width: initial;
+        margin-left: 0.5px
+	}
+    
+    #bbsv-public-key-regenerate {
+    	width: initial;
+    	min-width: 110px;
+    	margin-left: 5px;
+    	white-space: nowrap;
+    }
+    
+    label[for="defaultJGitRepositories"] {
+        margin-top: 12px;
+    }
+    #defaultJGitRepositories {
+        display: block;
+        width: 100%;
+        min-height: 100px;
+    }
+
+    .retrieve-strategy {
+        border: none;
+        padding-left: 0;
+        margin-left: 0;
+        display: grid;
+        column-gap: 3px;
+        grid-template-columns: auto 1fr auto;
+        align-items: baseline;
+        justify-content: start;
+        justify-items: start;
+    }
+
+    .retrieve-strategy label {
+        margin-top: 4px;
+    }
+
+
+</style>
+
+
+<style>
+    .infotooltip {
+        display: inline;
+        margin: 0 6px;
+    }
+    .infotooltip .infotooltip-control {
+        color: #2475b1;
+        border: 1px solid #2475b1;
+        border-radius: 19px;
+        width: 1em;
+        display: inline-block;
+        text-align: center;
+    }
+    .infotooltip:hover .infotooltip-tooltip {
+        visibility: visible;
+    }
+    .infotooltip .infotooltip-tooltip {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        width: 260px;
+        bottom: 130%;
+        left: -248px;
+        padding: 8px 0;
+        border-radius: 5px;
+        border-bottom-right-radius: 0;
+        line-height: 1.3;
+        text-align: center;
+        background-color: #555;
+        color: #fff;
+    }
+
+    .infotooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .infotooltip .infotooltip-tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        margin-left: -10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+</style>
+
+<div class="configz">
+    <div id="tabs">
+        <div id="tab-menu">
+            <span id="gh-menu" class="active">GitHub</span>
+            <span id="bb-menu">Bitbucket</span>
+            <span id="bbsv-menu">Bitbucket Server</span>
+            <span id="gl-menu">GitLab</span>
+            <span id="gle-menu">GitLab on-premise</span>
+            <span id="g-menu">Git</span>
+        </div>
+    </div>
+
+    <form class="git-configz">
+        <div id="gh-section" class="active">
+            <label title="Check this only if you are using a GitHub Enterprise deployment">
+                <input type="checkbox" id="use-github-enterprise" class="" th:classappend="${useGitHubEnterprise} ? using-enterprise : ''" th:checked="${useGitHubEnterprise}"/>
+                Use GitHub Enterprise
+            </label>
+
+            <div class="instruction" id="using-enterprise-msg" th:style="${useGitHubEnterprise} ? 'display:block' : 'display:none'">
+                <p>GitHub Authentication uses OAuth 2.0 to gain access to your files.</p>
+                <p>To obtain the configuration parameters listed below go to your GitHub Enterprise deployment in settings > applications > developer applications (http://enterprise-deployment.com/settings/applications/new) and register a new application.</p>
+                <p>
+                    <b>Note: </b>
+                    The <span style='font-family:monospace'>Authorization callback URL</span> must be set to:
+                    <br/>
+                    <span style='font-family:monospace'><span class='web-author-context'>web-author-context</span>/plugins-dispatcher/github-oauth/callback</span>
+                </p>
+            </div>
+
+            <div class="instruction" id='no-enterprise-msg' th:style="${useGitHubEnterprise} ? 'display:none' : 'display:block'">
+                <p>GitHub Authentication uses OAuth 2.0 to gain access to your files.</p>
+                <p>To obtain the configuration parameters required below, go to your <a target='_blank' href='https://github.com/settings/applications/new'>GitHub OAuth Apps</a> page and register a new application.</p>
+                <p>Note that <i>'Authorization callback URL'</i> must be set to:<br/><span style='font-family:monospace' title="OAuth Authorization Callback URL"><span class='web-author-context'>web-author-context</span>/plugins-dispatcher/github-oauth/callback</span>
+            </div>
+
+            <label title='Your GitHub Enterprise deployment URL' id='gh-api-url' th:style="${useGitHubEnterprise} ? 'display:block' : 'display:none'" th:classappend="${useGitHubEnterprise} ? using-enterprise : ''">
+                API URL: <span>(http://enterprise-deployment.com)</span>
+                <input th:name="${GITHUB_API_URL}" type="text" th:value="${githubApiUrl}"/>
+            </label>
+
+            <label>
+                Client ID:
+                <input th:name="${GITHUB_CLIENT_ID}" type='text' th:value="${githubClientId}"/>
+            </label>
+
+            <label>
+                Client Secret:
+                <input th:name="${GITHUB_CLIENT_SECRET}" type='text' th:value="${githubClientSecret}"/>
+            </label>
+            
+            <br>
+            <fieldset class="retrieve-strategy">
+              <legend>Retrieve documents strategy:</legend>
+
+              <input type="radio" th:value="${RETRIEVE_STRATEGY_REST_API}" th:id="${GITHUB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}" th:name="${GITHUB_RETRIEVE_STRATEGY}" th:attrappend="checked=${githubRetrieveStrategyValue==RETRIEVE_STRATEGY_REST_API}?true"/>
+              <label th:for="${GITHUB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}">
+                <span>REST API</span>
+              </label>
+              <div class="infotooltip">
+                <span class="infotooltip-control">?</span>
+                <span class="infotooltip-tooltip">Documents are retrieved via individual HTTP(S) requests to the REST API of the Git server.</span>
+              </div>
+
+              <input type="radio" th:value="${RETRIEVE_STRATEGY_HYBRID}" th:id="${GITHUB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}" th:name="${GITHUB_RETRIEVE_STRATEGY}" th:attrappend="checked=${githubRetrieveStrategyValue==RETRIEVE_STRATEGY_HYBRID}?true"/>
+              <label th:for="${GITHUB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}">
+                <span>Hybrid (load-time Git clone + REST API)</span>
+              </label>
+              <div class="infotooltip">
+                <span class="infotooltip-control">?</span>
+                <span class="infotooltip-tooltip">To speed up document loading, the repository is briefly cloned in memory. After loading, the application discards the clone and switches to HTTP(S) requests to the REST API of the Git server.</span>
+              </div>
+            </fieldset>
+        </div>
+
+        <div id="bb-section">
+            <div class="instruction">
+                <p>Bitbucket Authentication uses OAuth 2.0 to gain access to your files.</p>
+                <p>To obtain the configuration parameters listed below go to the <a href="https://bitbucket.org/account/workspaces/" target="_blank">Bitbucket workspaces page</a> and select one of your workspaces. 
+                Afterwards go to your workspace settings > OAuth consumers and add a new consumer.</p>
+                <p>The available permissions must be: <span style="font-family: monospace">Account:read, Pull requests:write & Repositories:admin</span></p>
+                <p><b>Note: </b>The <span style='font-family:monospace'>Callback URL</span> must be set to:<br/><span style='font-family:monospace'><span class='web-author-context'>web-author-context</span>/plugins-dispatcher/bitbucket-oauth/callback</span></p>
+                <p>After saving you will find the <span style='font-family:monospace'>Key</span> and <span style='font-family:monospace'>Secret</span> by clicking on the consumer name.</p>
+            </div>
+            <label>
+                Key:
+                <input th:name="${BITBUCKET_CLIENT_ID}" type='text' th:value="${bitbucketClientId}"/>
+            </label>
+
+            <label>
+                Secret:
+                <input th:name="${BITBUCKET_CLIENT_SECRET}" type='text' th:value="${bitbucketClientSecret}"/>
+            </label>
+
+            <br>
+            <fieldset class="retrieve-strategy">
+                <legend>Retrieve documents strategy:</legend>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_REST_API}" th:id="${BITBUCKET_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}" th:name="${BITBUCKET_RETRIEVE_STRATEGY}" th:attrappend="checked=${bitbucketRetrieveStrategyValue==RETRIEVE_STRATEGY_REST_API}?true"/>
+                <label th:for="${BITBUCKET_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}">
+                    <span>REST API</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">Documents are retrieved via individual HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_HYBRID}" th:id="${BITBUCKET_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}" th:name="${BITBUCKET_RETRIEVE_STRATEGY}" th:attrappend="checked=${bitbucketRetrieveStrategyValue==RETRIEVE_STRATEGY_HYBRID}?true"/>
+                <label th:for="${BITBUCKET_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}">
+                    <span>Hybrid (load-time Git clone + REST API)</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">To speed up document loading, the repository is briefly cloned in memory. After loading, the application discards the clone and switches to HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+            </fieldset>
+        </div>
+        
+        <div id="bbsv-section">
+        	<div class="instruction">
+                <p>Bitbucket Server Authentication uses OAuth 1.0a to gain access to your files.</p>
+                <p>
+                    To integrate Web Author with Bitbucket Server, you need to create an application link in the
+                    <b>Administration &gt; Application Links</b> page of your Bitbucket Server instance.
+                </p>
+                <p>
+                    Enter the home page address of your Oxygen XML Web Author instance as the application URL and click
+                    <b>Create new link</b>.
+                </p>
+                <p>
+                    A Configure Application URL dialog prompts you to confirm the URL. Check that it is correct and click
+                    <b>Continue</b>.
+                </p>
+                <p>
+                    In the Link applications dialog, in the <b>Application Name</b> field, define a name for the application
+                    link to Web Author. Check that the <b>Application Type</b> is set to <b>Generic Application</b>. Leave
+                    all the other fields blank and click <b>Continue</b>.
+                </p>
+                <p>
+                    The Configure Application Links page now displays the new application link to Web Author. Click on the
+                    pencil under the <b>Actions</b> column to edit the application link.
+                </p>
+                <p>
+                    Click on the <b>Incoming Authentication</b> tab to configure the OAuth 1.0a parameters.
+                </p>
+                <p>
+                    Enter a <b>Consumer Key</b> - it must be unique in regard to other application links and be the same as
+                    the one you will enter here. Next, enter a <b>Consumer Name</b>, the <b>Public Key</b>, and 
+                    <b>Consumer Callback URL</b> (provided below), then Save and Close.
+                </p>
+        	</div>
+        	
+            <label>
+                Public Key:
+                <div id="bbsv-public-key">
+                	<input id="bbsv-public-key-input" th:name="${BITBUCKET_SERVER_PUBLIC_KEY}" th:value=${bitbucketServerPublicKey} readonly/>
+                	<button id="bbsv-public-key-copy" class="git-configz" type="button" title='Copy'>
+                		<img height=13.5 src="../plugin-resources/github-static/CopyClipboard.svg">
+                	</button>
+                	<button id="bbsv-public-key-regenerate" class="git-configz" type="button">
+                		Regenerate key
+                	</button>
+                </div>
+            </label>
+        	
+        	<input id="bbsv-private-key-input" th:name=${BITBUCKET_SERVER_PRIVATE_KEY} th:value='${bitbucketServerPrivateKey}' type='hidden'/>
+            
+            <label>
+                Consumer Callback URL:
+                <div id="bbsv-consumer-callback-url">
+                    <input id="bbsv-consumer-callback-url-input" value="/plugins-dispatcher/bitbucketserver-oauth/callback/" readonly/>
+                    <button id="bbsv-consumer-callback-url-copy" class="git-configz" type="button" title='Copy'>
+                		<img height=13.5 src="../plugin-resources/github-static/CopyClipboard.svg">
+                	</button>
+                </div>
+            </label>
+
+            <label>
+                Consumer Key:
+                <input th:name="${BITBUCKET_SERVER_CONSUMER_KEY}" th:value="${bitbucketServerConsumerKey}"/>
+            </label>
+
+            <label>
+                API URI (https://bitbucketserver-example.com):
+                <input th:name="${BITBUCKET_SERVER_API_URL}" th:value="${bitbucketServerUrl}"/>
+            </label>
+
+
+            <br>
+            <fieldset class="retrieve-strategy">
+                <legend>Retrieve documents strategy:</legend>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_REST_API}" th:id="${BITBUCKET_SERVER_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}" th:name="${BITBUCKET_SERVER_RETRIEVE_STRATEGY}" th:attrappend="checked=${bitbucketServerRetrieveStrategyValue==RETRIEVE_STRATEGY_REST_API}?true"/>
+                <label th:for="${BITBUCKET_SERVER_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}">
+                    <span>REST API</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">Documents are retrieved via individual HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_HYBRID}" th:id="${BITBUCKET_SERVER_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}" th:name="${BITBUCKET_SERVER_RETRIEVE_STRATEGY}" th:attrappend="checked=${bitbucketServerRetrieveStrategyValue==RETRIEVE_STRATEGY_HYBRID}?true"/>
+                <label th:for="${BITBUCKET_SERVER_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}">
+                    <span>Hybrid (load-time Git clone + REST API)</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">To speed up document loading, the repository is briefly cloned in memory. After loading, the application discards the clone and switches to HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+            </fieldset>
+        </div>
+
+        <div id="gl-section">
+            <div class="instruction">
+                <p>GitLab Authentication uses OAuth 2.0 to gain access to your files.</p>
+                <p>To obtain the configuration parameters listed below go to your GitLab applications page (<a href="https://gitlab.com/-/profile/applications" target="_blank">https://gitlab.com/-/profile/applications</a>) and create a new application.</p>
+                <p>The available scopes must be: <span style="font-family: monospace">api: Access your API, read_user: Read user information</span></p>
+                <p><b>Note: </b>The <span style='font-family:monospace'>Redirect URI</span> must be set to:<br/><span style='font-family:monospace'><span class='web-author-context'>web-author-context</span>/plugins-dispatcher/gitlab-oauth/callback</span>
+                <br/>both in this dialog and on the GitLab page.</p>
+            </div>
+            <label>
+                Application Id:
+                <input th:name="${GITLAB_CLIENT_ID}" type='text' th:value="${gitlabClientId}"/>
+            </label>
+
+            <label>
+                Secret:
+                <input th:name="${GITLAB_CLIENT_SECRET}" type='text' th:value="${gitlabClientSecret}"/>
+            </label>
+
+            <label>
+                Redirect URI:
+                <input th:name="${GITLAB_REDIRECT_URL}" type='text' th:value="${gitlabRedirectUrl}"/>
+            </label>
+
+            <br>
+            <fieldset class="retrieve-strategy">
+                <legend>Retrieve documents strategy:</legend>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_REST_API}" th:id="${GITLAB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}" th:name="${GITLAB_RETRIEVE_STRATEGY}" th:attrappend="checked=${gitlabRetrieveStrategyValue==RETRIEVE_STRATEGY_REST_API}?true"/>
+                <label th:for="${GITLAB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}">
+                    <span>REST API</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">Documents are retrieved via individual HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_HYBRID}" th:id="${GITLAB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}" th:name="${GITLAB_RETRIEVE_STRATEGY}" th:attrappend="checked=${gitlabRetrieveStrategyValue==RETRIEVE_STRATEGY_HYBRID}?true"/>
+                <label th:for="${GITLAB_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}">
+                    <span>Hybrid (load-time Git clone + REST API)</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">To speed up document loading, the repository is briefly cloned in memory. After loading, the application discards the clone and switches to HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+            </fieldset>
+        </div>
+        <div id="gle-section">
+            <div class="instruction">
+                <p>GitLab On Premise Authentication uses OAuth 2.0 to gain access to your files.</p>
+                <p>To obtain the configuration parameters listed below, open your GitLab Enterprise in a browser, go to Preferences, Applications and create a new application.</p>
+                <p>The available scopes must be: <span style="font-family: monospace">api: Access your API, read_user: Read user information</span></p>
+                <p><b>Note: </b>The <span style='font-family:monospace'>Redirect URI</span> must be set to:<br/><span style='font-family:monospace'><span class='web-author-context'>web-author-context</span>/plugins-dispatcher/gitlab-e-oauth/callback</span>
+                <br/>both in this dialog and on the GitLab page.</p>
+            </div>
+            <label>
+                Application Id:
+                <input th:name="${GITLAB_E_CLIENT_ID}" type='text' th:value="${gitlabEnterpriseClientId}"/>
+            </label>
+
+            <label>
+                Secret:
+                <input th:name="${GITLAB_E_CLIENT_SECRET}" type='text' th:value="${gitlabEnterpriseClientSecret}"/>
+            </label>
+
+            <label>
+                API URI (https://gitlab-example.com):
+                <input th:name="${GITLAB_E_API_URL}" type='text' th:value="${gitlabEnterpriseApiUrl}"/>
+            </label>
+
+            <label>
+                Redirect URI:
+                <input th:name="${GITLAB_E_REDIRECT_URL}" type='text' th:value="${gitlabEnterpriseRedirectUri}"/>
+            </label>
+
+            <label>
+                GitLab version (required if you are using a GitLab version < 8.13.0):
+                <input th:name="${GITLAB_E_VERSION}" type='text' th:value="${gitlabEnterpiseVersion}"/>
+            </label>
+
+            <br>
+            <fieldset class="retrieve-strategy">
+                <legend>Retrieve documents strategy:</legend>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_REST_API}" th:id="${GITLAB_E_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}" th:name="${GITLAB_E_RETRIEVE_STRATEGY}" th:attrappend="checked=${gitlabEnterpriseRetrieveStrategyValue==RETRIEVE_STRATEGY_REST_API}?true"/>
+                <label th:for="${GITLAB_E_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_REST_API}">
+                    <span>REST API</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">Documents are retrieved via individual HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+
+                <input type="radio" th:value="${RETRIEVE_STRATEGY_HYBRID}" th:id="${GITLAB_E_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}" th:name="${GITLAB_E_RETRIEVE_STRATEGY}" th:attrappend="checked=${gitlabEnterpriseRetrieveStrategyValue==RETRIEVE_STRATEGY_HYBRID}?true"/>
+                <label th:for="${GITLAB_E_RETRIEVE_STRATEGY} + ${RETRIEVE_STRATEGY_HYBRID}">
+                    <span>Hybrid (load-time Git clone + REST API)</span>
+                </label>
+                <div class="infotooltip">
+                    <span class="infotooltip-control">?</span>
+                    <span class="infotooltip-tooltip">To speed up document loading, the repository is briefly cloned in memory. After loading, the application discards the clone and switches to HTTP(S) requests to the REST API of the Git server.</span>
+                </div>
+            </fieldset>
+        </div>
+        <div id="g-section">
+            <label>
+                <input th:name="${GIT_RESOLVE_SUBMODULES}" type='checkbox' th:checked="${gitResolveSubmodules}"/>
+                Enable Git submodules support
+            </label>
+
+            <label>
+                <input th:name="${GIT_ENABLE_NEW_BRANCH}" type='checkbox' th:checked="${gitEnableNewBranch}"/>
+                Allow users to commit on a new branch
+            </label>
+            
+            <label>
+                <input th:name="${GIT_SHOW_SIGN_OFF_TRAILER}" type='checkbox' th:checked="${gitShowSignOffTrailer}"/>
+                Allow users to add a Signed-off-by trailer to commit messages
+            </label>
+            
+            <label title="Check this box to hide the Git button from the dashboard.">
+                <input th:name="${GIT_GENERIC_DISABLED}" type='checkbox' th:checked="${gitGenericDisabled}"/>
+                Disable generic Git
+            </label>
+            
+            <label title="These values will be shown on the Dashboard when using the Generic Git connector" for="defaultJGitRepositories">
+              Default generic Git repositories (one per line)
+            </label>
+            <textarea placeholder="https://git.example.com/user/repo" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" th:name="${DEFAULT_JGIT_REPOSITORIES}" id="defaultJGitRepositories" th:text="${defaultJGitRepositories}"></textarea>
+        </div>
+    </form>
+</div>
+
+<script src='../plugin-resources/github-static/github-config.js'></script>

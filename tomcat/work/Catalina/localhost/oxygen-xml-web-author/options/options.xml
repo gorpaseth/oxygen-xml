@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized xml:space="preserve">
+	<serializableOrderedMap>
+		<entry>
+			<String>PLUGIN_CUSTOM_OPTIONS.cmis.enforced_name</String>
+			<String>CMIS</String>
+		</entry>
+		<entry>
+			<String>appearance.language.set</String>
+			<Boolean>true</Boolean>
+		</entry>
+		<entry>
+			<String>ask.open.ditamap.in.dita.manager</String>
+			<Integer>1</Integer>
+		</entry>
+		<entry>
+			<String>enable.file.protocol</String>
+			<Boolean>false</Boolean>
+		</entry>
+		<entry>
+			<String>frameworks.directory.url.with.editor.variables</String>
+			<String>file:/Users/gorpaseth/downloads/oxygen-xml-web-author/tomcat/work/Catalina/localhost/oxygen-xml-web-author/frameworks/</String>
+		</entry>
+		<entry>
+			<String>http.proxy.password</String>
+			<String>9.1.158;211;171;211;201;171;200;175;151;107;105;160;100;293;91;426;261;241;85;348;</String>
+		</entry>
+		<entry>
+			<String>http.proxy.user</String>
+			<String>gorpaseth</String>
+		</entry>
+		<entry>
+			<String>use.custom.frameworks.directory.url</String>
+			<Boolean>true</Boolean>
+		</entry>
+	</serializableOrderedMap>
+</serialized>

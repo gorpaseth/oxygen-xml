@@ -1,0 +1,101 @@
+html, body, form, .CodeMirror {
+  height: 100%;
+}
+
+.CodeMirror {
+  box-sizing: border-box;
+  border: 1px solid rgba(198, 198, 198, 1.0);
+  background-color: white;
+  margin: 0.25in auto 0.25in auto;
+  min-height: 10cm;
+}
+
+.CodeMirror-scroll {
+	padding: 2em 3em 5em 3em;
+  overflow: hidden !important;
+}
+
+body {
+  position: relative;
+  background-color: rgb(251, 251, 251);
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+article {
+  margin: 0 20% 0 20%;
+}
+
+@media screen and (max-width:1300px) {
+  article {
+    margin: 0 15% 0 15%;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  article {
+    margin: 0 10% 0 10%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  article {
+    margin: auto;
+  }
+}
+
+.CodeMirror-code {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.CodeMirror .cm-header {
+  color: black;
+}
+
+.cm-formatting-header:last-child {
+  line-height: 0.3em;
+}
+
+.cm-link {
+	text-decoration: none;
+}
+
+/* Start of new colors. */
+.cm-s-default .cm-comment {
+  color: rgb(194, 119, 84);
+}
+
+.cm-s-default .cm-variable-2, .cm-s-default .cm-variable-3{
+  color: rgb(102, 166, 209);
+}
+
+.cm-s-default .cm-quote {
+  color: rgb(155, 175, 74);
+}
+
+.cm-s-default .cm-link {
+  color: #c191c4;
+}
+
+.cm-s-default .cm-string {
+  color: #0033ff;
+}
+/* End of new colors. */
+
+.CodeMirror .cm-header-1 {
+  font-size: 2.5em;
+}
+
+.CodeMirror .cm-header-2 {
+  font-size: 2.0em;
+}
+
+.CodeMirror .cm-header-3 {
+  font-size: 1.5em;
+}
+
+.CodeMirror .cm-header-4 {
+  font-size: 1.0em;
+}

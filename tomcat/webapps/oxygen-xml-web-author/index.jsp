@@ -1,0 +1,1 @@
+<% response.sendRedirect("/oxygen-xml-web-author/app/oxygen.html"); %>

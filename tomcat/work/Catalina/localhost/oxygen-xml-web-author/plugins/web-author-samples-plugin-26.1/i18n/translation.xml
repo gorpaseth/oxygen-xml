@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Readonly_mode">
+        <val lang="en_US">Read-only mode</val>
+        <val lang="de_DE">Schreibgeschützter Modus</val>
+        <val lang="fr_FR">Mode lecture seule</val>
+        <val lang="ja_JP">読み取り専用モード</val>
+        <val lang="nl_NL">Alleen-lezen modus</val>
+        <val lang="zh_CN">只读模式</val>
+    </key>
+</translation>

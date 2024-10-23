@@ -1,0 +1,560 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.1
+Build-Jdk-Spec: 11
+Build-Number: 2024040407
+
+Name: js/licenseUnlock.js
+SHA-256-Digest: 5i9q9JZH1zd8r+gqq6WuyA2+CoB0WN5rrS5tyM2SMiY=
+
+Name: js/Chart.min.js
+SHA-256-Digest: aUydBd3D3p3+5tVJXERlqMtoCej+p4tdD+dkJgeRWNU=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseStore.class
+SHA-256-Digest: KX2mGy9CJ0UoR9E79LFdlv9IMATwDEOS4AcW6oMuAh4=
+
+Name: js/jquery-1.12.0.min.LICENSE.txt
+SHA-256-Digest: bt8MYfSDWFTNpVJU4OFvnt08Uxs8/2L19zPzXjrQRAI=
+
+Name: WEB-INF/lib/oxygen-patched-slf4j-26.1-SNAPSHOT.jar
+SHA-256-Digest: MfglX56TDUXfZYyhj2A/fHMZDLnGtikLREthfGPB/CM=
+
+Name: WEB-INF/classes/ro/sync/db/TimeProvider.class
+SHA-256-Digest: 8sutEdcVvoGmzO7LjptqNKtS4I8JPzPwfyZHfQiCgzc=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/LicensePollingResul
+ t.class
+SHA-256-Digest: psP5kZ81IEaZyIZr9Stc2uthngCLJild6MRndxdAflk=
+
+Name: WEB-INF/classes/ro/sync/db/BaseDBSupport.class
+SHA-256-Digest: 26mSUk5yoMafHN0Ih4tEQwGfs+qpMlL8paecEBjBXJY=
+
+Name: js/jquery-3.5.1.min.js
+SHA-256-Digest: 9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=
+
+Name: img/bx_loader.gif
+SHA-256-Digest: bUbizxZaWgWEr7p7yWY9opLuCMl8/HYT3mAT7QW+iSo=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/floating/LicenseServlet$1.c
+ lass
+SHA-256-Digest: pfIY3dSMqP4k/s/jUBT63WK9Glz7bMpRU/PXHwT/tRw=
+
+Name: WEB-INF/classes/ro/sync/db/NamedParameterStatement.class
+SHA-256-Digest: 4l1ipRC213kctDDZgGJmHM8HX4egYL8ipFBZdgrmh7E=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/ServerErrorExceptio
+ n.class
+SHA-256-Digest: 5h6bN/lyWSSVe7tRuAeXt/6wGjpD3OzuML1c25bnnV4=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/configuration_jsp.class
+SHA-256-Digest: akuHkYFv/jl12IigafXjHaIUwDjHI/o4hy7//CwZz+k=
+
+Name: WEB-INF/classes/ro/sync/db/floating/DBSupport.class
+SHA-256-Digest: 8uDwzi8vNJ6j7AGKOV/HIt0se7XH4K1Rp4jMHhWQCjE=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/Clock.class
+SHA-256-Digest: JzvTn2PyFsftID2z+Tq/j9gslrcORKoswp447PzffF0=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/polling_002dstatus_jsp.
+ class.smap
+SHA-256-Digest: NrmJb0pNmUarw+CTkVt3OAv7SIkRDi3DfSo5r5zXnEw=
+
+Name: WEB-INF/license/README.TXT
+SHA-256-Digest: Gx5IY3gFff7hnqclBfmr0lxpN10A2Hajlj18R2qNmKU=
+
+Name: WEB-INF/classes/org/apache/jsp/replace_jsp.class
+SHA-256-Digest: BPb8Jj9ey8sRHBZXuk/RxNVqKMfh9bUO1Bz+XhzOp6k=
+
+Name: WEB-INF/lib/logback-classic-1.4.14.jar
+SHA-256-Digest: joMvcmPKYGrjbauy2LJML0PYLPY06B2tnRZA+m7jxZY=
+
+Name: WEB-INF/classes/ro/sync/util/JsonUtil.class
+SHA-256-Digest: ZfEBZ4iRy+voe6Bt0AWF6v4BXQk38hNo9BQVV6nTtVc=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ClientInformation$ClientUni
+ queKey.class
+SHA-256-Digest: FoCN+OwQHCnkyhcqyZTvtUJmQI54cqfznhvT+xK2bC0=
+
+Name: WEB-INF/lib/jakarta.activation-1.2.2.jar
+SHA-256-Digest: AhVnc+SunQSNFKVq011kS+6fEFKnkdBy3z3tPGVubho=
+
+Name: img/Oxygen16.png
+SHA-256-Digest: ZO5DF/EEFzVz6+7/CTo6+yhiayK17KBT/eNSikS7i/0=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/hook/LicenseChangedHook.cla
+ ss
+SHA-256-Digest: tchd1DBG3DBrOnF/VZKOpd3NlCLl4zokq2lyTgogPkQ=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/nonfloating/LicenseServlet$
+ 3.class
+SHA-256-Digest: ytMD9m8j7y6cIAX/4S8wN+KlngEAr3dGbObhJWktpqU=
+
+Name: img/Warning16.png
+SHA-256-Digest: 5aAiv01pHO+7pZrT/XjkWQQH0GZD36DZcNZlZOanJdw=
+
+Name: WEB-INF/lib/oxygen-license-26.1-SNAPSHOT-reader.jar
+SHA-256-Digest: 4B6YQR25rpmYZgMV/mK34PpAjzhhs1iG3R3aBSj/Cqw=
+
+Name: css/user_management.css
+SHA-256-Digest: xKvTHo33d+MSfCqIRJ1vZ1a1dywVLZhjlhEzY5luBUQ=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/PropertiesUtil.class
+SHA-256-Digest: Nf++ZdjNm1Fi7j6YZk+2vTK2VjvKyErdsnTsCB8jlOc=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/LicensePollingManag
+ er$PollingTask.class
+SHA-256-Digest: WsL1zCot53FuZ2GCPHLyADmQle69EvLQiVHblbx+AS4=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseException.class
+SHA-256-Digest: cWjhjo8sVR9nhNhp4i3/9vMJUXCE2G/a2UTEdNyHYJY=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/usage_002dreport_jsp.cl
+ ass.smap
+SHA-256-Digest: KLxpz91+MCR+Cq4OTuXEVL2xEGV8gKkJTKaz8tdpJSw=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ClientInformationManager.cl
+ ass
+SHA-256-Digest: m/BDNHibBky6ZL6RKv+oY9IA4wcD019GAW4vONVVtOI=
+
+Name: WEB-INF/classes/ro/sync/db/IBaseDBSupport.class
+SHA-256-Digest: 4wv7mp5AwlW5CQLlZjxHLV894g8a5z2adHTCgAoUZkg=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/configuration_jsp.java
+SHA-256-Digest: Mug8cQ4f7zgRtou2C84vt0zPe0vqaKcOKxXrBulv1CY=
+
+Name: WEB-INF/classes/ro/sync/db/SystemTimeProvider.class
+SHA-256-Digest: 1X+qMJ26Vl6iV1S5aNNtl4wXXQxn0A0HjTaB9TRUrB8=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/store/AllowedUsersStore.cla
+ ss
+SHA-256-Digest: uDvgjm3wMKVaMhVlcyN39FcEhw3NnXU6jGMTwW/X8nQ=
+
+Name: WEB-INF/lib/oxygen-sandbox-26.1-SNAPSHOT.jar
+SHA-256-Digest: qtLcVaAu+l+aJLx9c4BwhyISLekO8Ga5OvOyL9dzu80=
+
+Name: error/401.html
+SHA-256-Digest: pVX2MZQMqmQUZxfH+dej2XGpCLhH7vpPlKDzxBouxMw=
+
+Name: WEB-INF/lib/json-20231013.jar
+SHA-256-Digest: DxgZLfKJEU4XqhoNCn+DcsyfXH5Pfjmtz4kG/nFPp9M=
+
+Name: js/report.js
+SHA-256-Digest: 6wgVucXiNhLL0cHSGoVbXqXnQQnFi5CeSJEoTifgpQg=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/nonfloating/LicenseServlet$
+ 1.class
+SHA-256-Digest: kI2CmGrj7olgT9jOEzzknhir8eFiFLRagBqlqo0X8oQ=
+
+Name: WEB-INF/classes/ro/sync/util/Time.class
+SHA-256-Digest: bFKJjx7XcYbBOGR6T6V6HgzGOs5RaQEFdEv0ZCRqAgs=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseServletInfo.class
+SHA-256-Digest: BWnjluH8FB8b8Pvhgwkr+4sFHPgeXYeYP6cE5qhPdPo=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/LicensePollingResul
+ t$1.class
+SHA-256-Digest: dKnpjkYjf8kowT9NtqWj0jezTCRuWNfbXgzvq50PyqI=
+
+Name: WEB-INF/lib/h2-2.1.210.jar
+SHA-256-Digest: 7cVymZJil/2TFeBN51+FOMTLX+l/09oqHlzuakyYtc0=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/usage_002dreport_jsp.cl
+ ass
+SHA-256-Digest: Ze/jZGjiMLz5GN+SIlRU1pwt07h2A6iduagkGpmmttw=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ServerResponseFormatter.cla
+ ss
+SHA-256-Digest: rjAdmxZFhaKNfKKZ5N14GbBXnlVpMkiE7p0wGARyTNw=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/BaseLicenseServlet.class
+SHA-256-Digest: GbxsXkZ1fgwZU5CZDwLWRc3BSG07hSEc8yHSIUYGOvI=
+
+Name: js/allowed-users.js
+SHA-256-Digest: suhTBoyJDG/ju3Ubxtmcqk+QUHpC/c2MMQCil8cjKxE=
+
+Name: WEB-INF/classes/ro/sync/db/CalendarTimeUtil.class
+SHA-256-Digest: b4v/VTwG/kuGzu+UYT3hXB50Jkh4eIeAxD+iEMAAmSc=
+
+Name: js/jquery.bxslider.min.LICENSE.txt
+SHA-256-Digest: fyEucf+wnw+c8sdZdDifWczUyWOkkwoNe3/g8BFhUVU=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/HostNameUtil.class
+SHA-256-Digest: OJV7ObGJMs4KbVi648wGHjFsJtF4HNmlaisbhE/0kAQ=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/statistics/UsageStatisticsS
+ ervlet.class
+SHA-256-Digest: vh/YdAsSmYQf6UayRKXyjCn7ooRrgwWUxYmleCL5/CI=
+
+Name: WEB-INF/lib/activation-1.1.jar
+SHA-256-Digest: KIHHnJ1u8BxY5ivuoT6dGsi4uqFvL8GYrW5ndt79zdM=
+
+Name: css/jquery.bxslider.css
+SHA-256-Digest: Ak7Pg6FISEXZpjDYpiAuAf06OOxl1C+AzHNOJjN9XRs=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/usage_002dreport_jsp.ja
+ va
+SHA-256-Digest: VPg+Wa1LfvvgdZea91XxDNZh9RJMtGoEAnqR+Z2SUGE=
+
+Name: img/eclipse16.ico
+SHA-256-Digest: kRsz950UHvqJKJaY+D4KaEP1yvDZ+e2hI4fCBXtdl9Y=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ServletStats.class
+SHA-256-Digest: 2zBrYq09oz8uFjntvoaqUHvLIWfCUp+erpMhjpPlK6k=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/HTMLReportUtil.class
+SHA-256-Digest: SKXM8UwPNgoDaVVTrAQ2FqOKsOH4Uu0G5lasZTFcltQ=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/LicensePollingResul
+ t$State.class
+SHA-256-Digest: /oTZUi3WyAfcsTiI0reXszTCKFPhqJ+xK8dvWSTLQGU=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ClientInformation.class
+SHA-256-Digest: 9m0QWwC8KBdNlpbr4uet38rbH1vnPS2Moq9pNORdRkY=
+
+Name: WEB-INF/classes/ro/sync/db/TimeInterval.class
+SHA-256-Digest: GwUdCGDSUNhmbmeWXQSqSYgGvgO2l6G9Q7Z9wvqDfhI=
+
+Name: img/controls.png
+SHA-256-Digest: JXIGxP1rzuNpJ+sO8roIe138bJoY33+FU4eL+EdhYiY=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/UserState.class
+SHA-256-Digest: g0tWiXSiIZpp9YX13tZfxtiGqQ5fIdvbTDRuFGlP+AM=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/store/AllowedUsersChangedLi
+ stener.class
+SHA-256-Digest: DGVVXUj4hxZdD7z+WXzbO9Mbng6EApZi8SkdwQetlVw=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/UpdateableServletStats.clas
+ s
+SHA-256-Digest: hmFinBhWolmbDyLASwKwxOdOpwvgDUszcfulnhHMQfo=
+
+Name: WEB-INF/usage-report.jsp
+SHA-256-Digest: mpiyWVubaC06JOQzecqDqRoSPc20lrzY/mMocYfiSxU=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/replace_002dlicense_002
+ dform_jsp.java
+SHA-256-Digest: CB6h/UgM1FofjzDsM96XULu3+7jNuAjDGFzrv2od1KE=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/proxy_002dsettings_jsp.
+ java
+SHA-256-Digest: QDu6Y6q1AA1CymK4Jcis4HQ+Cu2PvjB6RKQPHapNAck=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/polling_002dstatus_jsp.
+ class
+SHA-256-Digest: rTImC+0ex4GqqUct0bvgtp03zEFus+eWKeX5zxl+sD8=
+
+Name: WEB-INF/classes/ro/sync/db/AbstractRepo.class
+SHA-256-Digest: /W29L1thAxpkTeLhUIl36nEFFnC+jafSsuPEU1w4tVg=
+
+Name: css/custom.css
+SHA-256-Digest: SUCsRXRmqpzHntggi7FOsgTMWAnJoYfC6fxkigeiD/E=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/BaseLicenseServlet$DBUtil.c
+ lass
+SHA-256-Digest: W8AKjEbhQeS4f6k7YkPY6hKM+g4qA9PgQ/OVMTVQq/w=
+
+Name: WEB-INF/classes/org/apache/jsp/remove_jsp.class
+SHA-256-Digest: W/c79BeTJYC50XuQ8BxR7JY0y5+myEtMIHFy2tCu4GU=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/DateFormats.class
+SHA-256-Digest: nBiNCr9vdpsqNCLsi3UFTnlxhm3xF6ibZJsKZkGGMBY=
+
+Name: js/jquery.bxslider.min.js
+SHA-256-Digest: u559yCLGt7laYymTKIXHL/LK90skP8HECsoOhYEjuD4=
+
+Name: WEB-INF/lib/license-servlet-activation-system-id-26.1-SNAPSHOT.jar
+SHA-256-Digest: VGkN041v1sW3RB18XEfPIqmaZu2Qkvn9wTl6QmSN0nY=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/configuration_jsp.class
+ .smap
+SHA-256-Digest: t+xTeQSzoXdvEvdT4CP8qameq9o8oF+8F1K5ARXYM+g=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/floating/LicenseServlet.cla
+ ss
+SHA-256-Digest: 2O+wGieOHRiYcnLyte2H4Dbo6pBCUvB8NlR2LVP9rTo=
+
+Name: WEB-INF/classes/ro/sync/db/nonfloating/User.class
+SHA-256-Digest: A+TvcZeq/E/V2mgtIvcyjHqctWiUUJczCgbvqqt+4DI=
+
+Name: META-INF/maven/com.oxygenxml/oxygen-license-servlet/pom.xml
+SHA-256-Digest: +FNWFnIThDdmAREg+Nr9tD2EajRot8q/aZlcWZuD4nQ=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/proxy_002dsettings_jsp.
+ class.smap
+SHA-256-Digest: bk/+LeBdjNhcaf+rRuSH+YuU64FsHbR20t588ejYgks=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/polling_002dstatus_jsp.
+ java
+SHA-256-Digest: Ts+WcjcaodbYWqSAp0+vtfLCXVqH90LQLwrF1+NQuFc=
+
+Name: WEB-INF/classes/ro/sync/db/EmailHost.class
+SHA-256-Digest: rDm1q5EViATg6iFejlcjsy6QCg2UvzCYWeGx/o5+c0w=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/nonfloating/LicenseServlet$
+ 2.class
+SHA-256-Digest: kRye+UQY1k4zOLS3qni+N7TmhJ9NHZefKavlDBQCh7E=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseServlet.class
+SHA-256-Digest: YkoK/MB0plHFX+wBvdEcCmOvTUWIYcBGOox7HK737oM=
+
+Name: WEB-INF/lib/oxygen-basic-utilities-26.1-SNAPSHOT.jar
+SHA-256-Digest: Qeu2OFFsUxgYRPJs6PBWhS2oYwDAvzSVFq8SvkHFC7w=
+
+Name: WEB-INF/classes/ro/sync/servlet/ssl/SSLRedirectFilter.class
+SHA-256-Digest: dfgZsWpZnvKopLj9cKvjgqaFnYJhllneuWt5G4i4jqg=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/proxy_002dsettings_jsp.
+ class
+SHA-256-Digest: c+NQuphyBZZkRVxDMh4snaNxGvuP30mHLSRWmbRvvmc=
+
+Name: WEB-INF/logback.xml
+SHA-256-Digest: JnP/FeEljbVXzOAvk0q8X15SeAknY8D4bTKZyDGoENw=
+
+Name: WEB-INF/classes/ro/sync/util/Environment.class
+SHA-256-Digest: HouOZkdTTgkc8faQtxPlnrJu8uFmnm1TQJrI/cJuASA=
+
+Name: WEB-INF/lib/logback-core-1.4.14.jar
+SHA-256-Digest: +MLwX0JTCxhSc5UHwXkvAIAWeFDtjzlkRMaRPWYXopM=
+
+Name: WEB-INF/lib/jaxb-impl-2.3.3.jar
+SHA-256-Digest: 5ReNDHlIJH91oTxom/NvTV1JEKEh9xKqOyCulDdwadg=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/ProxySettingsServle
+ t$1.class
+SHA-256-Digest: y/zQgJ6FdJBTGOBsXhhq+OO6t4929OqGJArzkZdJO44=
+
+Name: replace.jsp
+SHA-256-Digest: 052igUETmDQ3BtPYxm+2w6nTCmCXfpZx4rnbEIUUXg0=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LogbackContextConfigurator.
+ class
+SHA-256-Digest: oa2k7dv96EgEB54uukFX2oba1fWxRVUPPHQA4mn4yY0=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/floating/FloatingClientInfo
+ rmationManager.class
+SHA-256-Digest: c3iFkJWiCdT7N5ulp3oJxh1vy/RI7akDczSnp6ceJJ4=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/ProxySettingsServle
+ t.class
+SHA-256-Digest: Ojgq1eKY+ffCNjdpyuReRbHxuDKH42CotzIM1x2+WzM=
+
+Name: css/index.css
+SHA-256-Digest: WlAXRuL2QKTrqlu34wdu1eO5WuTp/XvA+Yy6FexkF2E=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseInfo.class
+SHA-256-Digest: H+iRGwcuEPnlZIs78JvAqAqPXnH74gw7xbtAfEAkxlI=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/nonfloating/NonFloatingClie
+ ntInformationManager.class
+SHA-256-Digest: Wvf0dhd60EMS8XjFri3Ye2m4QTXujwuAqlrAlDs3jKY=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/HTMLReportUtil$LicenseData.
+ class
+SHA-256-Digest: w1I96a2QLfgttrZdJNunGn5oJYjfQZuCRiDM2vs0HoI=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/LicensePollingServl
+ et.class
+SHA-256-Digest: 6QjG9UE+tthK3RRJMbTNZ3wyJl3n7PvBsa502v2Flpo=
+
+Name: WEB-INF/classes/ro/sync/util/HttpClientUtil.class
+SHA-256-Digest: X9Y+ij9sP61Ppk4x00xsmWaz16q5RXCC7PM2p3jr9XQ=
+
+Name: css/report.css
+SHA-256-Digest: AvNXk35QwlAwizfRSqFP2xvVagm8ERfjjfGLYWzkelg=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/URLEncoderUTF8.class
+SHA-256-Digest: O+XM2NFUzFy+d1x/Fo89p7OAGvFwbwK4BKgO/38gkYw=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseOptions.class
+SHA-256-Digest: fQhVQSpLTK3JPkCDt7bMr9hJmdFhIZ+SfSZjh6oCtgg=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/DaemonThreadFactory
+ .class
+SHA-256-Digest: fy7YI3cgPdIkZ6M8U4SBpvLak4Ftz0MLJyRTykUCsps=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/initial/InitialSetupServlet
+ .class
+SHA-256-Digest: nqKcyQ6FpEPnXCrrZnEnh0R3o6dUNSoaurm3YLYT/Gw=
+
+Name: remove.jsp
+SHA-256-Digest: SdHXaEGhRTtiB966FUU8iuQBVwMgeAF32MFEjhUcQuA=
+
+Name: allowed-users.html
+SHA-256-Digest: M6gBL6f1bOfgA+fytHv1P5Z2N7h+Hh8Qe/vW1dGoLbA=
+
+Name: WEB-INF/proxy-settings.jsp
+SHA-256-Digest: pMeE8zKgBBJuoANVew428AeR+nkl/WX4R2BRfCldn3Q=
+
+Name: WEB-INF/classes/org/apache/jsp/index_jsp.class.smap
+SHA-256-Digest: +FMDYcM9ES4bkguPPcpKme0NPSM4CN1dsvX0/LJJ9Cs=
+
+Name: WEB-INF/classes/ro/sync/db/UsageData.class
+SHA-256-Digest: MEK78PFmBEWTblunhgDMnaw9KUdKx+Lt5MVBhe9chV4=
+
+Name: WEB-INF/lib/slf4j-api-2.0.9.jar
+SHA-256-Digest: CBiTDcjX3rtAMgRhFpHaWOSdQsULb/z9zgLa23w8K2w=
+
+Name: WEB-INF/classes/ro/sync/db/floating/FloatingRepo.class
+SHA-256-Digest: nzqqa1ZAiB4BMr62ByPurip1+JyzUVKotCjv7jZlqQo=
+
+Name: META-INF/maven/com.oxygenxml/oxygen-license-servlet/pom.properties
+SHA-256-Digest: jA6NGeIzqCeokchWuHgOK3VaM1qOIuJMR+cErmbHcMA=
+
+Name: js/Chart.min.LICENSE.txt
+SHA-256-Digest: OsS3gTkgtqLDrashJBmo49I3CDg93El3pt5to8wfsDs=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ActivationStates.class
+SHA-256-Digest: 6YRCuC7xPemIE+qmAwJYjdOy6Ml3cDLXX2DkFFmuqIc=
+
+Name: WEB-INF/configuration.jsp
+SHA-256-Digest: CbTpD8c+lina1BnD2IN9kQbSAPIGi6TnwCtJnDhAElY=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/FileSystemLayout.class
+SHA-256-Digest: DVOlhArHIIuuYzK79DNfLbE6JbwEVp//QwlmSvedP+o=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/nonfloating/LicenseServlet.
+ class
+SHA-256-Digest: Q4oLL1TmYSbbnAJBnuNtGRFuvNadRx8lWLQ1KdHOYKM=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseParser.class
+SHA-256-Digest: zjlT4tvYDeEEbJqOztwKzrInUByOM9F1ggFSG3kU47g=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseChangedListener.clas
+ s
+SHA-256-Digest: wbEC5JBRfhpV5O7I5zr/uZ5nYftLTqwFmrZ2CJq2Rvw=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/BaseServletConstants.class
+SHA-256-Digest: 9c/ymZIQ3td49nNatWb74AyCPUYkHK+fJpRfXn4TW+M=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/AllowedUsersServlet.class
+SHA-256-Digest: Z78xt1tYNRauh4FgNyxorSh0pDTDJkYQ2sDiD5FEcEY=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/URLDecoderUTF8.class
+SHA-256-Digest: nA/OP3u3ua9NoJ+NafMM8iqscaNjoBH1G957FkDCh4A=
+
+Name: favicon.ico
+SHA-256-Digest: +k5bskHThJZGEg05OgTcHpYbtwI5Rp2psH1a1M9DFl0=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/replace_002dlicense_002
+ dform_jsp.class
+SHA-256-Digest: WeytJ/mDll/dX/PAYbJ2X9CKeDVpGsI9UZZblccriY4=
+
+Name: WEB-INF/classes/org/apache/jsp/remove_jsp.java
+SHA-256-Digest: MZF59qkuXz7rwMyVsrlpO00gN9slmkQdlVSjnymgzZY=
+
+Name: WEB-INF/user-management.jsp
+SHA-256-Digest: C7Nrp6SmkD3P7/hsQQ2f4cQUF02vPRmoddaGO2stqFg=
+
+Name: WEB-INF/classes/ro/sync/db/UsageStats.class
+SHA-256-Digest: 91jU8R/WcFm195AXUkRZCoLgSAPYuIIasWOlzC6K3ho=
+
+Name: WEB-INF/web.xml
+SHA-256-Digest: qqymeLguV9fcTPEwEj1k7MQ4CxfOeN93NGb35PNNz7U=
+
+Name: WEB-INF/etc/servlet.properties
+SHA-256-Digest: d3HCcKfUoY580Wo9j50DGjxEsy1WiUnjE5qkuaLGEKM=
+
+Name: WEB-INF/classes/org/apache/jsp/index_jsp.java
+SHA-256-Digest: QG+5ehhzc3L+62kshX5iWMrpFCFya5jYQajZRI0rQCQ=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/ClientInformationManager$Cl
+ ientInformationCleanupDecisionMaker.class
+SHA-256-Digest: JgUeExnWZwEQh+UkUuwpC0E66PesfrCtQd1UPxM1/WY=
+
+Name: WEB-INF/classes/org/apache/jsp/remove_jsp.class.smap
+SHA-256-Digest: ol4ci56HxsOMk3tUGC34J+44ZQYi6g5OKBv8+D+B+OU=
+
+Name: WEB-INF/classes/ro/sync/db/Kind.class
+SHA-256-Digest: jUo+XWRB8x6TGIXuh2jhQC6L0zV+c6sc0oKiQVPZK+8=
+
+Name: js/licenseRevoke.js
+SHA-256-Digest: kh/Mnd55uSJKlLhoBQWwwxBalh4BrpC3801V3is3CkU=
+
+Name: WEB-INF/classes/org/apache/jsp/index_jsp.class
+SHA-256-Digest: p7fCgsByML8jN3IZYqrIfgqk9Oa2oG61mbZDWvcoDig=
+
+Name: WEB-INF/classes/ro/sync/util/charset/StandardCharsetsNames.class
+SHA-256-Digest: m7xXtu30fVGvSaX/2FznZghw7M1iHlw0d+BrP91CIs0=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/user_002dmanagement_jsp
+ .class
+SHA-256-Digest: Z5/Zqlzpewxdl6KYx32aVZs87Vz2qYjyeJkoBnMMEN8=
+
+Name: js/main.js
+SHA-256-Digest: 2RYfdPKuGakUWD/pwQ3t6hzYKuYKDaYCW/81ISWWN0Y=
+
+Name: WEB-INF/polling-status.jsp
+SHA-256-Digest: J9KY+CDeJOEnKXc84JX5dDV4D45cs9U5+0zI9hXT2Gk=
+
+Name: WEB-INF/replace-license-form.jsp
+SHA-256-Digest: qucGeiOlO48QsEvAq79rTcp0/nv4YXH/luYs/rKy+EM=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/LicenseServletStarter.class
+SHA-256-Digest: TNJMF3Gz5KOleDf1UHS21qiTSZ3LEi80ELwsSzJlYqs=
+
+Name: js/jquery-3.5.1.min.js.LICENSE.txt
+SHA-256-Digest: nMiOw3yvhxQXLH3aDEYlJ90yAhFCLjaUPaecT5nL5cE=
+
+Name: documentation.properties
+SHA-256-Digest: yRAW60s5x6K1mVP5tjLIXak4ohGWNYCB9GSjiruLqys=
+
+Name: WEB-INF/classes/ro/sync/licenseservlet/polling/LicensePollingManag
+ er.class
+SHA-256-Digest: CdGeyDidFc3Waj/RPEGeegHcFP/mwNwzHR/x1ODhLMc=
+
+Name: WEB-INF/lib/third-party-components.xml
+SHA-256-Digest: zBW6xjdUGXi6gMTqOuGPjcNs41ySyW9y526Jrhe/yqA=
+
+Name: META-INF/context.xml
+SHA-256-Digest: St1sAndW12u6ZqhXipyQIRHBEpJRavr9dFDGT/+/m1U=
+
+Name: WEB-INF/classes/ro/sync/db/nonfloating/DBSupport.class
+SHA-256-Digest: 0efh0JvWh6jxYT18NB8dtABCAGulQfdx8INMXFjQjPY=
+
+Name: index.jsp
+SHA-256-Digest: ODdjJ9qNxpfY9djgn+i13odZsppzBqHsj9LSNe1Lk/Y=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/replace_002dlicense_002
+ dform_jsp.class.smap
+SHA-256-Digest: 0KPIJn5XA9PrLfQmzwYmm+7Q0gcQI0F5q9bKpCFYjGo=
+
+Name: WEB-INF/classes/org/apache/jsp/replace_jsp.class.smap
+SHA-256-Digest: w1OIaePmlduhPVx8xu9NM4BTIU/xUroWBxEfkACt79o=
+
+Name: WEB-INF/lib/javax.mail-1.5.6.jar
+SHA-256-Digest: QMqAanJISGFtiEYepWW8WX2SuKkLpCarkuTEcVUt0Jc=
+
+Name: WEB-INF/classes/ro/sync/db/TimeIntervalDescription.class
+SHA-256-Digest: 8a64lwz2gbIlGiaoD5d4iviJ69jc1OkRAehj6I0jSr0=
+
+Name: WEB-INF/classes/ro/sync/db/Granularity.class
+SHA-256-Digest: Lf4rgc1eU8hjG/bkoAU3KN9brC7/PA87Ac6Kx2j6Qf4=
+
+Name: WEB-INF/classes/ro/sync/util/JspUtil.class
+SHA-256-Digest: C4dagVTmIlv/G4UJqm9YN8BOSCJKUyVcE00ZIcuoTAk=
+
+Name: WEB-INF/lib/jakarta.xml.bind-api-2.3.3.jar
+SHA-256-Digest: wEU59HLppt0MdoXqgtZ3KCJpq457rKLhRQDjgeDGzsU=
+
+Name: WEB-INF/classes/ro/sync/util/ServerURLUtil.class
+SHA-256-Digest: H2ONjyVXc8ZSY+hzkFGpkBK/v3KgDfvUa0q0EIMPlK8=
+
+Name: css/config_page.css
+SHA-256-Digest: PaDTrSd4n04qsBhrlOCXhDH6LKUYf8aLVJSG3Dgx3w0=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/user_002dmanagement_jsp
+ .java
+SHA-256-Digest: RlFRbTVjNpduLCI2IAn3hn2raRY9OcB24Q3KhZ59JlE=
+
+Name: WEB-INF/classes/ro/sync/db/nonfloating/NonFloatingRepo.class
+SHA-256-Digest: +ffxsKB+ADzFCi308NkDXrtn3ZRSgZm6mgswpZ4uVgY=
+
+Name: WEB-INF/classes/org/apache/jsp/replace_jsp.java
+SHA-256-Digest: OGWLoZUv1fvPgmzOu8l4nU1HHqzK5SxBPxTmZ2lC+W8=
+
+Name: WEB-INF/classes/ro/sync/db/DbUtil.class
+SHA-256-Digest: SmJYrmQqnTFeEsIzOkGZJn7VT4H77zne6zSVmpnwjH0=
+
+Name: WEB-INF/classes/org/apache/jsp/WEB_002dINF/user_002dmanagement_jsp
+ .class.smap
+SHA-256-Digest: kgoCkljjswZdoILvKoKXUUgJqiUrV1y85R9hiWTE/Nc=
+

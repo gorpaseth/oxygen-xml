@@ -1,0 +1,502 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.oxygenxml</groupId>
+    <artifactId>oxygen-superpom-standard</artifactId>
+    <version>26.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>oxygen-license-servlet</artifactId>
+  <packaging>war</packaging>
+  <name>oXygen License Servlet</name>
+  <description>The licensing servlet. This can be packaged in a Tomcat as a standalone licensing server.</description>
+  
+  <developers>
+    <developer>
+      <name>Mircea Enachescu</name>
+      <email>mircea@sync.ro</email>
+      <roles>
+        <role>manager</role>
+      </roles>
+    </developer>
+  </developers>
+  <scm>
+    <developerConnection>${scm.svn.base.url}${project.artifactId}</developerConnection>
+    <url>${svn.base.url}${project.artifactId}</url>
+  </scm>
+
+  <properties>
+    <jetty.for.test.version>9.4.46.v20220331</jetty.for.test.version>
+    
+    <!-- Needed to analyze JSP files and other web stuff -->
+    <sonar.sources>src/main/java,src/main/webapp</sonar.sources>
+    <maven.build.timestamp.format>yyyyMMddHH</maven.build.timestamp.format>
+    <cargo.command>start</cargo.command>
+  </properties>
+  
+  <build>
+    <plugins>
+      <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>properties-maven-plugin</artifactId>
+          <executions>
+              <execution>
+                  <phase>initialize</phase>
+                  <goals>
+                      <goal>read-project-properties</goal>
+                  </goals>
+                  <configuration>
+                      <files>
+                          <file>${project.basedir}/tools/signcert/signcert.properties</file>
+                      </files>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+            <webResources>
+                <resource>
+                    <directory>${project.basedir}</directory>
+                    <includes>
+                        <include>third-party-components.xml</include>
+                    </includes>
+                    <targetPath>WEB-INF/lib</targetPath>
+                </resource>
+                <resource>
+                    <directory>${project.basedir}</directory>
+                    <includes>
+                        <include>context.xml</include>
+                    </includes>
+                    <targetPath>META-INF/</targetPath>
+                </resource>
+                <resource>
+                    <directory>${project.basedir}/tools/licenses/</directory>
+                    <includes>
+                        <include>*LICENSE.txt</include>
+                    </includes>
+                    <targetPath>js</targetPath>
+                </resource>
+            </webResources>
+            <warName>oxygenLicenseServlet</warName>
+            <failOnMissingWebXml>false</failOnMissingWebXml>
+            <archive>
+                <manifestEntries>
+                    <Build-Number>${maven.build.timestamp}</Build-Number>
+                </manifestEntries>
+            </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-jarsigner-plugin</artifactId>
+		  <executions>
+		    <execution>
+		      <id>sign</id>
+		      <phase>install</phase>
+		      <goals>
+		        <goal>sign</goal>
+		      </goals>
+		    </execution>
+		  </executions>
+		  <configuration>
+		    <archiveDirectory>target</archiveDirectory>
+		    <includes>
+		      <include>oxygenLicenseServlet.war</include>
+		    </includes>
+
+		    <keystore>tools/signcert/authenticode/mycert.pfx</keystore>
+            <alias>${alias}</alias>
+            <storetype>${storeType}</storetype>
+            <storepass>${password}</storepass>
+            <keypass>${password}</keypass>
+		  	
+		  	<removeExistingSignatures>true</removeExistingSignatures>
+		  	<tsa>http://sha256timestamp.ws.symantec.com/sha256/timestamp</tsa>
+		  	<verbose>true</verbose>
+		  	<arguments>
+		  		<argument>-J-Dhttps.proxyHost=${proxyHost}</argument>
+		  		<argument>-J-Dhttps.proxyPort=${proxyPort}</argument>
+		  		<argument>-J-Dhttp.proxyHost=${proxyHost}</argument>
+		  		<argument>-J-Dhttp.proxyPort=${proxyPort}</argument>
+		  	</arguments>
+		  </configuration>
+		</plugin>
+		
+		<plugin>
+	        <groupId>org.apache.tomcat.maven</groupId>
+	        <artifactId>tomcat7-maven-plugin</artifactId>
+	        <executions>
+	        	<execution>
+	        		<id>undeploy-artifact</id>
+	        		<phase>deploy</phase>
+	        		<goals>
+	        			<goal>undeploy</goal>
+	        		</goals>
+	        		<configuration>
+			          <url>http://devel-new.sync.ro:8089/manager/text</url>
+			          <path>/oxygen-license-servlet-latest-build</path>
+			          <username>admin</username>
+			          <password>gh678j</password>
+			        </configuration>
+	        	</execution>
+	        	<execution>
+	        		<id>deploy-artifact</id>
+	        		<phase>deploy</phase>
+	        		<goals>
+	        			<goal>deploy</goal>
+	        		</goals>
+	        		<configuration>
+			          <url>http://devel-new.sync.ro:8089/manager/text</url>
+			          <path>/oxygen-license-servlet-latest-build</path>
+			          <username>admin</username>
+			          <password>gh678j</password>
+			          <warFile>target/oxygenLicenseServlet.war</warFile>
+			        </configuration>
+	        	</execution>
+	        </executions>
+	    </plugin>
+
+		<plugin>
+			<groupId>com.oxygenxml</groupId>
+			<artifactId>license-maven-plugin</artifactId>
+			<configuration>
+				<oxyProductName>content-fusion</oxyProductName>
+			</configuration>
+			<executions>
+				<execution>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>oxy-add-third-party</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+    
+    <!-- To run the container with the servlet enter in connsole "mvn cargo:run" -->
+    <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <container>
+            <containerId>tomcat9x</containerId>
+            
+            <zipUrlInstaller>
+               <url>https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/9.0.6/tomcat-9.0.6.zip</url>
+            </zipUrlInstaller>
+            
+            <output>target/output.log</output>
+            <append>false</append>
+            <systemProperties>
+              <basedir>${basedir}</basedir>
+              <oxygen.license.server.work.dir>${project.build.directory}/data/</oxygen.license.server.work.dir>
+            </systemProperties>
+          </container>
+          
+          <configuration>
+            <properties>
+              <cargo.servlet.port>9111</cargo.servlet.port>
+              <cargo.tomcat.ajp.port>9112</cargo.tomcat.ajp.port>
+            </properties>
+            <configfiles>
+            
+              <configfile>
+                <file>${project.basedir}/src/test/resources/tomcat-users.xml</file>
+                <todir>conf</todir>
+              </configfile>
+              
+            </configfiles>
+          </configuration>
+          
+          <deployables>
+            <!-- Configure the webapp to deploy -->
+            <deployable>
+              <location>${project.build.directory}/oxygen-license-servlet-${project.version}</location>
+              <properties>
+                <context>oxygenLicenseServlet</context>
+              </properties>
+            </deployable>
+          </deployables>
+
+          <packager>
+            <outputLocation>${project.build.directory}/tomcat-packaged</outputLocation>
+          </packager>
+
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>start</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>${cargo.command}</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>stop</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>stop</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+    
+        <executions>
+          <execution>
+            <id>configure-test-database</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <java classname="ro.sync.licenseservlet.admin.DatabasedInitializer" fork="true">
+                  <classpath>
+                    <path refid="maven.test.classpath" />
+                  </classpath>
+                </java>
+              </tasks>
+            </configuration>
+          </execution>
+
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <echo>Installing tests configuration</echo>
+                <!-- Copy the license.txt file. -->
+                <copy file="${basedir}/src/test/resources/license.txt"
+                  tofile="${basedir}/target/data/oxygenLicenseServlet/license.txt"/>
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Suppress some OWASP check false positives. -->
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <configuration>
+          <suppressionFiles>
+            <suppressionFile>dependency-check-suppressions.xml</suppressionFile>
+          </suppressionFiles>
+          <nodeAuditSkipDevDependencies>true</nodeAuditSkipDevDependencies>
+          <nodePackageSkipDevDependencies>true</nodePackageSkipDevDependencies>
+        </configuration>
+      </plugin>
+      <!-- Integration tests. -->
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <configuration>
+          <forkCount>1</forkCount>
+          <!-- Add a cleanup listener. -->
+          <properties>
+            <property>
+              <name>listener</name>
+              <value>ro.sync.jstest.junit.QuitDriversRunListener</value>
+            </property>
+          </properties>
+          <argLine>-Xmx1024m</argLine>
+          <trimStackTrace>false</trimStackTrace>
+          <systemPropertyVariables>
+            <!-- Integration tests should run only on FF in this project. -->
+            <available.drivers>FF</available.drivers>
+          </systemPropertyVariables>
+          <rerunFailingTestsCount>1</rerunFailingTestsCount>
+        </configuration>
+    <executions>
+        <execution>
+            <id>failsafe-integration-tests</id>
+            <phase>integration-test</phase>
+            <goals>
+                <goal>integration-test</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>failsafe-verify</id>
+            <phase>verify</phase>
+            <goals>
+                <goal>verify</goal>
+            </goals>
+        </execution>
+    </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <!--
+        Needed to run JSP code analysis from SonarQube/FindBugs.
+        
+        Compilation of the JSP with Jetty, according to:
+        https://github.com/find-sec-bugs/find-sec-bugs/wiki/JSP-precompilation
+         
+        Documentation for this plugin:
+        https://raw.githubusercontent.com/jetty-project/jetty-documentation/master/src/docbkx/development/maven/jetty-jspc-maven-plugin.xml
+    -->
+    <profile>
+      <id>jspc-jsp-precompilation-for-sonar</id>
+      <!-- Activate when SonarQube analysis is activated -->
+      <activation>
+        <property>
+          <name>ACTIVATE-SONARQUBE-SCANNER</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jspc-maven-plugin</artifactId>
+            <version>9.4.36.v20210114</version>
+            <executions>
+              <execution>
+                <id>jspc</id>
+                <goals>
+                  <goal>jspc</goal>
+                </goals>
+                <configuration>
+                  <jspc>
+                    <smapSuppressed>false</smapSuppressed>
+                    <smapDumped>true</smapDumped>
+                  </jspc>
+                  <!-- The generated .java files are not deleted at the end of processing. -->
+                  <keepSources>true</keepSources>
+
+                  <!-- Do not merge the generated fragment file with the source web.xml. --> 
+                  <mergeFragment>false</mergeFragment>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.oxygenxml</groupId>
+      <artifactId>license-servlet-activation-system-id</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.oxygenxml</groupId>
+      <artifactId>oxygen-basic-utilities</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.oxygenxml</groupId>
+      <artifactId>oxygen-license</artifactId>
+      <classifier>reader</classifier>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.oxygenxml</groupId>
+      <artifactId>selenium-utils</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-all</artifactId>
+    <version>1.3</version>
+    <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.truth</groupId>
+      <artifactId>truth</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Libraries removed from Java 11. -->
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>2.1.210</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20231013</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+      <version>1.18.22</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>${jetty.for.test.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-webapp</artifactId>
+      <version>${jetty.for.test.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-annotations</artifactId>
+      <version>${jetty.for.test.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>apache-jsp</artifactId>
+      <version>${jetty.for.test.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+  </dependencies>
+  
+</project>

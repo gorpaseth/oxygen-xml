@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSATALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+    class="com.oxygenxml.webapp.ce.ConcurrentPlugin"
+
+    id="web-author-concurrent-editing-plugin"
+    name="Web Author Concurrent Editing Plugin"
+    description="A plugin that implements a concurrent editing algorithm in Web Author"
+    version="26.1"
+    vendor="Syncro Soft">
+
+  <runtime>
+    <library name="target/classes" />
+    <librariesFolder name="target/lib" />
+    <librariesFolder name="lib" />
+  </runtime>
+
+  <extension type="RoomFactory" class="com.oxygenxml.webapp.ce.impl.multiserver.MultiServerRoomFactory"/>
+  <extension type="WebappServlet" class="com.oxygenxml.webapp.ce.PluginServlet"/>
+  <extension type="WebappServlet" class="com.oxygenxml.webapp.ce.MultiServerServlet"/>
+  <extension type="WebappStaticResourcesFolder" path="resources/" href="concurrent-editing"/> 
+ 
+  <context class="com.oxygenxml.webapp.ce.impl.multiserver.MultiServerRoomStore"/>
+  <context class="com.oxygenxml.webapp.ce.impl.multiserver.ServerRemoteInterfaceProvider"/>
+</plugin>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSTALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+ id="com.oxygenxml.sdksamples.webdav.WebdavServerPlugin"
+ name="WebDAV Server (deprecated)"
+ description="Runs a builtin WebDAV server with locking support. This plugin is deprecated and will be removed in a future release."
+ version="26.1"
+ vendor="Syncro Soft"
+ class="ro.sync.exml.plugin.Plugin">
+  <runtime>
+  <librariesFolder name="lib"/>
+  <library name="target/classes"/>
+ </runtime>
+
+ <extension type="WebappServlet" role="config"
+  class="com.oxygenxml.webdavserver.ConfigWebdavServerExtension"/>
+ <extension type="WebappServlet" 
+  class="com.oxygenxml.webdavserver.WebappWebdavServlet"/>
+</plugin>

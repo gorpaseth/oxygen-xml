@@ -1,0 +1,134 @@
+.cmis-history-table {
+	border-collapse: collapse;
+	border-top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	line-height: 1.2;
+}
+
+
+.cmis-history-table thead {
+	border: 1px solid lightgray;
+}
+
+.cmis-history-table thead tr {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.cmis-history-table thead th {
+	background-color: white;
+	box-shadow: inset 0 1px 0 lightgray, inset 0 -1px 0 lightgray;
+	border-top: 0;
+	border-bottom: 0;
+	line-height: 1.2;
+}
+
+.cmis-history-table td, .cmis-history-table th {
+	padding: 10px;
+}
+.cmis-history-table td {
+	border: 1px solid lightgray;
+}
+
+.cmis-history-table .cmis-old-version-link {
+	text-align: center;
+	color: #323233;
+}
+
+.cmis-history-table .current-version {
+	font-weight: bold;
+}
+
+.cmis-history-table .cmis-user {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 15em;
+}
+
+.cmis-history-table .cmis-checkin-message {
+	width: 100%;
+	position: relative;
+}
+
+.cmis-history-table .cmis-checkin-message > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	line-height: 2.5em;
+	padding: 0 10px;
+	white-space: pre-line;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.warningdiv {
+	text-align: center;
+	font-weight: 500;
+	font-family: robotolight, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+#cmis-messdiv {
+	text-align: center;
+	font-family: robotolight, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+#cmis-warnhr {
+	border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#cmis-loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	margin: -50px 0 0 -50px;
+	border: 8px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 8px solid #3498db;
+	width: 60px;
+	height: 60px;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+
+/* Add some space between the dropdown text and the downwards arrow. */
+[name="cmis-actions"] .goog-toolbar-menu-button-caption {
+	margin-right: 5px;
+}
+
+.cmis-login-dialog label, .cmis-version-label {
+  display: block;
+  line-height: 2em;
+}
+
+.cmis-error-content {
+  line-height: 2em;
+}
+
+#cmis-name, #cmis-passwd {
+  display: block;
+  width: 100%;
+}
+  
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

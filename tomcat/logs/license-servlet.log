@@ -1,0 +1,5 @@
+23 Oct 2024 12:45:32 163 INFO [ main ] ro.sync.licenseservlet.LicenseServletStarter - *************** <oXygen/> License Servlet Initializer started ***************
+23 Oct 2024 12:45:32 215 INFO [ main ] ro.sync.licenseservlet.BaseLicenseServlet - *************** <oXygen/> Floating License Servlet started ***************
+23 Oct 2024 12:45:32 218 INFO [ main ] ro.sync.licenseservlet.BaseLicenseServlet - Floating License Servlet version: 26.1.2024040407
+23 Oct 2024 12:45:33 491 INFO [ main ] ro.sync.licenseservlet.BaseLicenseServlet - *************** <oXygen/> User-Based License Servlet started ***************
+23 Oct 2024 12:45:33 492 INFO [ main ] ro.sync.licenseservlet.BaseLicenseServlet - User-Based License Servlet version: 26.1.2024040407

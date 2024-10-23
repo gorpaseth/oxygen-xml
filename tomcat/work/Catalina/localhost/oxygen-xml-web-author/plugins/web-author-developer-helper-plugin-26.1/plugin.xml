@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSATALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+    class="ro.sync.exml.plugin.Plugin"
+    id="web-author-developer-helper-plugin"
+    name="Web Author developer helper plugin"
+    description="Plugin that assists developers in creating customizations for Web Author, whether it's a framework or plugins."
+    version="26.1"
+    vendor="Syncro Soft">
+
+  <runtime>
+    <library name="target/classes" />
+    <librariesFolder name="target/lib" />
+    <librariesFolder name="lib" />
+  </runtime>
+
+  <extension type="WebappServlet" class="com.oxygenxml.devhelper.DatadirDetector"/>
+  <extension type="WebappCSSResource" href="web/css-inspector.css"/>
+  <extension type="WebappStaticResourcesFolder" path="web/static" href="dev-helper"/>
+</plugin>

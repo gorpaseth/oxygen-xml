@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translation>
+  <languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+  
+  <key value="MD_HEADING_1">
+    <comment>Description of the heading 1 insert action</comment>
+    <val lang="en_US">Insert H1 heading</val>
+    <val lang="de_DE">H1 Überschrift einfügen</val>
+    <val lang="fr_FR">Insérer un titre H1</val>
+    <val lang="ja_JP">H1 ヘッダの挿入</val>
+    <val lang="nl_NL">Voeg een H1 kop in</val>
+    <val lang="zh_CN">插入H1标题</val>
+  </key>
+  <key value="MD_HEADING_2">
+    <comment>Description of the heading 2 insert action</comment>
+    <val lang="en_US">Insert H2 heading</val>
+    <val lang="de_DE">H2 Überschrift einfügen</val>
+    <val lang="fr_FR">Insérer un titre H2</val>
+    <val lang="ja_JP">H2 ヘッダの挿入</val>
+    <val lang="nl_NL">Voeg een H2 kop in</val>
+    <val lang="zh_CN">插入H2标题</val>
+  </key>
+  <key value="MD_HEADING_3">
+    <comment>Description of the heading 3 insert action</comment>
+    <val lang="en_US">Insert H3 heading</val>
+    <val lang="de_DE">H3 Überschrift einfügen</val>
+    <val lang="fr_FR">Insérer un titre H3</val>
+    <val lang="ja_JP">H3 ヘッダの挿入</val>
+    <val lang="zh_CN">插入H3标题</val>
+  </key>
+  <key value="MD_HORIZONTAL_RULE">
+    <comment>Description of the horizontal rule insert action</comment>
+    <val lang="en_US">Horizontal rule</val>
+    <val lang="de_DE">Horizontale Linie</val>
+    <val lang="fr_FR">Ligne horizontale</val>
+    <val lang="ja_JP">水平罫線</val>
+    <val lang="nl_NL">Horizontale liniaal</val>
+    <val lang="zh_CN">水平尺</val>
+  </key>
+  <key value="MD_BOLD">
+    <comment>Description of the mark bold action</comment>
+    <val lang="en_US">Bold</val>
+    <val lang="de_DE">Fett</val>
+    <val lang="fr_FR">Gras</val>
+    <val lang="ja_JP">太字</val>
+    <val lang="nl_NL">Vet</val>
+    <val lang="zh_CN">大胆的</val>
+  </key>
+  <key value="MD_ITALIC">
+    <comment>Description of the mark italic action</comment>
+    <val lang="en_US">Italic</val>
+    <val lang="de_DE">Kursiv</val>
+    <val lang="fr_FR">Italique</val>
+    <val lang="ja_JP">斜体</val>
+    <val lang="nl_NL">Cursief</val>
+    <val lang="zh_CN">斜体</val>
+  </key>
+  <key value="MD_STRIKETHROUGH">
+    <comment>Description of the mark strikethrough action</comment>
+    <val lang="en_US">Strikethrough</val>
+    <val lang="de_DE">Durchgestrichen</val>
+    <val lang="fr_FR">Barré</val>
+    <val lang="ja_JP">取り消し線</val>
+    <val lang="nl_NL">Doorhalen</val>
+    <val lang="zh_CN">删除线</val>
+  </key>
+  <key value="MD_CODE_BLOCK">
+    <comment>Description of the mark code block action</comment>
+    <val lang="en_US">Code block</val>
+    <val lang="de_DE">Code-Block</val>
+    <val lang="fr_FR">Bloc de code</val>
+    <val lang="ja_JP">コードブロック</val>
+    <val lang="nl_NL">Codeblok</val>
+    <val lang="zh_CN">代码块</val>
+  </key>
+  <key value="MD_QUOTE_BLOCK">
+    <comment>Description of the mark quote block action</comment>
+    <val lang="en_US">Blockquote</val>
+    <val lang="de_DE">Blockzitat</val>
+    <val lang="fr_FR">Bloc de citation</val>
+    <val lang="ja_JP">ブロック引用要素</val>
+    <val lang="nl_NL">Blockquote</val>
+    <val lang="zh_CN">块引用</val>
+  </key>
+  <key value="MD_INSERT_IMAGE">
+    <comment>Description of the insert image action</comment>
+    <val lang="en_US">Insert image</val>
+    <val lang="de_DE">Bild einfügen</val>
+    <val lang="fr_FR">Insérer une image</val>
+    <val lang="ja_JP">画像を挿入します</val>
+    <val lang="nl_NL">Afbeelding invoegen</val>
+    <val lang="zh_CN">插入图像</val>
+  </key>
+  <key value="MD_INSERT_LINK">
+    <comment>Description of the insert link action</comment>
+    <val lang="en_US">Insert link</val>
+    <val lang="de_DE">Link einfügen</val>
+    <val lang="fr_FR">Insérer un lien</val>
+    <val lang="ja_JP">リンクを挿入</val>
+    <val lang="nl_NL">Koppeling invoegen</val>
+    <val lang="zh_CN">插入链接</val>
+  </key>
+  <key value="MD_INSERT_TABLE">
+    <comment>Description of the insert table action</comment>
+    <val lang="en_US">Insert a table</val>
+    <val lang="de_DE">Tabelle einfügen</val>
+    <val lang="fr_FR">Insérer un tableau</val>
+    <val lang="ja_JP">テーブルを挿入します。</val>
+    <val lang="nl_NL">Voeg een tabel in</val>
+    <val lang="zh_CN">插入表格</val>
+  </key>
+  <key value="MD_INSERT_ORDERED_LIST">
+    <comment>Description of the insert ordered list action</comment>
+    <val lang="en_US">Insert an ordered list</val>
+    <val lang="de_DE">Geordnete Liste einfügen</val>
+    <val lang="fr_FR">Insérer une liste ordonnée</val>
+    <val lang="ja_JP">ソート済リストを挿入します</val>
+    <val lang="nl_NL">Voeg een geordende lijst in</val>
+    <val lang="zh_CN">插入有序列表</val>
+  </key>
+  <key value="MD_INSERT_UNORDERED_LIST">
+    <comment>Description of the insert unordered list action</comment>
+    <val lang="en_US">Insert an unordered list</val>
+    <val lang="de_DE">Ungeordnete Liste einfügen</val>
+    <val lang="fr_FR">Insérer une liste non ordonnée</val>
+    <val lang="ja_JP">未ソートリストを挿入します</val>
+    <val lang="nl_NL">Voeg een niet geordende lijst in</val>
+    <val lang="zh_CN">插入无序列表</val>
+  </key>
+  <key value="MD_INSERT_TASK_LIST">
+    <comment>Description of the insert task list action</comment>
+    <val lang="en_US">Insert a task list</val>
+    <val lang="de_DE">Aufgabenliste einfügen</val>
+    <val lang="fr_FR">Insérer une liste de tâches</val>
+    <val lang="ja_JP">タスクリストを挿入する</val>
+    <val lang="nl_NL">Een takenlijst invoegen</val>
+    <val lang="zh_CN">插入任务列表</val>
+  </key>
+  <key value="MD_URL_EMPTY">
+    <comment>The error message when the URL of the image or link is empty</comment>
+    <val lang="en_US">The URL cannot be empty</val>
+    <val lang="de_DE">Die URL darf nicht leer sein</val>
+    <val lang="fr_FR">L'URL ne peut pas être vide</val>
+    <val lang="ja_JP">URL は空にできません</val>
+    <val lang="nl_NL">De URL mag niet leeg zijn</val>
+    <val lang="zh_CN">URL不能为空</val>
+  </key>
+  <key value="MD_URL_LABEL" skipTranslation="true">
+    <comment>The label for the URL attribute of the link or image to be inserted</comment>
+    <val lang="en_US">URL:</val>
+    <val lang="de_DE">URL:</val>
+    <val lang="fr_FR">URL :</val>
+    <val lang="ja_JP">URL:</val>
+    <val lang="nl_NL">URL:</val>
+    <val lang="zh_CN">URL:</val>
+  </key>
+  <key value="MD_ALTERNATE_TEXT_LABEL">
+    <comment>The label for the Alternate text (optional) attribute of image to be inserted</comment>
+    <val lang="en_US">Alternate text (optional):</val>
+    <val lang="de_DE">Alternativer Text (optional):</val>
+    <val lang="fr_FR">Texte alternatif (facultatif):</val>
+    <val lang="ja_JP">代替テキスト (オプション):</val>
+    <val lang="nl_NL">Alternatieve tekst (optioneel):</val>
+    <val lang="zh_CN">备选文本（可选）：</val>
+  </key>
+  <key value="MD_TEXT_LABEL">
+    <comment>The label for input used to set the text of the link to be inserted.</comment>
+    <val lang="en_US">Text (optional):</val>
+    <val lang="de_DE">Text (optional):</val>
+    <val lang="fr_FR">Texte (facultatif):</val>
+    <val lang="ja_JP">テキスト (オプション):</val>
+    <val lang="nl_NL">Tekst (optioneel):</val>
+    <val lang="zh_CN">文本（可选）：</val>
+  </key>
+  <key value="MD_TITLE_LABEL">
+    <comment>The label for the Title attribute of the link or image to be inserted</comment>
+    <val lang="en_US">Title (optional):</val>
+    <val lang="de_DE">Titel (optional):</val>
+    <val lang="fr_FR">Titre (facultatif):</val>
+    <val lang="ja_JP">タイトル (オプション):</val>
+    <val lang="nl_NL">Titel (optioneel):</val>
+    <val lang="zh_CN">标题（可选）：</val>
+  </key>
+</translation>

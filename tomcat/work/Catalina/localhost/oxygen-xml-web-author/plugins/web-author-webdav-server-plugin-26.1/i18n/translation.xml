@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Enforce_server">
+        <val lang="en_US">Enforce server</val>
+        <val lang="de_DE">Erzwinge Server</val>
+        <val lang="fr_FR">Serveur forcé</val>
+        <val lang="ja_JP">サーバーを強制する</val>
+        <val lang="nl_NL">Server afdwingen</val>
+        <val lang="zh_CN">强制服务器</val>
+    </key>
+</translation>

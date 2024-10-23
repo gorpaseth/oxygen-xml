@@ -1,0 +1,148 @@
+{"samples": [
+    {
+        "name": "DITA Topic",
+        "labels": "DITA, Keys, Review",
+		"newLabels": "Mentions",
+        "path": "dita/flowers/topics/flowers/gardenia.dita",
+        "ditamap": "dita/flowers/flowers.ditamap",
+        "image": ".descriptor/images/dita_flowers_topics_flowers_gardenia.png",
+        "urlParams": {
+            "showDitaMapView": "true",
+            "ccOnEnter": "false",
+            "stylesheet-titles": "Basic,%2B%20Inline%20insertion%20actions"
+        },
+		"new": "true"
+    },
+    {
+        "name": "DITA Map",
+        "labels": "DITA, Outline, Topic Content Editing",
+        "path": "dita/flowers/flowers.ditamap",
+        "image": ".descriptor/images/dita_flowers_flowers.png",
+        "urlParams": {
+            "stylesheet-titles": "Basic,%2B%20Show%20topic%20titles",
+            "editReferencesInPlace":"true"
+        }
+    },
+    {
+        "name": "DITA Profiling",
+        "labels": "DITA, Profiling",
+        "newLabels": "DITA Project",
+        "new": "true",
+        "path": "/dita/mobile-phone/topics/Specifications.dita",
+        "image": ".descriptor/images/dita_phone_map.png",
+        "urlParams": {
+            "stylesheet-titles": "Basic,%2B%20Show%20topic%20titles",
+            "inplaceReferenceEditingSupported": "true", 
+            "showDitaMapView": "true", 
+            "dita.project.url": "/dita/mobile-phone/mobilePhoneProjectFile.xml", 
+            "dita.project.contextid": "x1000ModelContext",
+            "editReferencesInPlace": "true"
+        }
+    },
+    {   
+        "name": "Compare Files",
+        "labels": "Diff, Merge",
+        "path": "diff/chess/Chess.dita",
+        "image": ".descriptor/images/chess_diff.png",
+        "urlParams": {
+            "diffUrl": "diff/chess/Chess_repo.dita",
+            "diffBaseUrl": "diff/chess/Chess_base.dita",
+            "leftEditorLabel": "Your version",
+            "rightEditorLabel": "Latest version",
+            "diffType": "merge",
+            "tags-mode" : "no-tags"
+        }
+    },
+    {
+        "name": "Image Map",
+        "labels": "DITA, Image Map",
+        "path": "dita/image-map/topics/gear-pump.dita",
+        "ditamap": "dita/image-map/gear-pump.ditamap",
+        "image": ".descriptor/images/dita_image-map_topics_gear-pump.png"
+    },
+    {
+        "name": "Markdown",
+        "labels": "Markdown",
+        "path": "markdown/markdown.md",
+        "image": ".descriptor/images/markdown_sample.png",        
+        "urlParams": {
+            "schematronUrl": "markdown/schematron.sch"
+        }
+    },
+    {
+        "name": "MathML and SVG",
+        "labels": "MathML, SVG, Docbook",
+        "path": "docbook/v5/sampleMathMLandSVG.xml",
+        "image": ".descriptor/images/docbook_v5_sampleMathMLandSVG.png"
+    },
+    {
+        "name": "Embedded Video",
+        "labels": "DITA, Embedded Video",
+        "path": "dita/space-videos/topics/aeronautics.dita",
+        "ditamap": "dita/space-videos/space-videos.ditamap",
+        "image": ".descriptor/images/dita_space-videos_topics_aeronautics.png"
+    },
+    {
+        "name": "Quick Fixes",
+        "labels": "Quick Fixes, Schematron, DITA",
+        "path": "quick-fixes/flowers.xml",
+        "image": ".descriptor/images/quick-fixes_flowers.png"
+    },
+    {
+        "name": "DocBook Article",
+        "labels": "DocBook, Outline",
+        "path": "docbook/v5/sample.xml",
+        "image": ".descriptor/images/docbook_v5_sample.png"
+    },
+    {
+        "name": "XHTML",
+        "labels": "XHTML",
+        "path": "xhtml/sample.xml",
+        "image": ".descriptor/images/xhtml_sample.png"
+    },
+    {
+        "name": "TEI",
+        "labels": "TEI",
+        "path": "tei/TEI-P5.xml",
+        "image": ".descriptor/images/tei_TEI-P5.png"
+    },
+    {
+        "name": "Footnotes",
+        "labels": "JTEI",
+        "path": "jtei/DEMOjtei-8-eide-source.xml",
+        "image": ".descriptor/images/jtei_DEMOjtei-8-eide-source.png",
+        "urlParams": {
+            "stylesheet-titles": "Footnotes"
+        }
+    },
+    {
+        "name": "Learning and Training",
+        "labels": "DITA, Specialization",
+        "path": "dita/learning/testlearningAssess.dita",
+        "image": ".descriptor/images/dita_learning_testlearningAssess.png"
+    },
+    {
+        "name": "Bi-directional Text",
+        "labels": "RTL, BiDi, DITA",
+        "path": "dita/cereals/cereal-ar.dita",
+        "image": ".descriptor/images/dita-cereals.png"
+    },
+    {
+        "name": "Chinese Content",
+        "labels": "CJK, DITA",
+        "path": "dita/xml-specification/topic.dita",
+        "image": ".descriptor/images/dita-xml-specialization.png"
+    },
+    {
+        "name": "Japanese Content",
+        "labels": "CJK, DITA",
+        "path": "dita/camellia-species/camelia.dita",
+        "image": ".descriptor/images/dita-camelia.png"
+    },
+    {
+        "name": "Korean Content",
+        "labels": "CJK, DITA",
+        "path": "dita/desert/desert.dita",
+        "image": ".descriptor/images/dita-desert.png"
+    }
+]}

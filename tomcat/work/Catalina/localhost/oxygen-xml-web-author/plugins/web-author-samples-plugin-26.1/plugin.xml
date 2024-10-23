@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+    id="web-author-samples-plugin"
+    name="Samples"
+    description="Shows a tab with sample documents on the Dashboard"
+    version="26.1"
+    vendor="Syncro Soft"
+    class="ro.sync.exml.plugin.Plugin">
+
+  <runtime>
+    <librariesFolder name="lib"/>
+    <library name="target/classes"/>
+  </runtime>
+
+  <extension type="AdditionalFrameworks" path="framework/"/>
+  <extension type="WebappStaticResourcesFolder" path="resources/" href="samples"/>
+  <context class="com.oxygenxml.samples.SamplesFileProvider"/>
+  <extension type="WebappServlet" role="config" class="com.oxygenxml.samples.SamplesConfigExtension"/>
+  <extension type="WebappServlet" class="com.oxygenxml.samples.SamplesServlet"/>
+  <extension type="URLHandler" class="com.oxygenxml.samples.SamplesURLStreamHandler"/>
+</plugin>

@@ -1,0 +1,1 @@
+Save the license text received via e-mail in a file called license.txt, then drop it into this folder.

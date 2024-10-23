@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSATALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+ id="com.oxygenxml.web.author.plugins.git.GitPlugin"
+ name="Git Plugin"
+ description="A plugin to enable the editing and committing of files on a Git repository."
+ version="26.1"
+ vendor="Syncro Soft"
+ class="com.oxygenxml.examples.github.GitHubPlugin">
+ <runtime>
+  <library name="target/classes"/>
+  <librariesFolder name="lib"/>
+  <librariesFolder name="target/lib"/>
+ </runtime>
+ 
+ <extension type="URLHandler" 
+    class="com.oxygenxml.examples.github.GithubURLStreamHandlerPluginExtension"/>
+    
+ <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.bitbucket.BitbucketOAuthServlet"/>
+ <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.bitbucketserver.oauth.BitbucketServerOAuthServlet"/>
+ <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.gitlab.GitlabOauthServlet"/>
+  <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.gitlab.GitlabEnterpriseOauthServlet"/>
+ <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.github.GithubOAuthServlet"/>
+    
+ <extension type="WebappCSSResource" href="web/static/github.css"/>
+ 
+ <extension type="WebappStaticResourcesFolder" path="web/static/" href="github-static"/>
+ <extension type="WebappServlet" role="config"
+    class="com.oxygenxml.examples.github.GithubPluginConfigExtension"/>
+    
+  <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.git.RESTGitAccess"/>
+  
+ <extension type="WebappServlet" 
+    class="com.oxygenxml.examples.webauthorgitapi.RESTGitApi"/>
+ <extension type="WebappServletFilter"
+    class="com.oxygenxml.examples.git.SynchronizedReposTrackerFilter"/>
+ <extension type="WorkspaceAccess"
+    class="com.oxygenxml.examples.git.ValidationTasksListenerForSyncrhoizedReposTracker"/>
+    
+ <extension type="WorkspaceAccess"
+    class="com.oxygenxml.examples.common.TeamsPseudoclassesSetter"/>
+
+ <extension type="WorkspaceAccess"
+    class="com.oxygenxml.examples.github.hybrid.InMemoryRepositoryCacheInstaller"/>
+
+  <extension type="TrustedHosts"
+    class="com.oxygenxml.examples.github.TrustedHostsProvider"/>
+
+  <context
+    class="com.oxygenxml.examples.github.GitHubOAuthService"/>
+  <context
+    class="com.oxygenxml.examples.gitlab.GitlabEnterpriseOAuthService"/>
+  <context
+    class="com.oxygenxml.examples.gitlab.GitlabCloudOAuthService"/>
+
+</plugin>

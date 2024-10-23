@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sample WebDAV authentication plugin</title>
+    </head>
+    <body>
+        <div>
+          <br>WebDAV Support for oXygen XML WebApp
+          <br>===============================================
+          <br>
+          <br>This project is a very simple integration of oXygen XML WebApp with a WebDAV-enabled server, which can be extended with more features or can be adapted to work with any CMS.
+          <br>
+          <br>Identifying the requesting user
+          <br>----------------------
+          <br>
+          <br>In order to implement a CMS connector, in oXygen one needs to implement a `URLStreamHandlerPluginExtension`,
+          <br>that returns an `URLStreamHandler` for the protocol used to communicate with the CMS.
+          <br>          
+          <br>In order to support authentication in the multi-user context of the oXygen Webapp, the `URLStreamHandler` instance should 
+          <br>extend `URLStreamHandlerWithContext`. The difference from `URLStreamHandler` is that the `openConnectionInContext` method receives the session ID that uniquely identifies the user on behalf of which we are accessing the given URL. 
+          <br>
+          <br>Credentials management
+          <br>--------------------
+          <br>
+          <br>When the user logs in, one needs to associate some credentials with the context ID.
+          <br> The simplest implementation would be to create a login servlet which implements the WebappServletPluginExtension interface and declare it as a WebappServlet extension in the plugin.xml file. The servlet would associate the user/passwd or the CMS session id with the context ID in a static Map.
+          <br>
+          <br>Auth failure
+          <br>-------------
+          <br>
+          <br>If the `URLStreamHandler` fails to authenticate with the CMS, it should throw an UserActionRequiredException. This exception will carry a WebappMessage that will be sent to the client-side JavaScript code. 
+          <br>
+          <br>The entire authentication failure handling should be implemented on the client-side. The basic steps are:
+          <br>- listen for authentication failure messages
+          <br>- pop-up an auth window
+          <br>- send the updated credentials to the login servlet
+          <br>- retry the user action
+          <br>
+          <br>The implementation can be found in the `plugin.js` file from the `app/` folder in the webapp `.war`.
+          <br>
+          <br>The URL that needs to be passed to the webapp is the WebDAV URL, prefixed with `webdav-` (e.g. `webdav-https://webdav-server.com/file.xml`).
+      </div>
+    </body>
+</html>

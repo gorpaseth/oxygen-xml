@@ -1,0 +1,182 @@
+/* Override note for lw dita */
+*[class ~= "topic/note"]:before(2) {
+    content:
+    oxy_buttonGroup(
+    icon, "../../css/img/Expand16.png",
+    transparent, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Caution', 
+                description, 'Note type caution', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'caution'
+          ),
+          oxy_action(
+                name, 'Danger', 
+                description, 'Note type danger', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'danger'
+          ),
+          oxy_action(
+                name, 'Note', 
+                description, 'Note type note', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'note'
+          ),
+          oxy_action(
+                name, 'Notice', 
+                description, 'Note type notice', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'notice'
+          ),
+          oxy_action(
+                name, 'Troubleshooting', 
+                description, 'Note type trouble', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'trouble'
+          ),
+          oxy_action(
+                name, 'Warning', 
+                description, 'Note type warning', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'warning'
+          )
+      )
+  )  !important;
+  vertical-align:middle;
+}
+
+/* Fr translation */
+*[class ~= "topic/note"]:lang(fr):before(2) {
+    content:
+    oxy_buttonGroup(
+    icon, "../../css/img/Expand16.png",
+    transparent, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Mise en garde', 
+                description, 'Type de note mise en garde', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'caution'
+          ),
+          oxy_action(
+                name, 'Danger', 
+                description, 'Type de note danger', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'danger'
+          ),
+          oxy_action(
+                name, 'Note', 
+                description, 'Type de note note', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'note'
+          ),
+          oxy_action(
+                name, 'Remarque', 
+                description, 'Type de note remarque', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'notice'
+          ),
+          oxy_action(
+                name, 'Dépannage', 
+                description, 'Type de note dépannage', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'trouble'
+          ),
+          oxy_action(
+                name, 'Attention', 
+                description, 'Type de note attention', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'warning'
+          )
+      )
+  )  !important;
+  vertical-align:middle;
+}
+
+/* De translation */
+*[class ~= "topic/note"]:lang(de):before(2) {
+    content:
+    oxy_buttonGroup(
+    icon, "../../css/img/Expand16.png",
+    transparent, true,
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Achtung', 
+                description, 'Notiztyp Achtung', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'attention'
+          ),
+          oxy_action(
+                name, 'Gefahr', 
+                description, 'Notiztyp Gefahr', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'danger'
+          ),
+          oxy_action(
+                name, 'Anmerkung', 
+                description, 'Notiztyp Anmerkung', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'note'
+          ),
+          oxy_action(
+                name, 'Hinweis', 
+                description, 'Notiztyp Hinweis', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'notice'
+          ),
+          oxy_action(
+                name, 'Problem', 
+                description, 'Notiztyp Problem', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'trouble'
+          ),
+          oxy_action(
+                name, 'Warnung', 
+                description, 'Notiztyp Warnung', 
+                operation, 'ChangeAttributeOperation', 
+                arg-name, 'type',
+                arg-elementLocation, '.',
+                arg-value, 'warning'
+          )
+      )
+  )  !important;
+  vertical-align:middle;
+}

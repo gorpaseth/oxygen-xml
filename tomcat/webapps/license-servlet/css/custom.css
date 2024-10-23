@@ -1,0 +1,122 @@
+.mainTitle {
+    display:block;
+    line-height: 1.4em;
+    text-decoration: none;
+    text-align: center;
+    color: #337AB7;
+}
+
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.licenseKeyCount {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.sliderItem {
+    background-color: white;
+    border: 1px solid lightgray;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.activeSlide {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.bx-wrapper .bx-prev {
+    left: -32px;
+}
+.bx-wrapper .bx-next {
+    right: -32px;
+}
+#usage-graph, #peak-graph {
+    padding-top: 15px;
+}
+#peak-graph {
+    margin-bottom: 30px;
+}
+#back2Month {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+.chartContainer {
+    width: 95%;
+    margin: auto;
+    position:relative;
+}
+.bigContainer {
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 20px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+#peakContainer {
+    padding-top: 0;
+    margin-top: 20px;
+    margin-bottom: 180px;
+}
+.emptyStuff {
+    height: 2em;
+}
+.nodata {
+    display: none;
+    text-align:center;
+    font-size: 1.5em;
+    background-color: #DDEEFF;
+    padding: 10px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+}
+.bx-wrapper .bx-viewport {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 5px solid transparent;
+    background: transparent;
+}
+.legendColor {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display:inline-block;
+    vertical-align: text-bottom;
+}
+.legendItemMax {
+    padding: 5px;
+    cursor: pointer;
+}
+.chart-legend {
+    text-align: left;
+    float: right;
+}
+.timeContainerDiv {
+    width:850px;
+    margin: auto;
+    padding: 5px 0 10px 0;
+    text-align: center;
+}
+.green {
+    color: #52803d;
+    font-weight: bold;
+}
+.red {
+    color: #CC0000;
+    font-weight: bold;
+}
+.blue {
+    color: #65A5DA;
+    font-weight: bold;
+}

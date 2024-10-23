@@ -1,0 +1,268 @@
+.sp-icon-large,
+.sp-icon-small{
+    display:inline-block;
+    background-size: cover;
+}
+.sp-icon-large {
+    background-image: url('../../../plugin-resources/sharepoint/OfficeWhite24.png');
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (min-resolution: 130dppx) {
+    .sp-icon-large{
+        background-image: url('../../../plugin-resources/sharepoint/OfficeWhite24@2x.png');
+    }
+}
+
+.sp-icon-small {
+    background-image: url('../../../plugin-resources/sharepoint/SharePoint16.png');
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (min-resolution: 130dppx) {
+    .sp-icon-small{
+        background-image: url('../../../plugin-resources/sharepoint/SharePoint16@2x.png');
+    }
+}
+
+.sp-radio {
+    padding-left: 20px;
+}
+.sp-radio input {
+    height: 1em;
+}
+.sp-textarea {
+    display: block;
+}
+
+.sp-message {
+    display:block;
+    word-wrap: break-word;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.5em;
+    vertical-align: middle;
+}
+
+.sp-check-in-type {
+    padding-bottom: 8px;
+}
+
+.sp-message-err-icon {
+    background-image: url('../../../plugin-resources/sharepoint/Problem16.png');
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    line-height: 1.5em;
+    vertical-align: middle;
+    margin-top: 0.2em;
+    margin-right: 0.2em;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (min-resolution: 130dppx) {
+    .sp-message-err-icon {
+        background-image: url('../../../plugin-resources/sharepoint/Problem16@2x.png');
+    }
+}
+
+.sp-check-in {
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.5em;
+    vertical-align: middle;
+}
+
+#sp-oauth-button {
+    display: block;
+    border-radius: 6px;
+    background-color: #0072C6;
+    color: #fff;
+    padding: 0 10px 0 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 3px;
+    line-height: 2.5em;
+}
+#sp-oauth-button:hover {
+    background-color: #0077DC;
+}
+
+span#sp-check-out-deco {
+    display: inline-block;
+    background-image: url('../../../plugin-resources/sharepoint/CheckOutDeco9.png');
+    width: 9px;
+    height: 9px;
+    margin-right: 2px;
+    margin-bottom: 0.6em;
+    vertical-align: middle;
+    background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (min-resolution: 130dppx) {
+    span#sp-check-out-deco {
+        background-image: url('../../../plugin-resources/sharepoint/CheckOutDeco9@2x.png');
+    }
+}
+
+
+div.sp-resources-input-wrapper {
+  display: block;
+}
+
+#sp-resources-input {
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.sp-config-dialog {
+    text-align: center;
+    width: 100%;
+}
+
+.sp-config-dialog input {
+    width: 80%;
+}
+
+.sp-login-dialog {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+.sp-login-dialog-error {
+    text-align: center;
+    background-color: #FEEBEB;
+    color: #b94a48;
+    border: 1px solid #eed3d7;
+    border-radius: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 3px 3px 3px 5px;
+    line-height: 1.2;
+    margin: 0 auto 5px auto;
+}
+
+.sp-login-dialog label {
+    text-align: right;
+    display: block;
+}
+
+.sp-login-dialog input {
+    width: 175px;
+}
+
+@media only screen and (max-width: 550px) {
+    .sp-config-dialog {
+        width: auto;
+    }
+    
+    .sp-login-dialog {
+        width: auto;
+    }
+    .sp-login-dialog label {
+        text-align: left;
+    }
+    .sp-login-dialog input {
+        width: 100%;
+        display: block;
+    }
+}
+
+.sp-oauth-text {
+    margin-left: 5px;
+}
+
+.domain-icon {
+    margin-right: 5px;
+    display:inline-block;
+    vertical-align: middle;
+    background: 50% 50% no-repeat;
+    background-size: 16px 16px;
+    width: 16px;
+    height:16px;
+}
+
+.sharepoint-domain-edit {
+    vertical-align: middle;
+    display: inline-block;
+    right: 0;
+    background: 50% 50% no-repeat;
+    padding-right: 5px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXUlEQVR42mNgGBKgoKAgAYj/Q3ECJZrBmCLNRBuASzNRXhhemj8AsQExmgWA+ABZmpEMUQDiC+RqBtnugOQVA1JTG8jWCVCvbIAaCKIboDgAZAFWg////08RptgAAMDo/Jm25cdCAAAAAElFTkSuQmCC);
+    height: 32px;
+    width: 20px;
+    border: 1px solid transparent;
+    margin: 0 0 0 10px;
+    border-radius: 2px;
+}
+
+.sharepoint-repo-preview {
+    display: inline-block;
+    height: inherit;
+}
+
+.file-browser-repo-config-area:hover .sharepoint-domain-edit {
+    background-color: lightgrey;
+}
+
+.file-browser-repo-config-area:hover .sharepoint-domain-edit:hover {
+    border-color: grey;
+    cursor: pointer;
+}
+
+.sp-ac .ac-row {
+    padding: 0.8em;
+}
+
+.sp-ac .ac-renderer {
+    z-index: 100;
+    max-height: 360px; /* Show at most 10 results + scroll*/
+    max-width: 80%;
+    overflow: auto;
+    width: auto;
+}
+
+.sp-logout-container {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 1;
+    color: #2072b2;
+}
+
+.sp-logout-container:hover {
+    border-color: #1976d2;
+}
+
+.sp-logout-container .sp-username {
+    color: #cccccc;
+}
+
+.sp-prefs-dialog {
+    margin: 10px 0;
+    display: block;
+}
+.sp-prefs-dialog .oxy-combo {
+    margin-top: .4rem;
+}
+
+

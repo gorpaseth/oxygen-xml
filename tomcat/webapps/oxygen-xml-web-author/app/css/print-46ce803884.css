@@ -1,0 +1,72 @@
+/**
+ * Print specific CSS rules.
+ */ 
+@media print {
+    /* A div that is used to hold the document to be printed. */
+    .print-div {
+        background-color: #fff;
+        width: 100%;
+        z-index: 10;
+        display: block !important;
+    }
+    /* Change the document layout to allow some space for review markers. */
+    .document-with-review-items {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding-right: 230px !important;
+    }
+    #editor-frame {
+        display: none !important;
+    }
+    #editorContent:before{
+        /* @translation-attribute */
+        content: attr(data-oxycaption)!important;
+        display: block !important;
+        color:red;
+    }
+
+    /**
+     * Elements marked with 'noprint' class should not appear in the print version.
+     */
+	.noprint {
+		display: none !important;
+	}
+
+    /**
+     * Hide the additional ui elements that are generated automatically and
+     * cannot be assigned a 'noprint' class.
+     */
+    .ui-layout-resizer {
+        display: none !important;
+    }
+
+    /**
+     * The document should be 100% wide and have its natural height.
+     */
+    html,
+    body,
+    #review,
+    #editorContent,
+    .main-container {
+        padding: 0 !important;
+        border: 0 !important;
+        margin: 0 !important;
+        position: static !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        height: inherit !important;
+        max-height: none !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+    }
+
+    /**
+     * Do not break inside XML text nodes.
+     */
+	.oxy-document span[data-role="text"] {
+        page-break-inside:avoid;
+    }
+}

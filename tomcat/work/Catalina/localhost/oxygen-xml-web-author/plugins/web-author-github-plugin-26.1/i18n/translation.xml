@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This file is generated and contains only the subset of messages used on the server-side. -->
+<!-- You should not manually edit this file. -->
+<translation>
+<languageList>
+    <language description="English" lang="en_US"/>
+    <language description="German" lang="de_DE"/>
+    <language description="French" lang="fr_FR"/>
+    <language description="Japanese" lang="ja_JP"/>
+    <language description="Dutch" lang="nl_NL"/>
+    <language description="Chinese" lang="zh_CN"/>
+  </languageList>
+    <key value="Created_with_oxygen_web_author">
+        <val lang="en_US">Created file with oXygen XML Web Author.</val>
+        <val lang="de_DE">Datei mit oXygen XML Web Author erstellt.</val>
+        <val lang="fr_FR">Fichier créé avec oXygen XML Web Author.</val>
+        <val lang="ja_JP">oXygen XML Web Authorでファイルを作成しました。</val>
+        <val lang="nl_NL">Bestand gemaakt met oXygen XML Web Author.</val>
+        <val lang="zh_CN">使用oXygen XML Web Author创建了文件。</val>
+    </key>
+    <key value="EMPTY_COMMIT_">
+        <val lang="en_US">Cannot make an empty commit.</val>
+        <val lang="de_DE">Kann keinen leeren Commit erstellen.</val>
+        <val lang="fr_FR">Impossible de faire un commit vide.</val>
+        <val lang="ja_JP">空のコミットを行うことはできません。</val>
+        <val lang="nl_NL">Kan geen lege vastlegging maken.</val>
+        <val lang="zh_CN">您不能执行空白提交.</val>
+    </key>
+    <key value="Not_authenticated">
+        <val lang="en_US">Not authenticated.</val>
+        <val lang="de_DE">Nicht berechtigt.</val>
+        <val lang="fr_FR">Non authentifié.</val>
+        <val lang="ja_JP">認証されていません。</val>
+        <val lang="nl_NL">Niet geverifieerd.</val>
+        <val lang="zh_CN">未经认证。</val>
+    </key>
+    <key value="No_commit_access">
+        <val lang="en_US">No commit access to this repository.</val>
+        <val lang="de_DE">Keine Commit-Berechtigung für dieses Repository</val>
+        <val lang="fr_FR">Aucun accès pour commit dans ce dépôt.</val>
+        <val lang="ja_JP">このリポジトリに対するアクセスはコミットされていません。</val>
+        <val lang="nl_NL">Geen vastlegtoegang tot deze opslagplaats.</val>
+        <val lang="zh_CN">没有对此存储库的提交访问权限。</val>
+    </key>
+    <key value="Not_authorized">
+        <val lang="en_US">Not authorized.</val>
+        <val lang="de_DE">Nicht berechtigt.</val>
+        <val lang="fr_FR">Non autorisé.</val>
+        <val lang="ja_JP">承認されていません。</val>
+        <val lang="nl_NL">Niet bevoegd.</val>
+        <val lang="zh_CN">未经授权。</val>
+    </key>
+    <key value="FILE_NOT_FOUND_">
+        <val lang="en_US">File not found</val>
+        <val lang="de_DE">Datei nicht gefunden</val>
+        <val lang="fr_FR">Fichier non trouvé</val>
+        <val lang="ja_JP">ファイルは見つかりません</val>
+        <val lang="nl_NL">Bestand niet gevonden</val>
+        <val lang="zh_CN">找不到文件</val>
+    </key>
+    <key value="INVALID_REPO_URL_">
+        <val lang="en_US">Invalid repository URL: {0}</val>
+        <val lang="de_DE">Ungültige Repository-URL: {0}</val>
+        <val lang="fr_FR">URL du dépôt invalide : {0}</val>
+        <val lang="ja_JP">無効なリポジトリ URL: {0}</val>
+        <val lang="nl_NL">Ongeldige URL voor opslagplaats: {0}</val>
+        <val lang="zh_CN">无效的存储库URL:{0}</val>
+    </key>
+    <key value="Failed_merge_conflict_docs">
+        <val lang="en_US">Failed to merge conflict in documents.</val>
+        <val lang="de_DE">Fehler beim Zusammenführen von Konflikten in Dokumenten.</val>
+        <val lang="fr_FR">Échec de la fusion des conflits dans les documents.</val>
+        <val lang="ja_JP">ドキュメント内の競合のマージに失敗しました。</val>
+        <val lang="nl_NL">Het samenvoegen van conflicten in documenten is mislukt.</val>
+        <val lang="zh_CN">合并冲突文件失败</val>
+    </key>
+    <key value="Failed_create_branch_pull_request">
+        <val lang="en_US">Failed to create branch for pull request.</val>
+        <val lang="de_DE">Zweig (branch) für Pull-Anfrage konnte nicht erstellt werden.</val>
+        <val lang="fr_FR">Echec de la création d'une branche pour le pull request.</val>
+        <val lang="ja_JP">プル要求用の分岐の作成に失敗しました。</val>
+        <val lang="nl_NL">Het maken van een vertakking voor een pull-aanvraag is mislukt.</val>
+        <val lang="zh_CN">为拉取请求创建分支失败</val>
+    </key>
+    <key value="Not_authorized_long">
+        <val lang="en_US">Not authorized to access this repository.</val>
+        <val lang="de_DE">Nicht berechtigt auf dieses Repository zuzugreifen.</val>
+        <val lang="fr_FR">Non autorisé à accéder à ce dépôt.</val>
+        <val lang="ja_JP">このリポジトリへのアクセスを承認されていません。</val>
+        <val lang="nl_NL">Niet bevoegd voor toegang tot deze opslagplaats.</val>
+        <val lang="zh_CN">未授权访问此存储库。</val>
+    </key>
+</translation>

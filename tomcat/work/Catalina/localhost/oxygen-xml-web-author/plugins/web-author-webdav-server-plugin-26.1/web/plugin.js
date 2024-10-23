@@ -1,0 +1,1 @@
+(()=>{(function(){var n={};sync.Translation.addTranslations(n)})();(function(){var n=null,r=location.href,a=r.indexOf("/app/"),e=r.substring(0,a+1)+"plugins-dispatcher/webdav-server/";sync.options.PluginsOptions.getClientOption("webdav_server_plugin_enforce_url")==="on"&&window.addEnforcedWebdavUrl&&window.addEnforcedWebdavUrl(e)})();})();

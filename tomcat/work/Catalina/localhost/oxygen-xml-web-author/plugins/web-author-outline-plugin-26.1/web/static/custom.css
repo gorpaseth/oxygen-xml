@@ -1,0 +1,209 @@
+.outline-container .goog-tree-row {
+  height: auto;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.outline-container .goog-tree-item {
+  display: table;
+  table-layout: fixed;
+  min-width: 100%;
+}
+
+.outline-container .goog-tree-item-label {
+  border-radius: 4px;
+  line-height: 1.1em;
+  position: relative;
+  overflow: visible;
+  margin-left: 0;
+  padding: 5px 10px 5px 0;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.outline-container .goog-tree-row:hover,
+.outline-container .outline-selection-after .goog-tree-row.selected:hover,
+.outline-container .outline-selection-before .goog-tree-row.selected:hover {
+  background-color: rgba(214, 233, 248, 0.2) !important;
+}
+
+.outline-container .goog-tree-row.selected {
+  background-color: rgba(214, 233, 248, 0.6)!important;
+  transition: background-color 300ms linear;
+}
+.outline-container:hover .goog-tree-row.selected {
+  background-color: rgba(214, 233, 248, 0.8)!important;
+}
+
+.outline-container .selected .goog-tree-item-label {
+  background-color: transparent;
+  color: ButtonText;
+}
+
+.outline-tagName {
+  color: #0068bd;
+}
+
+.outline-attribute {
+  color: #c73304;
+}
+
+.outline-tagName, .outline-attribute {
+  margin-right: 5px;
+}
+
+.outline-tagName,
+.outline-attribute,
+.outline-text {
+  pointer-events: none;
+}
+
+.outline-element-icon {
+  display: none !important;
+}
+
+.outline-toolbar {
+  background-color: #F5F5F5;
+  border: 1px solid #dcdcdc;
+  padding: 3px 3px;
+  margin: 12px;
+  width: calc(100% - 24px);
+}
+
+.outline-toolbar .goog-toolbar {
+  padding: 2px 1px;
+}
+
+.outline-toolbar .goog-menuitem,
+.outline-toolbar .goog-toolbar-menu-button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.outline-container .goog-tree-row:not(.goog-tree-hide-root) {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.outline-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.outline-tree-container {
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.outline-tree-container .goog-tree-root > .goog-tree-children-nolines > .goog-tree-item > .goog-tree-row {
+  padding-left: 4px !important;
+}
+
+.custom-drag-inserting-bottom:after,
+.custom-drag-inserting-middle:after,
+.custom-drag-inserting-top:after {
+  position: absolute;
+  content: '';
+  width: calc(100% + 18px);
+  left: -20px;
+}
+
+.selected.custom-drag-inserting-bottom:after,
+.selected.custom-drag-inserting-middle:after,
+.selected.custom-drag-inserting-top:after {
+  display: none;
+}
+
+.custom-drag-inserting-bottom:after {
+  background-color: rgba(51, 122, 183, 0.5);
+  height: 2px;
+  bottom: -2px;
+}
+
+.custom-drag-inserting-middle:after {
+  top: 0;
+  height: 100%;
+  box-shadow: 0 0 0 2px rgba(51, 122, 183, 0.5);
+}
+
+.custom-drag-inserting-top:after {
+  background-color: rgba(51, 122, 183, 0.5);
+  height: 2px;
+  top: -2px;
+}
+
+.outline-dragging {
+  background-color: rgba(214, 233, 248, 0.6);
+  border-radius: 4px;
+  opacity: 0.3;
+  z-index: 1;
+  overflow: hidden;
+  visibility: hidden;
+  padding-left: 15px;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.outline-dragging-disabled {
+  background-color: transparent;
+  overflow: visible;
+  cursor: not-allowed;
+}
+
+.outline-dragging-disabled span {
+  display: none!important;
+}
+
+.outline-progress {
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+.outline-toolbar .goog-toolbar {
+  background-color: transparent;
+  border: none;
+}
+.outline-toolbar .goog-toolbar-menu-button {
+  font-size: 1.2em;
+}
+
+.outline-toolbar .goog-toolbar .goog-toolbar-menu-button .goog-toolbar-menu-button-inner-box {
+  padding: 1px 6px 2px 6px;
+}
+
+.outline-toolbar .goog-toolbar-menu-button-open {
+  background-color: transparent !important;
+}
+
+.outline-toolbar .goog-toolbar-menu-button-dropdown {
+  vertical-align: baseline;
+}
+
+.outline-container .outline-selection-after .goog-tree-row.selected,
+.outline-container .outline-selection-before .goog-tree-row.selected {
+  background-color: transparent!important;
+}
+
+.outline-selection-after, .outline-selection-before {
+  position: relative;
+}
+.outline-selection-after > .goog-tree-row:after,
+.outline-selection-before > .goog-tree-row:before {
+  position: absolute;
+  content: ' ';
+  width: 20px;
+  height: 1px;
+  background-color: black;
+  margin-left: 20px;
+}
+.outline-selection-after > .goog-tree-row:after {
+  bottom: -2px;
+}
+.outline-selection-before > .goog-tree-row:before {
+  top: 4px;
+}

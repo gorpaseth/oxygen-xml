@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSATALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin class="com.oxygenxml.cmis.web.Plugin"
+
+	id="web-author-cmis-plugin" name="CMIS Plugin"
+	description="Plugin that adds support for CMIS servers including browsing for files, check out, edit, save, check in."
+	version="26.1" vendor="Syncro Soft">
+
+	<runtime>
+		<librariesFolder name="lib" />
+		<library name="target/classes" />
+		<librariesFolder name="target/lib" />
+	</runtime>
+
+	<!-- Add extensions here -->
+
+	<!-- Example extensions: -->
+	<extension type="WebappServlet"
+		class="com.oxygenxml.cmis.web.CmisLoginServlet" />
+	<extension type="URLHandler"
+		class="com.oxygenxml.cmis.web.CmisURLExtension" />
+		
+	 <extension type="WorkspaceAccess" 
+  		class="com.oxygenxml.cmis.web.EditorListener"/>
+		
+	
+
+	<!-- You can access static files at XML_WEB_AUTHOR/plugin-resources/cmis 
+		(change PLUGIN_NAME_STATIC to whatever you need) -->
+	<extension type="WebappStaticResourcesFolder"
+		path="web/static/" href="cmis" />
+
+	<extension type="WebappServlet" role="config"
+		class="com.oxygenxml.cmis.web.CmisPluginConfigExtension" />
+		
+  <extension type="WebappCSSResource" href="web/static/style.css"/>
+
+  <extension type="TrustedHosts"
+    class="com.oxygenxml.cmis.web.TrustedHostsProvider"/>
+</plugin>
